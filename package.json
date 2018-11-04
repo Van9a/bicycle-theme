@@ -1,0 +1,13 @@
+{
+  "name": "bicycle",
+  "version": "0.0.1",
+  "description": "bicycle project",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^4.0.1"
+  },
+  "dependencies": {
+    "browser-sync": "^2.24.6"
+  }
+}

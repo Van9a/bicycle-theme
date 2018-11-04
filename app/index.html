@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+</head>
+<body>
+
+<header>
+    <nav class="">
+        <ul class="menu">
+            <li class="menu__item"><a href="">About us</a></li>
+            <li class="menu__item"><a href="">Work</a></li>
+            <li class="">
+                <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        width="3.316cm" height="2.999cm">
+                    <image x="0px" y="0px" width="94px" height="85px"
+                           xlink:href="data:img/png;base64,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"/>
+                </svg>
+            </li>
+            <li class="menu__item"><a href="">Shop</a></li>
+            <li class="menu__item"><a href="">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <section class="new-generation">
+        <div class="container">
+            <div class="title-text">
+                <div class="title-text__icon">
+                    <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                            width="1.834cm" height="1.517cm">
+                        <image x="0px" y="0px" width="52px" height="43px"
+                               xlink:href="data:img/png;base64,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"/>
+                    </svg>
+                </div>
+                <h3>A new generation of vintage bike</h3>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                    when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                    It has survived not only five centuries, but also the leap into electronic typesetting, remaining
+                    essentially unchanged.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="generation-info">
+        <div class="row">
+            <div class="image-container">
+                <img src="images/bicycle-company.png" alt="">
+            </div>
+            <div class="flex-column">
+                <div class="title-text">
+                    <div class="title-text__icon">
+                        <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                                width="1.446cm" height="1.058cm">
+                            <image x="0px" y="0px" width="41px" height="30px"
+                                   xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACkAAAAeCAMAAACGwcfRAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABwlBMVEVkwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp7///9bQbDzAAAAlHRSTlMAEARr/dYLt21l2wI7fMRKMXO187gwEilqrez+KuofYqPl5Jq0XBdZ3dmYVRu+8F7yd+KhHPxEbumpZiVwbAMocbJvLQFIlpC9Bgiq57YVEcKe9QfVgNdCmUYv5vtkkYpF9NJH+ug1Hnsir2kTFJfHCgka9pXNS4fKjvfhzrmmk1ozDBn4qCsFGD1QY52ww8CnnO6SrrMz5QAAAAFiS0dElQhgeoMAAAAHdElNRQfiCh8VGgx25JgqAAAByklEQVQ4y42SZVsbQRSFBw8S3CNIcEmAEqC0JAGCBHcpQQO0xVOsgmuxYucHc9lkQ2aXp9nzZWbOvjM7595hTIGCgpVQpJDQsHBlZASgUkZGAlHRgbHgGHUsgLj/U9HxCYlJEJQs/ZaS6pumpWdkwieNlgfV0AmoPis7R0RyPaOBJ/OA/IJCQ5F4UnFJaVk5YDQBFTxZCSSJVNUHUzVZBsBcQ0ck8mStl6r7WP/J43ymVQNjFquFA20a8o2NTc120WkxA63ymrQJ59n8LK0RaHdIwY5OwrqA7jerJ4q6kyoFe/sI7LcCA4Oi5Winu1iloH6IwGE7GwFGRW+MYo9LwS8TgHOSJlPAtF8hZG9opgKYFR7BODDn8VwUu0QKmuaBhUVhOkiV/yq0/b3Y36iMxd+9iyVgmYaV19irPGdZo/us+8xJIM8bO40HNxoJXHL71j802HQz2m1ukfy6m8At/6ZuAzsqMpukaejiW5yxC/yk2GOybv8Cfv/Z2z84HFYduY71J8wmdL9c1m12uglOZ86BBLUz9JTJpcrkURwydo4L9p4u/2qvrm8qp2/v/oXVOXF/6Z7TlLGAst8jR4eHwCA9v8cn3bNb7r8AyJ20LLrzDyQAAAAASUVORK5CYII="/>
+                        </svg>
+                    </div>
+                    <h3>Vintage oliva</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                        when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                        It has survived not only five centuries, but also the leap into electronic typesetting,
+                        remaining
+                        essentially unchanged.
+                    </p>
+                </div>
+                <img src="images/Layer11.png" alt="">
+            </div>
+        </div>
+        <div class="row">
+            <div class="flex-column">
+                <div class="title-text">
+                    <div class="title-text__icon">
+                        <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                                width="1.129cm" height="1.129cm">
+                            <image x="0px" y="0px" width="32px" height="32px"
+                                   xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABrVBMVEVkwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp7////ltm4NAAAAjXRSTlMAG7r52UK74PzwEP3cAZZGP4TE6OnGjQLY5p8DYtXdZUHxnifNKA+h7pxRJOPzSZ33gVzv+k4sNlnRWDf0Kc69t3jsYTzD4T1kgri8Cu22g9vB1MJAjpXSK8Ati8dPp6NS6iN0Knkm/vaiqKl3OsVQpi6b67k1BGa+sWDP4vX7ONNarw6aJV+MR7La+Bhjt5BWAAAAAWJLR0SOggWzbwAAAAd0SU1FB+ILAhAiG3twxQ8AAAJRSURBVDjLfVP5WxJRFH1F4MA4RChOCriA4IKISJLIMi6A2UCWZJotli3Sorbabvtidf7n7ns0M/gL7/vm++bde967955zHjt23HbCzlosB9okp6sFQG5X3DjJ/xTPKW8H5E5fl11tApyW3N3oUZk/EIS5evv8JqB/gEdCYR+OrMGIiYh6higg0zc8MhobG4uNjgzTJj5uVVET/MxEMsrCk6nUZJhFkxPAmSkLkabz0lllOtO4PjOjZCmSyxt5f4Hy0GYha3Pz83OajFmNAhg0Ol0AbEUNKKUZK5fpwhKgLdqAc428QvMtKecBvaIWq9WiWtGBC8oycLHBRz+Qik7D68ClFd7CSg16CTNRJ3BZAFaBK2xNXq9cNUioVTbkDAsB1wTgOnAjD52pVCp+czMOBFWmIXwL8ArAbWArgDssS3ma7G4OyLJ7WLgPdArANvVQR26YEg/4fhNiU08RWQIgWYCHfP/IAkhGiVgAj0UJkmidgDu8RMwosQvsRXiTBd7kkzrF/dRkZBTwCUAXkGAZOV2pmWInnm6vsWfAajNRJR01QdRz+pyYdqUMotReYJlT/aKivqxWd/aJIZT9SeJDaYjxisRafG2JtUFn8YbEemvI/Y7L7dAg61xuXcZ70UnBNGb+A3Dw0TTMp8/7X7gL1y1LTR2Q5ZZchuW+Jm1ilib3j5NESCW4abf2vg38d/GQJ2oiIoNHbV/6HhIjF02Ev6/XSgd/0EvqQbdbyjS9MdX+c7dDQod3eVHM/wtupb3e4tW6nFIbDls9fPvvP4d//wHLGPKlbohbOQAAAABJRU5ErkJggg=="/>
+                        </svg>
+                    </div>
+                    <h3>La boriosa</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                        when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                        It has survived not only five centuries, but also the leap into electronic typesetting,
+                        remaining
+                        essentially unchanged.
+                    </p>
+                </div>
+                <img src="images/Layer13.png" alt="">
+            </div>
+            <div class="image-container">
+                <img src="images/Layer12.png" alt="">
+            </div>
+        </div>
+        <div class="row">
+            <div class="image-container">
+                <img src="images/Layer15.png" alt="">
+            </div>
+            <div class="flex-column">
+                <div class="title-text">
+                    <div class="title-text__icon">
+                        <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                                width="0.811cm" height="1.446cm">
+                            <image x="0px" y="0px" width="23px" height="41px"
+                                   xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAApCAMAAADphEJPAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAilBMVEVkwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp5kwp7///+AhQz7AAAALHRSTlMAWgFJu7o2zjdh+lf+HvPZzNWhei2kGfuV+RdnEQkzpabQZuxD6/gwMSLl4XbfKiwAAAABYktHRC3N2kE9AAAAB3RJTUUH4gsCECsLtwVuIgAAALJJREFUKM/tj8sSgjAMRUNRkTcIKMpLFB+F/v/3mVCc0mHhyo3jXdybnE7TFEDKEFIG6PpNzszVxNcmU3hjCSVr+8a2I+ZybIldT+jyXMJ+QHUYxehxFFIT+Mh3VCUMUowUWEJtBrA/YOZ4LjlAjnk8QUH3Suyruq4rzJLmFpChN9pnzuOgdjyd64KkhSt6p/EOyQ3u6A+NP+lhENMaSrSY+PMPnPN+wXvOMYcFH8b8Kn8BdPg9feudF1oAAAAASUVORK5CYII="/>
+                        </svg>
+                    </div>
+                    <h3>retrò Bike - M. Hulot</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                        when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                        It has survived not only five centuries, but also the leap into electronic typesetting,
+                        remaining
+                        essentially unchanged.
+                    </p>
+                </div>
+                <img src="images/Layer16.png" alt="">
+            </div>
+            <div class="image-container ">
+                <img src="images/Layer14.png" alt="">
+            </div>
+        </div>
+    </section>
+    <section class="contact flex-column">
+        <!--<div class="title-text">
+            <div class="title-text__icon">
+                <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        width="1.129cm" height="0.952cm">
+                    <image x="0px" y="0px" width="32px" height="27px"
+                           xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAbCAMAAAAqGX2oAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABTVBMVEVWx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+7///9dPdZmAAAAbXRSTlMAI111YiQLAy+6tR0UcyVwolj34LT5tqUGPMwRDdG/GAHziq+ZwedMNcgPlF+rCUL+t1tmDMv6x49shDD1AqyWqu+jVATOUCHeEpwfVfwoHoDjkj9AZMVrS9X0URBDhttJzezmheVjB9n26Z4gVJVyNgAAAAFiS0dEbiIPURcAAAAHdElNRQfiCwIQMCCyj1z4AAABKUlEQVQoz2NgwAIYmZhZWOE8NnY0aQ7OXBDg4mZg4OHlY2DgF0BVISiUCwHCvCKiIkABsVxxCSR5SdFcBJCSlmFgkM3NlZOHyyvIIskrKimrMDCoAllq6jAFGrkoQFOLgUEbzFLmgCjQQZHX1QMK6UPYBoZGQPsYjFEUmIBtNYVxzcwtLK1QFGiBTbW2ycUFbEHydvYOuOQdwQY44dSfKwVW4IxbgT1YgYsrTgVuEK+7e+CQVzSBhp6nlxlWBSqw4PX2YVbEIu/rB1PgT8AABoYAbPKBWggFtkGY8qLBKMkohAstvA1C0ROqSRiKfDiatEJEJLJ8VDSKbExsXDyK+Zp+SLIJiUlozktmsUXRz5OSimy5Zlo6RkZilwwQyVDMzczSzA7NQZcEAJoO16Q2ibtYAAAAAElFTkSuQmCC"/>
+                </svg>
+            </div>
+            <h3>AOD New York @aod <p>/ 35 min</p></h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut tellus ac nulla semper rhoncus. Nullam a
+                odio porttitor, dictum turpis vitae, pretium ante amet.
+            </p>
+        </div>-->
+
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="title-text">
+                            <div class="title-text__icon">
+                                <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                                        width="1.129cm" height="0.952cm">
+                                    <image x="0px" y="0px" width="32px" height="27px"
+                                           xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAbCAMAAAAqGX2oAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABTVBMVEVWx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+7///9dPdZmAAAAbXRSTlMAI111YiQLAy+6tR0UcyVwolj34LT5tqUGPMwRDdG/GAHziq+ZwedMNcgPlF+rCUL+t1tmDMv6x49shDD1AqyWqu+jVATOUCHeEpwfVfwoHoDjkj9AZMVrS9X0URBDhttJzezmheVjB9n26Z4gVJVyNgAAAAFiS0dEbiIPURcAAAAHdElNRQfiCwIQMCCyj1z4AAABKUlEQVQoz2NgwAIYmZhZWOE8NnY0aQ7OXBDg4mZg4OHlY2DgF0BVISiUCwHCvCKiIkABsVxxCSR5SdFcBJCSlmFgkM3NlZOHyyvIIskrKimrMDCoAllq6jAFGrkoQFOLgUEbzFLmgCjQQZHX1QMK6UPYBoZGQPsYjFEUmIBtNYVxzcwtLK1QFGiBTbW2ycUFbEHydvYOuOQdwQY44dSfKwVW4IxbgT1YgYsrTgVuEK+7e+CQVzSBhp6nlxlWBSqw4PX2YVbEIu/rB1PgT8AABoYAbPKBWggFtkGY8qLBKMkohAstvA1C0ROqSRiKfDiatEJEJLJ8VDSKbExsXDyK+Zp+SLIJiUlozktmsUXRz5OSimy5Zlo6RkZilwwQyVDMzczSzA7NQZcEAJoO16Q2ibtYAAAAAElFTkSuQmCC"/>
+                                </svg>
+                            </div>
+                            <h3>AOD New York @aod <p>/ 35 min</p></h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut tellus ac nulla semper rhoncus. Nullam a
+                                odio porttitor, dictum turpis vitae, pretium ante amet.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="title-text">
+                            <div class="title-text__icon">
+                                <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                                        width="1.129cm" height="0.952cm">
+                                    <image x="0px" y="0px" width="32px" height="27px"
+                                           xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAbCAMAAAAqGX2oAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABTVBMVEVWx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+7///9dPdZmAAAAbXRSTlMAI111YiQLAy+6tR0UcyVwolj34LT5tqUGPMwRDdG/GAHziq+ZwedMNcgPlF+rCUL+t1tmDMv6x49shDD1AqyWqu+jVATOUCHeEpwfVfwoHoDjkj9AZMVrS9X0URBDhttJzezmheVjB9n26Z4gVJVyNgAAAAFiS0dEbiIPURcAAAAHdElNRQfiCwIQMCCyj1z4AAABKUlEQVQoz2NgwAIYmZhZWOE8NnY0aQ7OXBDg4mZg4OHlY2DgF0BVISiUCwHCvCKiIkABsVxxCSR5SdFcBJCSlmFgkM3NlZOHyyvIIskrKimrMDCoAllq6jAFGrkoQFOLgUEbzFLmgCjQQZHX1QMK6UPYBoZGQPsYjFEUmIBtNYVxzcwtLK1QFGiBTbW2ycUFbEHydvYOuOQdwQY44dSfKwVW4IxbgT1YgYsrTgVuEK+7e+CQVzSBhp6nlxlWBSqw4PX2YVbEIu/rB1PgT8AABoYAbPKBWggFtkGY8qLBKMkohAstvA1C0ROqSRiKfDiatEJEJLJ8VDSKbExsXDyK+Zp+SLIJiUlozktmsUXRz5OSimy5Zlo6RkZilwwQyVDMzczSzA7NQZcEAJoO16Q2ibtYAAAAAElFTkSuQmCC"/>
+                                </svg>
+                            </div>
+                            <h3>AOD New York @aod <p>/ 35 min</p></h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut tellus ac nulla semper rhoncus. Nullam a
+                                odio porttitor, dictum turpis vitae, pretium ante amet.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="title-text">
+                            <div class="title-text__icon">
+                                <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                                        width="1.129cm" height="0.952cm">
+                                    <image x="0px" y="0px" width="32px" height="27px"
+                                           xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAbCAMAAAAqGX2oAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABTVBMVEVWx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+7///9dPdZmAAAAbXRSTlMAI111YiQLAy+6tR0UcyVwolj34LT5tqUGPMwRDdG/GAHziq+ZwedMNcgPlF+rCUL+t1tmDMv6x49shDD1AqyWqu+jVATOUCHeEpwfVfwoHoDjkj9AZMVrS9X0URBDhttJzezmheVjB9n26Z4gVJVyNgAAAAFiS0dEbiIPURcAAAAHdElNRQfiCwIQMCCyj1z4AAABKUlEQVQoz2NgwAIYmZhZWOE8NnY0aQ7OXBDg4mZg4OHlY2DgF0BVISiUCwHCvCKiIkABsVxxCSR5SdFcBJCSlmFgkM3NlZOHyyvIIskrKimrMDCoAllq6jAFGrkoQFOLgUEbzFLmgCjQQZHX1QMK6UPYBoZGQPsYjFEUmIBtNYVxzcwtLK1QFGiBTbW2ycUFbEHydvYOuOQdwQY44dSfKwVW4IxbgT1YgYsrTgVuEK+7e+CQVzSBhp6nlxlWBSqw4PX2YVbEIu/rB1PgT8AABoYAbPKBWggFtkGY8qLBKMkohAstvA1C0ROqSRiKfDiatEJEJLJ8VDSKbExsXDyK+Zp+SLIJiUlozktmsUXRz5OSimy5Zlo6RkZilwwQyVDMzczSzA7NQZcEAJoO16Q2ibtYAAAAAElFTkSuQmCC"/>
+                                </svg>
+                            </div>
+                            <h3>AOD New York @aod <p>/ 35 min</p></h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut tellus ac nulla semper rhoncus. Nullam a
+                                odio porttitor, dictum turpis vitae, pretium ante amet.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+
+    </section>
+    <section class="gallery">
+        <div class="container-fluid">
+            <div class="col-4">
+                <div class="flex-row">
+                    <div class="gallery__item"
+                         style="background: url('images/Layer19.png'); background-repeat: no-repeat; background-size: cover;">
+                        <a href="">
+                            <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    width="1.799cm" height="1.058cm">
+                                <image x="0px" y="0px" width="51px" height="30px"
+                                       xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAADMAAAAeCAQAAAArmu5JAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfiCwQSHCijijTWAAAEgUlEQVRIx42WW2xUVRSGvw4DWLCAlYJFgoq0co2RCMEIChFRAogiGghCIKiAtygq1nB5wEgkXhIxGiCSFBMQlQdDSLhFogS1BBEqZaAQBOSiXAItUHqZznw+0A5nZjotez3NXt9aa691Zv/nZEmGNY759CQPqEDquEwZr3EmE87tTGAQYTbwYxNeM1mJwVXmNrc5OAPbzi+ts8Yd7lAXpROZy7ydKHHZ0dKsrbTCV7xNxEVesVUqEc44hE+J8Ai5TGUJm2h+nSLKSuoB6Mat5HL+ZofWaMVGzGqBuU8dJYZ83ir/SifCtLQ+509mUNoCdZxJbGU1L/AfU9LdWbYQTwGRmzgMVNCVyeSxikvpzpYTLCVKmBH80wwzjUV05ElWZyRamPqj6kT/dWkzTB+vuszfXZOZSR1aVwaSTwfOU0oZIXZziZF8wGx6UN3kOdtRQpSHmMOHDKMPedRzkl2czdTNOH82HriSx/3Weu8Xuxl1eoaTrrDSe23nkqTrHPdnx6V305mvGQ9cZBvHuUJ3htIfqGQsO4HvKGBgE71MZi2TOMla7gIus4Yz3MrdPE4usIGZXLjRTXfL1b993nDgnMuNqbVObHhGQ9I6KbDS5T5trbrVj62xU4Mn7CRPqOV2bxSbbPeqm+2QlKK7VS50sXFrHSKWpj3iNu6x1GHWGPc9s+xsXdJoc92u7jP7epmP1N22S0my2hNmiwvUctv6krXmJxFfeNUBHlQXNuxsdEuKpO5Rlwrme806e6UUedCYU0QMWaLOsr2XXBAgnjHuVGepvyXEaKpRuyTlKbTOa+bju+qKtKn/4q5E8BPqHvETz1jgV67wMwu9aLH4R4OaXbccq52TkmmVOg+3qyNTXBOM+3DiV8hzxu1qL2O+5xbrXOpeI7Y317hnDQUif3BHSq5R6vYwfYmzM/AXbc1KnuUY/ehJDXEqgePkMYpfKWEsEQ6TRSFDqGIIWewiHoj+nnVMZH1gZyfSL0xXKqkJbI9mOlDFQCKc4RAh2nCaQfShmhjDGEqUvsxhP9AFOJd0j/IIsY78wPvmGpfpEqaW9rQiltiOUE02ZxnBTMLEOcYB+gDnCDOsoV9oD0A10CmpTCnVHKUySZxzqM2ynEJ6cizguIe+FNKWcxwln/705ilap9z+CP2Agexhb4o63EI0cGgo4DCHsVh9vUm16uFsi3zZwcas8AF/D2jWSRFbe8W43ZrV+DfUYhyjHkwSmWTLdYu6z74WBcoUN3i/URc3UyRsuToGQ5apb2UEe1ttzIcd72IvNBQ55B2Jd03UKu/LGP2OesAQ4nDrrXVMk9idHlGXJc62xXJnmJ0kORrJMLhx1lrv8MbvtCK13iLbpGCPeUrdaduEIpe63pwkJtsS9bQj0oR1vvVqUaNCI75vTD3imw4wx1b2cLKbVd1mx0ToXi960WkpCTv5k6qbfM67bGOOA5zrETXm+9eZG/Bwy0xdl5yb/gXZhLVynpVp0WUObySCcMgxFrvfC9Z4yo2+GuijZevki27wlFGrPGSxY4Na9z+LpF4RXWxdRQAAAABJRU5ErkJggg=="/>
+                            </svg>
+                            <div>
+                                Shop now
+                            </div>
+                        </a>
+                    </div>
+                    <div class="gallery__item"
+                         style="background: url('images/Layer21.png'); background-repeat: no-repeat; background-size: cover;">
+                        <a href="">
+                            <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    width="1.799cm" height="1.058cm">
+                                <image x="0px" y="0px" width="51px" height="30px"
+                                       xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAADMAAAAeCAQAAAArmu5JAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfiCwQSHCijijTWAAAEgUlEQVRIx42WW2xUVRSGvw4DWLCAlYJFgoq0co2RCMEIChFRAogiGghCIKiAtygq1nB5wEgkXhIxGiCSFBMQlQdDSLhFogS1BBEqZaAQBOSiXAItUHqZznw+0A5nZjotez3NXt9aa691Zv/nZEmGNY759CQPqEDquEwZr3EmE87tTGAQYTbwYxNeM1mJwVXmNrc5OAPbzi+ts8Yd7lAXpROZy7ydKHHZ0dKsrbTCV7xNxEVesVUqEc44hE+J8Ai5TGUJm2h+nSLKSuoB6Mat5HL+ZofWaMVGzGqBuU8dJYZ83ir/SifCtLQ+509mUNoCdZxJbGU1L/AfU9LdWbYQTwGRmzgMVNCVyeSxikvpzpYTLCVKmBH80wwzjUV05ElWZyRamPqj6kT/dWkzTB+vuszfXZOZSR1aVwaSTwfOU0oZIXZziZF8wGx6UN3kOdtRQpSHmMOHDKMPedRzkl2czdTNOH82HriSx/3Weu8Xuxl1eoaTrrDSe23nkqTrHPdnx6V305mvGQ9cZBvHuUJ3htIfqGQsO4HvKGBgE71MZi2TOMla7gIus4Yz3MrdPE4usIGZXLjRTXfL1b993nDgnMuNqbVObHhGQ9I6KbDS5T5trbrVj62xU4Mn7CRPqOV2bxSbbPeqm+2QlKK7VS50sXFrHSKWpj3iNu6x1GHWGPc9s+xsXdJoc92u7jP7epmP1N22S0my2hNmiwvUctv6krXmJxFfeNUBHlQXNuxsdEuKpO5Rlwrme806e6UUedCYU0QMWaLOsr2XXBAgnjHuVGepvyXEaKpRuyTlKbTOa+bju+qKtKn/4q5E8BPqHvETz1jgV67wMwu9aLH4R4OaXbccq52TkmmVOg+3qyNTXBOM+3DiV8hzxu1qL2O+5xbrXOpeI7Y317hnDQUif3BHSq5R6vYwfYmzM/AXbc1KnuUY/ehJDXEqgePkMYpfKWEsEQ6TRSFDqGIIWewiHoj+nnVMZH1gZyfSL0xXKqkJbI9mOlDFQCKc4RAh2nCaQfShmhjDGEqUvsxhP9AFOJd0j/IIsY78wPvmGpfpEqaW9rQiltiOUE02ZxnBTMLEOcYB+gDnCDOsoV9oD0A10CmpTCnVHKUySZxzqM2ynEJ6cizguIe+FNKWcxwln/705ilap9z+CP2Agexhb4o63EI0cGgo4DCHsVh9vUm16uFsi3zZwcas8AF/D2jWSRFbe8W43ZrV+DfUYhyjHkwSmWTLdYu6z74WBcoUN3i/URc3UyRsuToGQ5apb2UEe1ttzIcd72IvNBQ55B2Jd03UKu/LGP2OesAQ4nDrrXVMk9idHlGXJc62xXJnmJ0kORrJMLhx1lrv8MbvtCK13iLbpGCPeUrdaduEIpe63pwkJtsS9bQj0oR1vvVqUaNCI75vTD3imw4wx1b2cLKbVd1mx0ToXi960WkpCTv5k6qbfM67bGOOA5zrETXm+9eZG/Bwy0xdl5yb/gXZhLVynpVp0WUObySCcMgxFrvfC9Z4yo2+GuijZevki27wlFGrPGSxY4Na9z+LpF4RXWxdRQAAAABJRU5ErkJggg=="/>
+                            </svg>
+                            <div>
+                                Shop now
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="gallery__item"
+                     style="background: url('images/Layer20.png'); background-repeat: no-repeat; background-size: cover;">
+                    <a href="">
+                        <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                                width="1.799cm" height="1.058cm">
+                            <image x="0px" y="0px" width="51px" height="30px"
+                                   xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAADMAAAAeCAQAAAArmu5JAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfiCwQSHCijijTWAAAEgUlEQVRIx42WW2xUVRSGvw4DWLCAlYJFgoq0co2RCMEIChFRAogiGghCIKiAtygq1nB5wEgkXhIxGiCSFBMQlQdDSLhFogS1BBEqZaAQBOSiXAItUHqZznw+0A5nZjotez3NXt9aa691Zv/nZEmGNY759CQPqEDquEwZr3EmE87tTGAQYTbwYxNeM1mJwVXmNrc5OAPbzi+ts8Yd7lAXpROZy7ydKHHZ0dKsrbTCV7xNxEVesVUqEc44hE+J8Ai5TGUJm2h+nSLKSuoB6Mat5HL+ZofWaMVGzGqBuU8dJYZ83ir/SifCtLQ+509mUNoCdZxJbGU1L/AfU9LdWbYQTwGRmzgMVNCVyeSxikvpzpYTLCVKmBH80wwzjUV05ElWZyRamPqj6kT/dWkzTB+vuszfXZOZSR1aVwaSTwfOU0oZIXZziZF8wGx6UN3kOdtRQpSHmMOHDKMPedRzkl2czdTNOH82HriSx/3Weu8Xuxl1eoaTrrDSe23nkqTrHPdnx6V305mvGQ9cZBvHuUJ3htIfqGQsO4HvKGBgE71MZi2TOMla7gIus4Yz3MrdPE4usIGZXLjRTXfL1b993nDgnMuNqbVObHhGQ9I6KbDS5T5trbrVj62xU4Mn7CRPqOV2bxSbbPeqm+2QlKK7VS50sXFrHSKWpj3iNu6x1GHWGPc9s+xsXdJoc92u7jP7epmP1N22S0my2hNmiwvUctv6krXmJxFfeNUBHlQXNuxsdEuKpO5Rlwrme806e6UUedCYU0QMWaLOsr2XXBAgnjHuVGepvyXEaKpRuyTlKbTOa+bju+qKtKn/4q5E8BPqHvETz1jgV67wMwu9aLH4R4OaXbccq52TkmmVOg+3qyNTXBOM+3DiV8hzxu1qL2O+5xbrXOpeI7Y317hnDQUif3BHSq5R6vYwfYmzM/AXbc1KnuUY/ehJDXEqgePkMYpfKWEsEQ6TRSFDqGIIWewiHoj+nnVMZH1gZyfSL0xXKqkJbI9mOlDFQCKc4RAh2nCaQfShmhjDGEqUvsxhP9AFOJd0j/IIsY78wPvmGpfpEqaW9rQiltiOUE02ZxnBTMLEOcYB+gDnCDOsoV9oD0A10CmpTCnVHKUySZxzqM2ynEJ6cizguIe+FNKWcxwln/705ilap9z+CP2Agexhb4o63EI0cGgo4DCHsVh9vUm16uFsi3zZwcas8AF/D2jWSRFbe8W43ZrV+DfUYhyjHkwSmWTLdYu6z74WBcoUN3i/URc3UyRsuToGQ5apb2UEe1ttzIcd72IvNBQ55B2Jd03UKu/LGP2OesAQ4nDrrXVMk9idHlGXJc62xXJnmJ0kORrJMLhx1lrv8MbvtCK13iLbpGCPeUrdaduEIpe63pwkJtsS9bQj0oR1vvVqUaNCI75vTD3imw4wx1b2cLKbVd1mx0ToXi960WkpCTv5k6qbfM67bGOOA5zrETXm+9eZG/Bwy0xdl5yb/gXZhLVynpVp0WUObySCcMgxFrvfC9Z4yo2+GuijZevki27wlFGrPGSxY4Na9z+LpF4RXWxdRQAAAABJRU5ErkJggg=="/>
+                        </svg>
+                        <div>
+                            Shop now
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="flex-row">
+                    <div class="gallery__item"
+                         style="background: url('images/Layer22.png'); background-repeat: no-repeat; background-size: cover;">
+                        <a href="">
+                            <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    width="1.799cm" height="1.058cm">
+                                <image x="0px" y="0px" width="51px" height="30px"
+                                       xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAADMAAAAeCAQAAAArmu5JAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfiCwQSHCijijTWAAAEgUlEQVRIx42WW2xUVRSGvw4DWLCAlYJFgoq0co2RCMEIChFRAogiGghCIKiAtygq1nB5wEgkXhIxGiCSFBMQlQdDSLhFogS1BBEqZaAQBOSiXAItUHqZznw+0A5nZjotez3NXt9aa691Zv/nZEmGNY759CQPqEDquEwZr3EmE87tTGAQYTbwYxNeM1mJwVXmNrc5OAPbzi+ts8Yd7lAXpROZy7ydKHHZ0dKsrbTCV7xNxEVesVUqEc44hE+J8Ai5TGUJm2h+nSLKSuoB6Mat5HL+ZofWaMVGzGqBuU8dJYZ83ir/SifCtLQ+509mUNoCdZxJbGU1L/AfU9LdWbYQTwGRmzgMVNCVyeSxikvpzpYTLCVKmBH80wwzjUV05ElWZyRamPqj6kT/dWkzTB+vuszfXZOZSR1aVwaSTwfOU0oZIXZziZF8wGx6UN3kOdtRQpSHmMOHDKMPedRzkl2czdTNOH82HriSx/3Weu8Xuxl1eoaTrrDSe23nkqTrHPdnx6V305mvGQ9cZBvHuUJ3htIfqGQsO4HvKGBgE71MZi2TOMla7gIus4Yz3MrdPE4usIGZXLjRTXfL1b993nDgnMuNqbVObHhGQ9I6KbDS5T5trbrVj62xU4Mn7CRPqOV2bxSbbPeqm+2QlKK7VS50sXFrHSKWpj3iNu6x1GHWGPc9s+xsXdJoc92u7jP7epmP1N22S0my2hNmiwvUctv6krXmJxFfeNUBHlQXNuxsdEuKpO5Rlwrme806e6UUedCYU0QMWaLOsr2XXBAgnjHuVGepvyXEaKpRuyTlKbTOa+bju+qKtKn/4q5E8BPqHvETz1jgV67wMwu9aLH4R4OaXbccq52TkmmVOg+3qyNTXBOM+3DiV8hzxu1qL2O+5xbrXOpeI7Y317hnDQUif3BHSq5R6vYwfYmzM/AXbc1KnuUY/ehJDXEqgePkMYpfKWEsEQ6TRSFDqGIIWewiHoj+nnVMZH1gZyfSL0xXKqkJbI9mOlDFQCKc4RAh2nCaQfShmhjDGEqUvsxhP9AFOJd0j/IIsY78wPvmGpfpEqaW9rQiltiOUE02ZxnBTMLEOcYB+gDnCDOsoV9oD0A10CmpTCnVHKUySZxzqM2ynEJ6cizguIe+FNKWcxwln/705ilap9z+CP2Agexhb4o63EI0cGgo4DCHsVh9vUm16uFsi3zZwcas8AF/D2jWSRFbe8W43ZrV+DfUYhyjHkwSmWTLdYu6z74WBcoUN3i/URc3UyRsuToGQ5apb2UEe1ttzIcd72IvNBQ55B2Jd03UKu/LGP2OesAQ4nDrrXVMk9idHlGXJc62xXJnmJ0kORrJMLhx1lrv8MbvtCK13iLbpGCPeUrdaduEIpe63pwkJtsS9bQj0oR1vvVqUaNCI75vTD3imw4wx1b2cLKbVd1mx0ToXi960WkpCTv5k6qbfM67bGOOA5zrETXm+9eZG/Bwy0xdl5yb/gXZhLVynpVp0WUObySCcMgxFrvfC9Z4yo2+GuijZevki27wlFGrPGSxY4Na9z+LpF4RXWxdRQAAAABJRU5ErkJggg=="/>
+                            </svg>
+                            <div>
+                                Shop now
+                            </div>
+                        </a>
+                    </div>
+                    <div class="gallery__item"
+                         style="background: url('images/Layer25.png'); background-repeat: no-repeat; background-size: cover;">
+                        <a href="">
+                            <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    width="1.799cm" height="1.058cm">
+                                <image x="0px" y="0px" width="51px" height="30px"
+                                       xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAADMAAAAeCAQAAAArmu5JAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfiCwQSHCijijTWAAAEgUlEQVRIx42WW2xUVRSGvw4DWLCAlYJFgoq0co2RCMEIChFRAogiGghCIKiAtygq1nB5wEgkXhIxGiCSFBMQlQdDSLhFogS1BBEqZaAQBOSiXAItUHqZznw+0A5nZjotez3NXt9aa691Zv/nZEmGNY759CQPqEDquEwZr3EmE87tTGAQYTbwYxNeM1mJwVXmNrc5OAPbzi+ts8Yd7lAXpROZy7ydKHHZ0dKsrbTCV7xNxEVesVUqEc44hE+J8Ai5TGUJm2h+nSLKSuoB6Mat5HL+ZofWaMVGzGqBuU8dJYZ83ir/SifCtLQ+509mUNoCdZxJbGU1L/AfU9LdWbYQTwGRmzgMVNCVyeSxikvpzpYTLCVKmBH80wwzjUV05ElWZyRamPqj6kT/dWkzTB+vuszfXZOZSR1aVwaSTwfOU0oZIXZziZF8wGx6UN3kOdtRQpSHmMOHDKMPedRzkl2czdTNOH82HriSx/3Weu8Xuxl1eoaTrrDSe23nkqTrHPdnx6V305mvGQ9cZBvHuUJ3htIfqGQsO4HvKGBgE71MZi2TOMla7gIus4Yz3MrdPE4usIGZXLjRTXfL1b993nDgnMuNqbVObHhGQ9I6KbDS5T5trbrVj62xU4Mn7CRPqOV2bxSbbPeqm+2QlKK7VS50sXFrHSKWpj3iNu6x1GHWGPc9s+xsXdJoc92u7jP7epmP1N22S0my2hNmiwvUctv6krXmJxFfeNUBHlQXNuxsdEuKpO5Rlwrme806e6UUedCYU0QMWaLOsr2XXBAgnjHuVGepvyXEaKpRuyTlKbTOa+bju+qKtKn/4q5E8BPqHvETz1jgV67wMwu9aLH4R4OaXbccq52TkmmVOg+3qyNTXBOM+3DiV8hzxu1qL2O+5xbrXOpeI7Y317hnDQUif3BHSq5R6vYwfYmzM/AXbc1KnuUY/ehJDXEqgePkMYpfKWEsEQ6TRSFDqGIIWewiHoj+nnVMZH1gZyfSL0xXKqkJbI9mOlDFQCKc4RAh2nCaQfShmhjDGEqUvsxhP9AFOJd0j/IIsY78wPvmGpfpEqaW9rQiltiOUE02ZxnBTMLEOcYB+gDnCDOsoV9oD0A10CmpTCnVHKUySZxzqM2ynEJ6cizguIe+FNKWcxwln/705ilap9z+CP2Agexhb4o63EI0cGgo4DCHsVh9vUm16uFsi3zZwcas8AF/D2jWSRFbe8W43ZrV+DfUYhyjHkwSmWTLdYu6z74WBcoUN3i/URc3UyRsuToGQ5apb2UEe1ttzIcd72IvNBQ55B2Jd03UKu/LGP2OesAQ4nDrrXVMk9idHlGXJc62xXJnmJ0kORrJMLhx1lrv8MbvtCK13iLbpGCPeUrdaduEIpe63pwkJtsS9bQj0oR1vvVqUaNCI75vTD3imw4wx1b2cLKbVd1mx0ToXi960WkpCTv5k6qbfM67bGOOA5zrETXm+9eZG/Bwy0xdl5yb/gXZhLVynpVp0WUObySCcMgxFrvfC9Z4yo2+GuijZevki27wlFGrPGSxY4Na9z+LpF4RXWxdRQAAAABJRU5ErkJggg=="/>
+                            </svg>
+                            <div>
+                                Shop now
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="gallery__item"
+                     style="background: url('images/Layer20.png'); background-repeat: no-repeat; background-size: cover;">
+                    <a href="">
+                        <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                                width="1.799cm" height="1.058cm">
+                            <image x="0px" y="0px" width="51px" height="30px"
+                                   xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAADMAAAAeCAQAAAArmu5JAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfiCwQSHCijijTWAAAEgUlEQVRIx42WW2xUVRSGvw4DWLCAlYJFgoq0co2RCMEIChFRAogiGghCIKiAtygq1nB5wEgkXhIxGiCSFBMQlQdDSLhFogS1BBEqZaAQBOSiXAItUHqZznw+0A5nZjotez3NXt9aa691Zv/nZEmGNY759CQPqEDquEwZr3EmE87tTGAQYTbwYxNeM1mJwVXmNrc5OAPbzi+ts8Yd7lAXpROZy7ydKHHZ0dKsrbTCV7xNxEVesVUqEc44hE+J8Ai5TGUJm2h+nSLKSuoB6Mat5HL+ZofWaMVGzGqBuU8dJYZ83ir/SifCtLQ+509mUNoCdZxJbGU1L/AfU9LdWbYQTwGRmzgMVNCVyeSxikvpzpYTLCVKmBH80wwzjUV05ElWZyRamPqj6kT/dWkzTB+vuszfXZOZSR1aVwaSTwfOU0oZIXZziZF8wGx6UN3kOdtRQpSHmMOHDKMPedRzkl2czdTNOH82HriSx/3Weu8Xuxl1eoaTrrDSe23nkqTrHPdnx6V305mvGQ9cZBvHuUJ3htIfqGQsO4HvKGBgE71MZi2TOMla7gIus4Yz3MrdPE4usIGZXLjRTXfL1b993nDgnMuNqbVObHhGQ9I6KbDS5T5trbrVj62xU4Mn7CRPqOV2bxSbbPeqm+2QlKK7VS50sXFrHSKWpj3iNu6x1GHWGPc9s+xsXdJoc92u7jP7epmP1N22S0my2hNmiwvUctv6krXmJxFfeNUBHlQXNuxsdEuKpO5Rlwrme806e6UUedCYU0QMWaLOsr2XXBAgnjHuVGepvyXEaKpRuyTlKbTOa+bju+qKtKn/4q5E8BPqHvETz1jgV67wMwu9aLH4R4OaXbccq52TkmmVOg+3qyNTXBOM+3DiV8hzxu1qL2O+5xbrXOpeI7Y317hnDQUif3BHSq5R6vYwfYmzM/AXbc1KnuUY/ehJDXEqgePkMYpfKWEsEQ6TRSFDqGIIWewiHoj+nnVMZH1gZyfSL0xXKqkJbI9mOlDFQCKc4RAh2nCaQfShmhjDGEqUvsxhP9AFOJd0j/IIsY78wPvmGpfpEqaW9rQiltiOUE02ZxnBTMLEOcYB+gDnCDOsoV9oD0A10CmpTCnVHKUySZxzqM2ynEJ6cizguIe+FNKWcxwln/705ilap9z+CP2Agexhb4o63EI0cGgo4DCHsVh9vUm16uFsi3zZwcas8AF/D2jWSRFbe8W43ZrV+DfUYhyjHkwSmWTLdYu6z74WBcoUN3i/URc3UyRsuToGQ5apb2UEe1ttzIcd72IvNBQ55B2Jd03UKu/LGP2OesAQ4nDrrXVMk9idHlGXJc62xXJnmJ0kORrJMLhx1lrv8MbvtCK13iLbpGCPeUrdaduEIpe63pwkJtsS9bQj0oR1vvVqUaNCI75vTD3imw4wx1b2cLKbVd1mx0ToXi960WkpCTv5k6qbfM67bGOOA5zrETXm+9eZG/Bwy0xdl5yb/gXZhLVynpVp0WUObySCcMgxFrvfC9Z4yo2+GuijZevki27wlFGrPGSxY4Na9z+LpF4RXWxdRQAAAABJRU5ErkJggg=="/>
+                        </svg>
+                        <div>
+                            Shop now
+                        </div>
+                    </a>
+                </div>
+                <div class="flex-row">
+                    <div class="gallery__item"
+                         style="background: url('images/Layer19.png'); background-repeat: no-repeat; background-size: cover;">
+                        <a href="">
+                            <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    width="1.799cm" height="1.058cm">
+                                <image x="0px" y="0px" width="51px" height="30px"
+                                       xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAADMAAAAeCAQAAAArmu5JAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfiCwQSHCijijTWAAAEgUlEQVRIx42WW2xUVRSGvw4DWLCAlYJFgoq0co2RCMEIChFRAogiGghCIKiAtygq1nB5wEgkXhIxGiCSFBMQlQdDSLhFogS1BBEqZaAQBOSiXAItUHqZznw+0A5nZjotez3NXt9aa691Zv/nZEmGNY759CQPqEDquEwZr3EmE87tTGAQYTbwYxNeM1mJwVXmNrc5OAPbzi+ts8Yd7lAXpROZy7ydKHHZ0dKsrbTCV7xNxEVesVUqEc44hE+J8Ai5TGUJm2h+nSLKSuoB6Mat5HL+ZofWaMVGzGqBuU8dJYZ83ir/SifCtLQ+509mUNoCdZxJbGU1L/AfU9LdWbYQTwGRmzgMVNCVyeSxikvpzpYTLCVKmBH80wwzjUV05ElWZyRamPqj6kT/dWkzTB+vuszfXZOZSR1aVwaSTwfOU0oZIXZziZF8wGx6UN3kOdtRQpSHmMOHDKMPedRzkl2czdTNOH82HriSx/3Weu8Xuxl1eoaTrrDSe23nkqTrHPdnx6V305mvGQ9cZBvHuUJ3htIfqGQsO4HvKGBgE71MZi2TOMla7gIus4Yz3MrdPE4usIGZXLjRTXfL1b993nDgnMuNqbVObHhGQ9I6KbDS5T5trbrVj62xU4Mn7CRPqOV2bxSbbPeqm+2QlKK7VS50sXFrHSKWpj3iNu6x1GHWGPc9s+xsXdJoc92u7jP7epmP1N22S0my2hNmiwvUctv6krXmJxFfeNUBHlQXNuxsdEuKpO5Rlwrme806e6UUedCYU0QMWaLOsr2XXBAgnjHuVGepvyXEaKpRuyTlKbTOa+bju+qKtKn/4q5E8BPqHvETz1jgV67wMwu9aLH4R4OaXbccq52TkmmVOg+3qyNTXBOM+3DiV8hzxu1qL2O+5xbrXOpeI7Y317hnDQUif3BHSq5R6vYwfYmzM/AXbc1KnuUY/ehJDXEqgePkMYpfKWEsEQ6TRSFDqGIIWewiHoj+nnVMZH1gZyfSL0xXKqkJbI9mOlDFQCKc4RAh2nCaQfShmhjDGEqUvsxhP9AFOJd0j/IIsY78wPvmGpfpEqaW9rQiltiOUE02ZxnBTMLEOcYB+gDnCDOsoV9oD0A10CmpTCnVHKUySZxzqM2ynEJ6cizguIe+FNKWcxwln/705ilap9z+CP2Agexhb4o63EI0cGgo4DCHsVh9vUm16uFsi3zZwcas8AF/D2jWSRFbe8W43ZrV+DfUYhyjHkwSmWTLdYu6z74WBcoUN3i/URc3UyRsuToGQ5apb2UEe1ttzIcd72IvNBQ55B2Jd03UKu/LGP2OesAQ4nDrrXVMk9idHlGXJc62xXJnmJ0kORrJMLhx1lrv8MbvtCK13iLbpGCPeUrdaduEIpe63pwkJtsS9bQj0oR1vvVqUaNCI75vTD3imw4wx1b2cLKbVd1mx0ToXi960WkpCTv5k6qbfM67bGOOA5zrETXm+9eZG/Bwy0xdl5yb/gXZhLVynpVp0WUObySCcMgxFrvfC9Z4yo2+GuijZevki27wlFGrPGSxY4Na9z+LpF4RXWxdRQAAAABJRU5ErkJggg=="/>
+                            </svg>
+                            <div>
+                                Shop now
+                            </div>
+                        </a>
+                    </div>
+                    <div class="gallery__item"
+                         style="background: url('images/Layer21.png'); background-repeat: no-repeat; background-size: cover;">
+                        <a href="">
+                            <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    width="1.799cm" height="1.058cm">
+                                <image x="0px" y="0px" width="51px" height="30px"
+                                       xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAADMAAAAeCAQAAAArmu5JAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfiCwQSHCijijTWAAAEgUlEQVRIx42WW2xUVRSGvw4DWLCAlYJFgoq0co2RCMEIChFRAogiGghCIKiAtygq1nB5wEgkXhIxGiCSFBMQlQdDSLhFogS1BBEqZaAQBOSiXAItUHqZznw+0A5nZjotez3NXt9aa691Zv/nZEmGNY759CQPqEDquEwZr3EmE87tTGAQYTbwYxNeM1mJwVXmNrc5OAPbzi+ts8Yd7lAXpROZy7ydKHHZ0dKsrbTCV7xNxEVesVUqEc44hE+J8Ai5TGUJm2h+nSLKSuoB6Mat5HL+ZofWaMVGzGqBuU8dJYZ83ir/SifCtLQ+509mUNoCdZxJbGU1L/AfU9LdWbYQTwGRmzgMVNCVyeSxikvpzpYTLCVKmBH80wwzjUV05ElWZyRamPqj6kT/dWkzTB+vuszfXZOZSR1aVwaSTwfOU0oZIXZziZF8wGx6UN3kOdtRQpSHmMOHDKMPedRzkl2czdTNOH82HriSx/3Weu8Xuxl1eoaTrrDSe23nkqTrHPdnx6V305mvGQ9cZBvHuUJ3htIfqGQsO4HvKGBgE71MZi2TOMla7gIus4Yz3MrdPE4usIGZXLjRTXfL1b993nDgnMuNqbVObHhGQ9I6KbDS5T5trbrVj62xU4Mn7CRPqOV2bxSbbPeqm+2QlKK7VS50sXFrHSKWpj3iNu6x1GHWGPc9s+xsXdJoc92u7jP7epmP1N22S0my2hNmiwvUctv6krXmJxFfeNUBHlQXNuxsdEuKpO5Rlwrme806e6UUedCYU0QMWaLOsr2XXBAgnjHuVGepvyXEaKpRuyTlKbTOa+bju+qKtKn/4q5E8BPqHvETz1jgV67wMwu9aLH4R4OaXbccq52TkmmVOg+3qyNTXBOM+3DiV8hzxu1qL2O+5xbrXOpeI7Y317hnDQUif3BHSq5R6vYwfYmzM/AXbc1KnuUY/ehJDXEqgePkMYpfKWEsEQ6TRSFDqGIIWewiHoj+nnVMZH1gZyfSL0xXKqkJbI9mOlDFQCKc4RAh2nCaQfShmhjDGEqUvsxhP9AFOJd0j/IIsY78wPvmGpfpEqaW9rQiltiOUE02ZxnBTMLEOcYB+gDnCDOsoV9oD0A10CmpTCnVHKUySZxzqM2ynEJ6cizguIe+FNKWcxwln/705ilap9z+CP2Agexhb4o63EI0cGgo4DCHsVh9vUm16uFsi3zZwcas8AF/D2jWSRFbe8W43ZrV+DfUYhyjHkwSmWTLdYu6z74WBcoUN3i/URc3UyRsuToGQ5apb2UEe1ttzIcd72IvNBQ55B2Jd03UKu/LGP2OesAQ4nDrrXVMk9idHlGXJc62xXJnmJ0kORrJMLhx1lrv8MbvtCK13iLbpGCPeUrdaduEIpe63pwkJtsS9bQj0oR1vvVqUaNCI75vTD3imw4wx1b2cLKbVd1mx0ToXi960WkpCTv5k6qbfM67bGOOA5zrETXm+9eZG/Bwy0xdl5yb/gXZhLVynpVp0WUObySCcMgxFrvfC9Z4yo2+GuijZevki27wlFGrPGSxY4Na9z+LpF4RXWxdRQAAAABJRU5ErkJggg=="/>
+                            </svg>
+                            <div>
+                                Shop now
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section class="discover flex-column">
+        <button class="discover__button">Discover the shop</button>
+    </section>
+    <section class="contact-with-us">
+        <svg
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                width="3.316cm" height="2.999cm">
+            <image x="0px" y="0px" width="94px" height="85px"
+                   xlink:href="data:img/png;base64,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"/>
+        </svg>
+        Stay on the saddle!
+        <div class="contact-with-us__input">
+            <input type="email" placeholder="enter your email...">
+            <button type="submit">GO</button>
+        </div>
+    </section>
+</main>
+<footer class="footer">
+    <div class="container">
+        <div class="container__item">
+            <div class="company">AOD New York</div>
+            <div class="street">2250 Lexington Avenue</div>
+            <div class="city"><i>New York, NY 10035 - info@domain.com</i></div>
+        </div>
+        <div class="container__item social-icon">
+            <img src="images/twitter.png" alt=""><img src="images/facebook.png" alt=""><img src="images/pinterest.png"
+                                                                                            alt="">
+        </div>
+        <div class="container__item author">
+            <p>Handcrafted by </p>
+            <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    width="1.94cm" height="1.27cm">
+                <image x="0px" y="0px" width="55px" height="36px"
+                       xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAADcAAAAkCAMAAAAaR1JBAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAACQFBMVEVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkX///9Y/vAVAAAAvnRSTlMAE7/ykGPXthWYKSCRpIY7NfyUEfZK0bKj2lU9+MQE6ewwnWck07QBPLzgTOhoXwP7uxJ7IQUHGYuH6jfC+sUsWUKtwEQaenCVlzL5ZVMLaX8mBkltYP6mfsl45o1hkrfwFxuBXhQnRhz93oUfie9bWooWdlQ02chPxvN8vioe9diAm87V0Oe49+5rK/SCqFYJnk4PS90zDo/bJcxNhNTLZI5zrlACGHE5OhDSrD/BzzZBupp1KN9Ss7ChMWbh3eqtBQAAAAFiS0dEv9Pbs1UAAAAHdElNRQfiCwISDiT3o1fyAAADBklEQVQ4y5VUh1ZTQRAdeiyUEOlNEAQJSA0KoaiIiJQoaqgWCAhYKIqCICiiKCiKFbGAHcXexTLf5szuS84TwoHsOW9n5s69+3a2ASzSnJxdXBfjUHNz99D8ByxDxOV2iCtWenp52yIfLaKvOq1bRTo/Ozp/wjFAp0SBFASp08GcDrGjC+UEhoXLKIL81eq0F2cj7eiihA7XiCCa3Rh1ei0jOju62DhXLmGdCPyYFaVOx8+dgKrpKZcgvETWrVelkpIJSFlAl2obM4116RI1ZFC3gYGNC+iibYuYSV6W8IzZOdrcPPBh3aYFdJspt8WmyxdT55oxQreVTcEcfpIuw8B2G+UKBbKdvCKyO4rlKpeUivUtM+3cpdKV796zl202olkWVUG0SrJViNrqGsTafQTshwOIB+sIri+0NDSyPdREfXMLorMc6TDR3ADiyFggF/GIibf2KP/6GKXzybbaqq2kqE14IUxoB+igCRyvo7m2nSCgM53hGgCTmLv2pKI7RX6ZqLeL8W6A07QvZSmIPU69BDTBGcb7+s/Koj2kjEc7J7wOAetBk4OYzCd1AM5THweaQQ4siC6ZNCReuFgOspihWDpwlXK4dvCUDl4y9F8WOjCSGc5CHIECXqhu/ssVpvh6N3Qp7JJqaa+OGuAaSt11JWeEMZpLnzxPw2htWTeoqzKzG3TzFsBtVAouQrzTS0fhLkMt47LAe1ZZjzHRNsQEJe5nCfdB80O6pKMQhvio3hlxUlnP8SlJHcyDx9Jzoa96XJ9A25GgjNOqgSeKm2bdwLGn/qHxz56/gJcTYoOmX2kVitnUrXgmgNfSG5qZe741bxgv7gSwSEpxu1KFWVylt6KYd3Nl5e8F+QM/AgP87HR9ZPhTxecv8mHK+DrlHvht3nWqlT/5LoJG/Y/5DLstkoqa+EmLsjS6rc3yUQygLtwhWWox3ya6ismO/Y5v9gjE0OPgmG6adKVAJ6TKcd2vAeo6HNN1Wk/mb8d0M8ptnnVMBvBHyCY1juogeDDnb+b4Esn/AF1q1mJWmPM7AAAAAElFTkSuQmCC"/>
+            </svg>
+        </div>
+    </div>
+</footer>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>
