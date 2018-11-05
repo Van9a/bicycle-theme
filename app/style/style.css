@@ -50,6 +50,7 @@ main {
     padding: 117px 279px; }
   main .generation-info .row {
     display: flex;
+    width: 100%;
     padding: 0; }
     main .generation-info .row .image-container {
       width: 70%;
@@ -65,13 +66,32 @@ main {
       display: flex;
       flex-direction: column;
       width: 30%; }
-      main .generation-info .row .flex-column .title-text .title-text__icon {
-        padding-top: 65px; }
-      main .generation-info .row .flex-column .title-text p {
-        text-align: left;
-        padding: 65px;
-        padding-top: 0;
-        margin-bottom: 53px; }
+      main .generation-info .row .flex-column .title-text {
+        position: relative; }
+        main .generation-info .row .flex-column .title-text .title-text__icon {
+          padding-top: 65px; }
+        main .generation-info .row .flex-column .title-text p {
+          text-align: left;
+          position: relative;
+          padding: 65px;
+          padding-top: 0;
+          margin-bottom: 53px; }
+          main .generation-info .row .flex-column .title-text p:after {
+            content: '';
+            position: absolute;
+            left: 45%;
+            bottom: 0px;
+            width: 50px;
+            height: 3px;
+            background: #d7d7d7;
+            border-width: 0 10px; }
+        main .generation-info .row .flex-column .title-text:after {
+          content: '';
+          position: absolute;
+          left: 45%;
+          bottom: -39px;
+          border: 20px solid transparent;
+          border-top: 20px solid white; }
   main .generation-info .row:last-child .image-container {
     width: 33.333%; }
   main .generation-info .row:last-child .flex-column {
