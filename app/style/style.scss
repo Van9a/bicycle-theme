@@ -73,6 +73,11 @@ main {
       padding: 0;
       .image-container {
         width: 70%;
+        background-repeat: no-repeat!important;
+        background-size: cover!important;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
       }
       img {
         width: 100%;
