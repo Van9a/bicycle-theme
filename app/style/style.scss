@@ -42,6 +42,9 @@ html, body {
 .swiper-pagination-bullet-active{
   background-color: #a9afb3!important;
 }
+.swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+  bottom: 51px!important;
+}
 /*********************************************/
 .flex-column {
   display: flex;
@@ -188,7 +191,7 @@ main {
       background-color: #a9afb3;
     }
     .title-text {
-      padding: 300px 125px;
+      padding: 127px 125px;
       h3 {
         text-transform: none;
         p {
@@ -351,7 +354,7 @@ footer {
   main {
     .contact {
       .title-text {
-        padding: 143px 125px;
+        padding: 127px 125px;
       }
     }
     .gallery {

@@ -37,6 +37,9 @@ html, body {
 .swiper-pagination-bullet-active {
   background-color: #a9afb3 !important; }
 
+.swiper-container-horizontal > .swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+  bottom: 51px !important; }
+
 /*********************************************/
 .flex-column {
   display: flex;
@@ -148,7 +151,7 @@ main {
     main .contact .carousel-indicators .active {
       background-color: #a9afb3; }
     main .contact .title-text {
-      padding: 300px 125px; }
+      padding: 127px 125px; }
       main .contact .title-text h3 {
         text-transform: none; }
         main .contact .title-text h3 p {
@@ -268,7 +271,7 @@ footer .container {
   .container {
     padding: 117px 75px !important; }
   main .contact .title-text {
-    padding: 143px 125px; }
+    padding: 127px 125px; }
   main .gallery {
     display: flex; }
     main .gallery .col-4 {
