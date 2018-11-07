@@ -286,14 +286,17 @@ footer .container {
       width: -webkit-fill-available;
       max-width: 33.333333%; } }
 
-@media screen and (max-width: 768px) {
-  main .generation-info .image-container {
-    width: 50% !important; }
-  main .generation-info .flex-column {
-    width: 50%; } }
+@media screen and (min-width: 768px) {
+  main .generation-info .row {
+    overflow: hidden; }
+    main .generation-info .row .image-container {
+      width: 50% !important; }
+    main .generation-info .row .flex-column {
+      width: 50% !important; } }
 
 @media screen and (max-width: 600px) {
   .new-generation .container .title-text p {
-    line-height: 48px; }
+    line-height: 48px;
+    font-size: 14px; }
   .generation-info .row .flex-column .title-text p {
     padding: 45px !important; } }
