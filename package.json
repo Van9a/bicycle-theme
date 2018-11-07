@@ -8,6 +8,8 @@
     "gulp-sass": "^4.0.1"
   },
   "dependencies": {
-    "browser-sync": "^2.24.6"
+    "browser-sync": "^2.24.6",
+    "swiper": "^4.4.2",
+    "tiny-slider": "^2.8.7"
   }
 }
