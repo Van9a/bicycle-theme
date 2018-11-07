@@ -72,7 +72,8 @@ header {
         color: #4d4959;
         text-decoration: none; }
         header nav .menu__item a:hover {
-          color: #64c29e; }
+          color: #64c29e;
+          cursor: pointer; }
 
 main {
   font-family: "Lato", sans-serif; }
@@ -195,7 +196,8 @@ main {
       opacity: 0;
       background-color: rgba(100, 194, 158, 0.8); }
       main .gallery__item a:hover {
-        opacity: 1; }
+        opacity: 1;
+        cursor: pointer; }
       main .gallery__item a:after {
         position: absolute;
         content: '';
@@ -211,7 +213,7 @@ main {
     justify-content: center;
     min-height: 200px;
     background: #282f35; }
-    main .discover .discover__button {
+    main .discover__button {
       letter-spacing: 4.5px;
       font-size: 14px;
       background: #282f35;
@@ -219,6 +221,10 @@ main {
       color: white;
       padding: 20px 58px;
       text-transform: uppercase; }
+      main .discover__button:hover {
+        cursor: pointer;
+        background-color: #64c29e;
+        border: 2px solid #64c29e; }
   main .contact-with-us {
     font-size: 24px;
     color: #848789;
@@ -243,6 +249,7 @@ main {
         background: #64c29e;
         border: none; }
         main .contact-with-us .contact-with-us__input button:hover {
+          cursor: pointer;
           background-color: #ff5654; }
 
 footer .container {
@@ -256,9 +263,10 @@ footer .container {
       padding-bottom: 7px; }
     footer .container__item .company {
       padding-bottom: 7px; }
-  footer .container .social-icon img {
+  footer .container .social-icon a {
+    display: inline-block;
     padding-right: 15px; }
-    footer .container .social-icon img:last-child {
+    footer .container .social-icon a:last-child {
       padding: 0; }
   footer .container .author {
     display: flex; }

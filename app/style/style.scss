@@ -81,6 +81,7 @@ header {
           text-decoration: none;
           &:hover {
             color: #64c29e;
+            cursor: pointer;
           }
         }
       }
@@ -246,6 +247,7 @@ main {
       background-color: rgba(100, 194, 158, 0.8);
       &:hover {
         opacity: 1;
+        cursor: pointer;
       }
       &:after {
         position: absolute;
@@ -267,7 +269,7 @@ main {
     justify-content: center;
     min-height: 200px;
     background: #282f35;
-    .discover__button {
+    &__button {
       letter-spacing: 4.5px;
       font-size: 14px;
       background: #282f35;
@@ -275,7 +277,13 @@ main {
       color: white;
       padding: 20px 58px;
       text-transform: uppercase;
+      &:hover{
+        cursor: pointer;
+        background-color: rgb(100, 194, 158);
+        border: 2px solid rgb(100, 194, 158);
+      }
     }
+
   }
 
   .contact-with-us {
@@ -304,6 +312,7 @@ main {
         background: #64c29e;
         border: none;
         &:hover{
+          cursor: pointer;
           background-color: #ff5654;
         }
       }
@@ -328,7 +337,8 @@ footer {
       }
     }
     .social-icon {
-      img {
+      a {
+        display: inline-block;
         padding-right: 15px;
         &:last-child {
           padding: 0;
