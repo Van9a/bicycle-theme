@@ -35,16 +35,20 @@ html, body {
   -webkit-align-items: center;
   align-items: center;
 }
-.swiper-pagination-bullet{
-  background-color:#f7f7f7!important;
-  border: 2px solid #a9afb3!important;
+
+.swiper-pagination-bullet {
+  background-color: #f7f7f7 !important;
+  border: 2px solid #a9afb3 !important;
 }
-.swiper-pagination-bullet-active{
-  background-color: #a9afb3!important;
+
+.swiper-pagination-bullet-active {
+  background-color: #a9afb3 !important;
 }
-.swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
-  bottom: 51px!important;
+
+.swiper-container-horizontal > .swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+  bottom: 51px !important;
 }
+
 /*********************************************/
 .flex-column {
   display: flex;
@@ -123,6 +127,7 @@ main {
         display: flex;
         align-items: center;
         justify-content: space-around;
+
       }
       img {
         width: 100%;
@@ -277,7 +282,7 @@ main {
       color: white;
       padding: 20px 58px;
       text-transform: uppercase;
-      &:hover{
+      &:hover {
         cursor: pointer;
         background-color: rgb(100, 194, 158);
         border: 2px solid rgb(100, 194, 158);
@@ -301,7 +306,7 @@ main {
         font-size: 15px;
         color: #c8c8c8;
         border: 2px solid #d3d7d9;
-        &:focus{
+        &:focus {
           border: 2px solid #64c29e;
         }
       }
@@ -311,7 +316,7 @@ main {
         color: white;
         background: #64c29e;
         border: none;
-        &:hover{
+        &:hover {
           cursor: pointer;
           background-color: #ff5654;
         }
@@ -377,5 +382,44 @@ footer {
         }
       }
     }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    .generation-info {
+        .image-container {
+          width: 50%!important;
+        }
+        .flex-column {
+          width: 50%;
+
+        }
+      }
+    }
+
+}
+
+@media screen and (max-width: 600px){
+  .new-generation {
+    .container {
+      .title-text {
+        p {
+          line-height: 48px;
+        }
+      }
+    }
+  }
+  .generation-info {
+    .row {
+      .flex-column {
+        .title-text {
+          p {
+            padding: 45px!important;
+          }
+        }
+      }
+    }
+
   }
 }
