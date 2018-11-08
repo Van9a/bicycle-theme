@@ -10,3 +10,13 @@ $(document).ready(function () {
     });
     swiper();
 });
+$(document).ready(function () {
+    $('.icon').click(function () {
+        $('.icon').toggleClass('active');
+    })
+});
+$(document).ready(function () {
+    $('.icon').click(function () {
+        $('.menu ul').toggleClass('open');
+    })
+});
