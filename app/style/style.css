@@ -289,12 +289,7 @@ footer .container {
       width: -webkit-fill-available;
       max-width: 33.333333%; } }
 
-@media screen and (min-width: 600px) {
-  header ul {
-    display: flex; }
-  .new-generation .container .title-text p {
-    line-height: 48px;
-    font-size: 14px; }
+@media screen and (max-width: 1024px) {
   .generation-info .row {
     overflow: hidden; }
     .generation-info .row .flex-column .title-text p {
@@ -303,6 +298,34 @@ footer .container {
       width: 50% !important; }
     .generation-info .row .flex-column {
       width: 50% !important; } }
+
+@media screen and (max-width: 768px) {
+  .contact-with-us__input {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .contact-with-us__input button {
+      margin-top: 20px;
+      width: 100%; }
+  footer .container {
+    display: flex;
+    flex-direction: column; }
+    footer .container__item {
+      margin-bottom: 30px; }
+      footer .container__item:last-child {
+        margin-bottom: 0;
+        display: flex;
+        justify-content: space-around; }
+    footer .container .social-icon {
+      display: flex;
+      justify-content: space-around; } }
+
+@media screen and (min-width: 600px) {
+  header ul {
+    display: flex; }
+  .new-generation .container .title-text p {
+    line-height: 48px;
+    font-size: 14px; } }
 
 @media screen and (max-width: 600px) {
   .menu__mobile {
@@ -389,28 +412,7 @@ footer .container {
     display: flex;
     flex-direction: column;
     z-index: 1; }
-  /***************************************/
-  .contact-with-us__input {
-    display: flex;
-    flex-direction: column;
-    align-items: center; }
-    .contact-with-us__input button {
-      margin-top: 20px;
-      width: 100%; }
-  footer .container {
-    display: flex;
-    flex-direction: column; }
-    footer .container__item {
-      margin-bottom: 30px; }
-      footer .container__item:last-child {
-        margin-bottom: 0;
-        display: flex;
-        justify-content: space-around; }
-    footer .container .social-icon {
-      display: flex;
-      justify-content: space-around; } }
-
-@media screen and (min-width: 320px) {
+  /**************************************/
   .generation-info .row {
     flex-direction: column; }
     .generation-info .row .image-container, .generation-info .row .flex-column {
@@ -422,7 +424,9 @@ footer .container {
       padding: 0px;
       height: 200px; }
     .generation-info .row:last-child .flex-column {
-      width: 100% !important; }
+      width: 100% !important; } }
+
+@media screen and (min-width: 320px) {
   .gallery {
     text-align: center; }
     .gallery svg {
