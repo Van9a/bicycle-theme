@@ -7,15 +7,15 @@
 </head>
 <body>
 
-<header>
-    <div class="icon">
+<div class="main-screen">
+    <div class="main-screen__hamg-menu">
         <a href="#" class="burger-nav"></a>
     </div>
-    <nav class="menu menu__mobile">
-        <ul class="">
-            <li class="menu__item"><a href="">About us</a></li>
-            <li class="menu__item"><a href="">Work</a></li>
-            <li class="">
+    <nav class="menu" id="menu">
+        <div class="menu__mobile" id="main-screen__menu">
+            <div class="menu__item"><a href="#">About us</a></div>
+            <div class="menu__item"><a href="#">Work</a></div>
+            <div class=""><a href="#">
                 <svg
                         xmlns="http://www.w3.org/2000/svg"
                         xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -23,34 +23,36 @@
                     <image x="0px" y="0px" width="94px" height="85px"
                            xlink:href="data:img/png;base64,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"/>
                 </svg>
-            </li>
-            <li class="menu__item"><a href="">Shop</a></li>
-            <li class="menu__item"><a href="">Contact</a></li>
-        </ul>
+            </a>
+
+            </div>
+            <div class="menu__item"><a href="#">Shop</a></div>
+            <div class="menu__item"><a href="#">Contact</a></div>
+        </div>
     </nav>
-</header>
+</div>
 <main>
     <section class="new-generation">
-        <div class="container">
-            <div class="title-text">
-                <div class="title-text__icon">
-                    <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            xmlns:xlink="http://www.w3.org/1999/xlink"
-                            width="1.834cm" height="1.517cm">
-                        <image x="0px" y="0px" width="52px" height="43px"
-                               xlink:href="data:img/png;base64,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"/>
-                    </svg>
-                </div>
-                <h3>A new generation of vintage bike</h3>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                    when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                    It has survived not only five centuries, but also the leap into electronic typesetting, remaining
-                    essentially unchanged.
-                </p>
+
+        <div class="title-text">
+            <div class="title-text__icon">
+                <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        width="1.834cm" height="1.517cm">
+                    <image x="0px" y="0px" width="52px" height="43px"
+                           xlink:href="data:img/png;base64,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"/>
+                </svg>
             </div>
+            <h3>A new generation of vintage bike</h3>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                It has survived not only five centuries, but also the leap into electronic typesetting, remaining
+                essentially unchanged.
+            </p>
         </div>
+
     </section>
     <section class="generation-info">
         <div class="row">
@@ -83,9 +85,7 @@
                         essentially unchanged.
                     </p>
                 </div>
-                <!--  <div class="image-container__inner"
-                       style="width:100%; height: 200px; content:'';background: url('images/Layer11.png')">
-                  </div>-->
+
                 <img src="images/Layer11.png" alt="">
             </div>
         </div>
@@ -153,9 +153,7 @@
                         essentially unchanged.
                     </p>
                 </div>
-                <!--<div class="image-container"
-                     style="width:100%; height: 200px; content:'';background: url('images/Layer16.png')">
-                </div>-->
+
                 <img src="images/Layer16.png" alt="">
             </div>
             <div class="image-container" style="content:'';background: url('images/Layer14.png')">
@@ -163,21 +161,7 @@
         </div>
     </section>
     <section class="contact flex-column">
-        <!--<div class="title-text">
-            <div class="title-text__icon">
-                <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        xmlns:xlink="http://www.w3.org/1999/xlink"
-                        width="1.129cm" height="0.952cm">
-                    <image x="0px" y="0px" width="32px" height="27px"
-                           xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAbCAMAAAAqGX2oAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABTVBMVEVWx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+5Wx+7///9dPdZmAAAAbXRSTlMAI111YiQLAy+6tR0UcyVwolj34LT5tqUGPMwRDdG/GAHziq+ZwedMNcgPlF+rCUL+t1tmDMv6x49shDD1AqyWqu+jVATOUCHeEpwfVfwoHoDjkj9AZMVrS9X0URBDhttJzezmheVjB9n26Z4gVJVyNgAAAAFiS0dEbiIPURcAAAAHdElNRQfiCwIQMCCyj1z4AAABKUlEQVQoz2NgwAIYmZhZWOE8NnY0aQ7OXBDg4mZg4OHlY2DgF0BVISiUCwHCvCKiIkABsVxxCSR5SdFcBJCSlmFgkM3NlZOHyyvIIskrKimrMDCoAllq6jAFGrkoQFOLgUEbzFLmgCjQQZHX1QMK6UPYBoZGQPsYjFEUmIBtNYVxzcwtLK1QFGiBTbW2ycUFbEHydvYOuOQdwQY44dSfKwVW4IxbgT1YgYsrTgVuEK+7e+CQVzSBhp6nlxlWBSqw4PX2YVbEIu/rB1PgT8AABoYAbPKBWggFtkGY8qLBKMkohAstvA1C0ROqSRiKfDiatEJEJLJ8VDSKbExsXDyK+Zp+SLIJiUlozktmsUXRz5OSimy5Zlo6RkZilwwQyVDMzczSzA7NQZcEAJoO16Q2ibtYAAAAAElFTkSuQmCC"/>
-                </svg>
-            </div>
-            <h3>AOD New York @aod <p>/ 35 min</p></h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut tellus ac nulla semper rhoncus. Nullam a
-                odio porttitor, dictum turpis vitae, pretium ante amet.
-            </p>
-        </div>-->
+
         <div class="swiper-container">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
@@ -245,7 +229,7 @@
             <div class="flex-row">
                 <div class="gallery__item"
                      style="background: url('images/Layer19.png'); background-repeat: no-repeat; background-size: cover;">
-                    <a href="">
+                    <a href="#">
                         <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -260,7 +244,7 @@
                 </div>
                 <div class="gallery__item"
                      style="background: url('images/Layer21.png'); background-repeat: no-repeat; background-size: cover;">
-                    <a href="">
+                    <a href="#">
                         <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -276,7 +260,7 @@
             </div>
             <div class="gallery__item"
                  style="background: url('images/Layer20.png'); background-repeat: no-repeat; background-size: cover;">
-                <a href="">
+                <a href="#">
                     <svg
                             xmlns="http://www.w3.org/2000/svg"
                             xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -294,7 +278,7 @@
             <div class="flex-row">
                 <div class="gallery__item"
                      style="background: url('images/Layer22.png'); background-repeat: no-repeat; height: 534px; background-size: cover;">
-                    <a href="">
+                    <a href="#">
                         <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -309,7 +293,7 @@
                 </div>
                 <div class="gallery__item"
                      style="background: url('images/Layer25.png'); background-repeat: no-repeat; background-size: cover; height: 534px;">
-                    <a href="">
+                    <a href="#">
                         <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -327,7 +311,7 @@
         <div class="col-4">
             <div class="gallery__item"
                  style="background: url('images/Layer20.png'); background-repeat: no-repeat; background-size: cover;">
-                <a href="">
+                <a href="#">
                     <svg
                             xmlns="http://www.w3.org/2000/svg"
                             xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -343,7 +327,7 @@
             <div class="flex-row">
                 <div class="gallery__item"
                      style="background: url('images/Layer19.png'); background-repeat: no-repeat; background-size: cover;">
-                    <a href="">
+                    <a href="#">
                         <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -358,7 +342,7 @@
                 </div>
                 <div class="gallery__item"
                      style="background: url('images/Layer21.png'); background-repeat: no-repeat; background-size: cover;">
-                    <a href="">
+                    <a href="#">
                         <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -395,16 +379,16 @@
     </section>
 </main>
 <footer class="footer">
-    <div class="container">
+
         <div class="container__item">
             <div class="company">AOD New York</div>
             <div class="street">2250 Lexington Avenue</div>
-            <div class="city"><i>New York, NY 10035 - info@domain.com</i></div>
+            <div class="city"><i>New York, NY 10035 - <a href="#">info@domain.com</a></i></div>
         </div>
         <div class="container__item social-icon">
-            <a href=""> <img src="images/twitter.png" alt=""></a>
-            <a href=""><img src="images/facebook.png" alt=""></a>
-            <a href=""><img src="images/pinterest.png" alt=""></a>
+            <a href="#"> <img src="images/twitter.png" alt=""></a>
+            <a href="#"><img src="images/facebook.png" alt=""></a>
+            <a href="#"><img src="images/pinterest.png" alt=""></a>
 
 
         </div>
@@ -418,7 +402,7 @@
                        xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAADcAAAAkCAMAAAAaR1JBAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAACQFBMVEVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkVKRkX///9Y/vAVAAAAvnRSTlMAE7/ykGPXthWYKSCRpIY7NfyUEfZK0bKj2lU9+MQE6ewwnWck07QBPLzgTOhoXwP7uxJ7IQUHGYuH6jfC+sUsWUKtwEQaenCVlzL5ZVMLaX8mBkltYP6mfsl45o1hkrfwFxuBXhQnRhz93oUfie9bWooWdlQ02chPxvN8vioe9diAm87V0Oe49+5rK/SCqFYJnk4PS90zDo/bJcxNhNTLZI5zrlACGHE5OhDSrD/BzzZBupp1KN9Ss7ChMWbh3eqtBQAAAAFiS0dEv9Pbs1UAAAAHdElNRQfiCwISDiT3o1fyAAADBklEQVQ4y5VUh1ZTQRAdeiyUEOlNEAQJSA0KoaiIiJQoaqgWCAhYKIqCICiiKCiKFbGAHcXexTLf5szuS84TwoHsOW9n5s69+3a2ASzSnJxdXBfjUHNz99D8ByxDxOV2iCtWenp52yIfLaKvOq1bRTo/Ozp/wjFAp0SBFASp08GcDrGjC+UEhoXLKIL81eq0F2cj7eiihA7XiCCa3Rh1ei0jOju62DhXLmGdCPyYFaVOx8+dgKrpKZcgvETWrVelkpIJSFlAl2obM4116RI1ZFC3gYGNC+iibYuYSV6W8IzZOdrcPPBh3aYFdJspt8WmyxdT55oxQreVTcEcfpIuw8B2G+UKBbKdvCKyO4rlKpeUivUtM+3cpdKV796zl202olkWVUG0SrJViNrqGsTafQTshwOIB+sIri+0NDSyPdREfXMLorMc6TDR3ADiyFggF/GIibf2KP/6GKXzybbaqq2kqE14IUxoB+igCRyvo7m2nSCgM53hGgCTmLv2pKI7RX6ZqLeL8W6A07QvZSmIPU69BDTBGcb7+s/Koj2kjEc7J7wOAetBk4OYzCd1AM5THweaQQ4siC6ZNCReuFgOspihWDpwlXK4dvCUDl4y9F8WOjCSGc5CHIECXqhu/ssVpvh6N3Qp7JJqaa+OGuAaSt11JWeEMZpLnzxPw2htWTeoqzKzG3TzFsBtVAouQrzTS0fhLkMt47LAe1ZZjzHRNsQEJe5nCfdB80O6pKMQhvio3hlxUlnP8SlJHcyDx9Jzoa96XJ9A25GgjNOqgSeKm2bdwLGn/qHxz56/gJcTYoOmX2kVitnUrXgmgNfSG5qZe741bxgv7gSwSEpxu1KFWVylt6KYd3Nl5e8F+QM/AgP87HR9ZPhTxecv8mHK+DrlHvht3nWqlT/5LoJG/Y/5DLstkoqa+EmLsjS6rc3yUQygLtwhWWox3ya6ismO/Y5v9gjE0OPgmG6adKVAJ6TKcd2vAeo6HNN1Wk/mb8d0M8ptnnVMBvBHyCY1juogeDDnb+b4Esn/AF1q1mJWmPM7AAAAAElFTkSuQmCC"/>
             </svg>
         </div>
-    </div>
+
 </footer>
 <!--Slider-->
 <script src="../node_modules/swiper/dist/js/swiper.min.js"></script>
