@@ -11,9 +11,11 @@ $(document).ready(function () {
         $('.menu #main-screen__menu').toggleClass('open');
     })
 });
-window.onscroll = function() {myFunction()};
+window.onscroll = function () {
+    myFunction()
+};
 
-var header = document.getElementById("main-screen__menu");
+var header = document.getElementById("menu");
 var sticky = header.offsetTop;
 
 function myFunction() {
@@ -23,6 +25,7 @@ function myFunction() {
         header.classList.remove("sticky");
     }
 }
+
 $(document).ready(function () {
     //initialize swiper when document ready
     var swiper = new Swiper('.swiper-container', {

@@ -79,6 +79,13 @@ html, body {
             color: #64c29e;
             cursor: pointer;
             transition: color 300ms ease-out; }
+  .main-screen .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: white;
+    z-index: 999;
+    padding-bottom: 25px; }
 
 main {
   font-family: "Lato", sans-serif; }
@@ -124,9 +131,8 @@ main {
       flex-direction: column;
       width: 30%; }
       main .generation-info .row .flex-column .title-text {
+        padding: 65px;
         position: relative; }
-        main .generation-info .row .flex-column .title-text .title-text__icon {
-          padding-top: 65px; }
         main .generation-info .row .flex-column .title-text p {
           font-size: 18px;
           line-height: 34px;
@@ -134,9 +140,7 @@ main {
           font-family: "Lato", sans-serif;
           text-align: left;
           position: relative;
-          padding: 65px;
-          padding-top: 0;
-          margin-bottom: 53px; }
+          padding-bottom: 53px; }
           main .generation-info .row .flex-column .title-text p:after {
             content: '';
             position: absolute;
@@ -187,11 +191,11 @@ main {
     width: 100%;
     display: flex;
     padding: 0; }
-    main .gallery .col-4 {
+    main .gallery .col {
       padding: 0;
       width: -webkit-fill-available;
       max-width: 33.333333%; }
-      main .gallery .col-4 .gallery__item {
+      main .gallery .col .gallery__item {
         height: 267px; }
   main .gallery__item {
     width: 100%;
@@ -231,7 +235,9 @@ main {
     align-items: center;
     justify-content: center;
     min-height: 200px;
-    background: #282f35; }
+    background: #282f35;
+    display: flex;
+    flex-direction: column; }
     main .discover__button {
       letter-spacing: 4.5px;
       font-size: 14px;
@@ -252,23 +258,23 @@ main {
     flex-direction: column;
     align-items: center;
     padding: 110px; }
-    main .contact-with-us .contact-with-us__input {
-      padding-top: 40px; }
-      main .contact-with-us .contact-with-us__input input {
+    main .contact-with-us .contact-with-us__input-section {
+      margin-top: 40px; }
+      main .contact-with-us .contact-with-us__input-section input {
         padding: 25px;
         width: 350px;
         font-size: 15px;
         color: #c8c8c8;
         border: 2px solid #d3d7d9; }
-        main .contact-with-us .contact-with-us__input input:focus {
+        main .contact-with-us .contact-with-us__input-section input:focus {
           border: 2px solid #64c29e; }
-      main .contact-with-us .contact-with-us__input button {
+      main .contact-with-us .contact-with-us__input-section button {
         font-size: 17px;
         padding: 25px 45px;
         color: white;
         background: #64c29e;
         border: none; }
-        main .contact-with-us .contact-with-us__input button:hover {
+        main .contact-with-us .contact-with-us__input-section button:hover {
           cursor: pointer;
           background-color: #ff5654;
           transition: all 400ms ease-out; }
@@ -284,20 +290,24 @@ footer {
       padding-bottom: 7px; }
     footer__item .company {
       padding-bottom: 7px; }
-  footer .social-icon a {
-    display: inline-block;
-    padding-right: 15px; }
-    footer .social-icon a img:hover {
-      opacity: .5;
-      transition: all 400ms ease; }
-    footer .social-icon a:last-child {
-      padding: 0; }
-  footer .author {
+  footer .social-icon {
     display: flex; }
+    footer .social-icon div {
+      padding-right: 15px; }
+      footer .social-icon div a img:hover {
+        opacity: .5;
+        transition: all 400ms ease; }
+      footer .social-icon div:last-child {
+        padding: 0; }
+  footer .author {
+    display: flex;
+    align-items: center; }
     footer .author p {
-      color: #848789; }
-    footer .author svg {
-      padding: 10px; }
+      color: #848789;
+      margin-right: 10px; }
+    footer .author img {
+      width: 100%;
+      height: max-content; }
 
 @media screen and (max-width: 1440px) {
   .container {
@@ -306,7 +316,7 @@ footer {
     padding: 127px 125px; }
   main .gallery {
     display: flex; }
-    main .gallery .col-4 {
+    main .gallery .col {
       width: -webkit-fill-available;
       max-width: 33.333333%; } }
 
@@ -348,16 +358,18 @@ footer {
     padding: 100px; } }
 
 @media screen and (max-width: 600px) {
-  .menu__mobile {
+  .main-screen .menu {
+    padding-top: 0; }
+  .main-screen .menu__mobile {
     display: flex;
     flex-direction: column;
     text-align: center;
     background-color: #fff; }
-    .menu__mobile .menu__item {
+    .main-screen .menu__mobile .menu__item {
       padding: 34px; }
-    .menu__mobile svg {
+    .main-screen .menu__mobile svg {
       display: none; }
-  .main-screen__hamg-menu {
+  .main-screen .main-screen__hamg-menu {
     position: absolute;
     top: 5%;
     right: -20px;
