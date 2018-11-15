@@ -26,7 +26,7 @@ function myFunction() {
 
 //slider
 $(document).ready(function () {
-    $('.single-item').slick({
+    $('.contact').slick({
         dots: true,
         accessibility: false,
         infinite: true,

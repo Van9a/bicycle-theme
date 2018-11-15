@@ -5,13 +5,16 @@ html, body {
   margin: 0;
   padding: 0;
 }
+
 /*********************************************/
-.slick-dots{
+.slick-dots {
   bottom: 0;
 }
-.slick-dotted.slick-slider{
+
+.slick-dotted.slick-slider {
   margin-bottom: 0;
 }
+
 /*.slick-slider .slick-track, .slick-slider .slick-list{
   transform: none!important;
   width: max-content!important;
@@ -31,11 +34,11 @@ html, body {
   background: url("../images/bg.png") no-repeat center;
   background-size: cover;
   min-height: 800px;
-  height: 100vh;
+  height: 80vh; //100vh;
   position: relative;
 
   .menu {
-    padding-top: 40px;
+    padding-top: 35px;
 
     .menu__mobile {
       width: 100%;
@@ -49,12 +52,13 @@ html, body {
       font-weight: bold;
       font-size: 13px;
       .menu__item {
-        padding: 0 34px;
+        padding: 0 40px;
         a {
           display: block;
           width: max-content;
           color: #4d4959;
           text-decoration: none;
+          letter-spacing: 3px;
           &:hover {
             color: #64c29e;
             cursor: pointer;
@@ -83,6 +87,8 @@ main {
     font-family: $Lato;
     font-size: 18px;
     h3 {
+      font-size: 18px;
+      letter-spacing: 4px;
       text-transform: uppercase;
     }
     p {
@@ -92,30 +98,35 @@ main {
     }
   }
   .new-generation {
-    padding: 117px 279px;
-    h3 {
+    padding: 132px 230px;
+    .info {
       font-size: 18px;
-      letter-spacing: 4px;
-      color: #353738;
-      font-family: $Lato;
-      font-weight: bold;
-      text-align: center;
+      h3 {
+        font-size: 18px;
+        color: #353738;
+        font-family: $Lato;
+        font-weight: bold;
+        text-align: center;
+        letter-spacing: 3.7px;
+        margin: 23px;
+      }
+      p {
+        font-size: 16px;
+        line-height: 30px;
+        color: #848789;
+        font-family: $Lato;
+        text-align: center;
+      }
     }
-    p {
-      font-size: 18px;
-      line-height: 34px;
-      color: #848789;
-      font-family: $Lato;
-      text-align: center;
-    }
+
   }
   .generation-info {
-    .row {
+    &__items {
       display: flex;
       width: 100%;
       padding: 0;
       .image-container {
-        width: 70%;
+        width: 66.9%;
         background-repeat: no-repeat !important;
         background-size: cover !important;
         display: flex;
@@ -127,22 +138,28 @@ main {
         //  width: 100%;
         // height: 100%;
       }
-      .flex-column {
+      .item-content {
         display: flex;
         flex-direction: column;
-        width: 30%;
+        width: 33.1%;
         .info {
-          padding: 65px;
+          padding-top: 100px;
+          padding-left: 70px;
+          padding-right: 59px;
           position: relative;
-
+          .info__title {
+            margin-top: 23px;
+            margin-bottom: 10px;
+          }
           p {
-            font-size: 18px;
-            line-height: 34px;
+            font-size: 16px;
+            line-height: 31px;
             color: #848789;
             font-family: $Lato;
-            text-align: left;
+            text-align: justify;
             position: relative;
-            padding-bottom: 53px;
+            padding-bottom: 33px;
+            margin-bottom: 40px;
             &:after {
               content: '';
               position: absolute;
@@ -157,7 +174,7 @@ main {
           &:after {
             content: '';
             position: absolute;
-            left: 45%;
+            left: 48%;
             bottom: -39px;
             border: 20px solid transparent;
             border-top: 20px solid white;
@@ -165,11 +182,11 @@ main {
         }
       }
     }
-    .row:last-child {
+    &__items:last-child {
       .image-container {
         width: 33.333%;
       }
-      .flex-column {
+      .item-content {
         width: 33.333%;
       }
     }
@@ -177,6 +194,8 @@ main {
   .contact {
     width: 100%;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
     .carousel-indicators li {
       background-color: white;
       width: 10px;
@@ -191,13 +210,23 @@ main {
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 127px 125px;
-      h3 {
+      padding: 124px 125px;
+      margin-bottom: 54px;
+      font-family: $Lato;
+      &__title {
+        margin-top: 27px;
+        margin-bottom: 11px;
         text-transform: none;
         p {
           display: inline;
           color: #848789;
         }
+      }
+      &__text {
+        font-size: 24px;
+        line-height: 34px;
+        font-style: italic;
+
       }
     }
     ul {
@@ -205,7 +234,7 @@ main {
 
         color: #a9afb3;
         border-radius: 50%;
-        button{
+        button {
           width: 10px;
           height: 10px;
         }
@@ -216,7 +245,7 @@ main {
     width: 100%;
     display: flex;
     padding: 0;
-    .col {
+    &__items {
       padding: 0;
       width: -webkit-fill-available;
       max-width: 33.333333%;
@@ -274,12 +303,12 @@ main {
     display: flex;
     flex-direction: column;
     &__button {
-      letter-spacing: 4.5px;
       font-size: 14px;
+      letter-spacing: 3px;
       background: #282f35;
-      border: 2px solid white;
+      border: 1px solid white;
       color: white;
-      padding: 20px 58px;
+      padding: 16px 50px;
       text-transform: uppercase;
       &:hover {
         cursor: pointer;
@@ -298,8 +327,15 @@ main {
     flex-direction: column;
     align-items: center;
     padding: 110px;
-    .contact-with-us__input-section {
-      margin-top: 40px;
+    &__title {
+      margin-top: 31px;
+      font-size: 24px;
+      line-height: 34px;
+      font-family: $Lato;
+      font-style: italic;
+    }
+    &__input-section {
+      margin-top: 30px;
       input {
         padding: 25px;
         width: 350px;
@@ -311,11 +347,14 @@ main {
         }
       }
       button {
-        font-size: 17px;
-        padding: 25px 45px;
-        color: white;
+        padding: 25px 49px;
         background: #64c29e;
         border: none;
+        font-size: 24px;
+        line-height: 24px;
+        color: #ffffff;
+        font-family: $Lato;
+        font-weight: 300;
         &:hover {
           cursor: pointer;
           background-color: #ff5654;
@@ -327,18 +366,18 @@ main {
 
 }
 
-footer {
+.footer {
   display: flex;
   justify-content: space-around;
-  padding: 100px 250px;
+  padding: 90px 108px;
   &__item {
     font-size: 16px;
-    .street, .city {
-      color: #848789;
-      padding-bottom: 7px;
-    }
+    line-height: 18px;
+    color: #848789;
+    font-family: $Lato;
     .company {
-      padding-bottom: 7px;
+      font-weight: bold;
+
     }
   }
   .social-icon {
@@ -383,7 +422,7 @@ footer {
     }
     .gallery {
       display: flex;
-      .col {
+      &__items {
         width: -webkit-fill-available;
         max-width: 33.333333%;
       }
@@ -393,9 +432,9 @@ footer {
 
 @media screen and (max-width: 1024px) {
   .generation-info {
-    .row {
+    &__items {
       overflow: hidden;
-      .flex-column {
+      .item-content {
         .info {
 
           p {
@@ -406,7 +445,7 @@ footer {
       .image-container {
         width: 50% !important;
       }
-      .flex-column {
+      .item-content {
         width: 50% !important;
 
       }
@@ -451,9 +490,6 @@ footer {
       ul {
         display: flex;
       }
-    }
-    .new-generation {
-      padding: 100px;
     }
   }
 
@@ -595,15 +631,15 @@ footer {
       padding: 117px 45px;
     }
     .generation-info {
-      .row {
+      &__items {
         flex-direction: column;
         .image-container {
           padding: 40px 0;
         }
-        .image-container, .flex-column {
+        .image-container, .item-content {
           width: 100% !important;
         }
-        .flex-column {
+        .item-content {
           .info p {
             padding: 0 0 45px 0 !important
 
@@ -611,21 +647,21 @@ footer {
         }
 
       }
-      .row:last-child {
+      &__items :last-child {
         flex-direction: column;
         .image-container {
           width: 100% !important;
           padding: 0px;
           height: 200px;
         }
-        .flex-column {
+        .item-content {
           width: 100% !important;
         }
       }
     }
     .gallery {
       flex-direction: column;
-      .col {
+      &__items {
         max-width: 100%;
         width: 100%;
       }
