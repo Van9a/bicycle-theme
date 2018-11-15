@@ -3,43 +3,17 @@ html, body {
   margin: 0;
   padding: 0; }
 
-.swiper-container {
-  width: 600px;
-  height: 300px; }
-
 /*********************************************/
-.swiper-container {
-  width: 100%;
-  height: 100%; }
+.slick-dots {
+  bottom: 0; }
 
-.swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
-  /* Center slide text vertically */
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  align-items: center; }
+.slick-dotted.slick-slider {
+  margin-bottom: 0; }
 
-.swiper-pagination-bullet {
-  background-color: #f7f7f7 !important;
-  border: 2px solid #a9afb3 !important; }
-
-.swiper-pagination-bullet-active {
-  background-color: #a9afb3 !important; }
-
-.swiper-container-horizontal > .swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
-  bottom: 51px !important; }
-
+/*.slick-slider .slick-track, .slick-slider .slick-list{
+  transform: none!important;
+  width: max-content!important;
+}*/
 /*********************************************/
 .flex-column {
   display: flex;
@@ -89,14 +63,14 @@ html, body {
 
 main {
   font-family: "Lato", sans-serif; }
-  main .title-text {
+  main .info {
     text-align: center;
     color: #353738;
     font-family: "Lato", sans-serif;
     font-size: 18px; }
-    main .title-text h3 {
+    main .info h3 {
       text-transform: uppercase; }
-    main .title-text p {
+    main .info p {
       color: #848789;
       line-height: 34px;
       margin: 0; }
@@ -130,10 +104,10 @@ main {
       display: flex;
       flex-direction: column;
       width: 30%; }
-      main .generation-info .row .flex-column .title-text {
+      main .generation-info .row .flex-column .info {
         padding: 65px;
         position: relative; }
-        main .generation-info .row .flex-column .title-text p {
+        main .generation-info .row .flex-column .info p {
           font-size: 18px;
           line-height: 34px;
           color: #848789;
@@ -141,7 +115,7 @@ main {
           text-align: left;
           position: relative;
           padding-bottom: 53px; }
-          main .generation-info .row .flex-column .title-text p:after {
+          main .generation-info .row .flex-column .info p:after {
             content: '';
             position: absolute;
             left: 45%;
@@ -150,7 +124,7 @@ main {
             height: 3px;
             background: #d7d7d7;
             border-width: 0 10px; }
-        main .generation-info .row .flex-column .title-text:after {
+        main .generation-info .row .flex-column .info:after {
           content: '';
           position: absolute;
           left: 45%;
@@ -162,10 +136,8 @@ main {
   main .generation-info .row:last-child .flex-column {
     width: 33.333%; }
   main .contact {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%; }
+    width: 100%;
+    overflow: hidden; }
     main .contact .carousel-indicators li {
       background-color: white;
       width: 10px;
@@ -174,19 +146,22 @@ main {
       border: 1px solid #a9afb3; }
     main .contact .carousel-indicators .active {
       background-color: #a9afb3; }
-    main .contact .title-text {
+    main .contact .info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       padding: 127px 125px; }
-      main .contact .title-text h3 {
+      main .contact .info h3 {
         text-transform: none; }
-        main .contact .title-text h3 p {
+        main .contact .info h3 p {
           display: inline;
           color: #848789; }
-    main .contact ul {
-      display: flex; }
-      main .contact ul li {
-        background-color: red; }
-        main .contact ul li button {
-          display: none !important; }
+    main .contact ul li {
+      color: #a9afb3;
+      border-radius: 50%; }
+      main .contact ul li button {
+        width: 10px;
+        height: 10px; }
   main .gallery {
     width: 100%;
     display: flex;
@@ -312,7 +287,7 @@ footer {
 @media screen and (max-width: 1440px) {
   .container {
     padding: 117px 75px !important; }
-  main .contact .title-text {
+  main .contact .info {
     padding: 127px 125px; }
   main .gallery {
     display: flex; }
@@ -323,7 +298,7 @@ footer {
 @media screen and (max-width: 1024px) {
   .generation-info .row {
     overflow: hidden; }
-    .generation-info .row .flex-column .title-text p {
+    .generation-info .row .flex-column .info p {
       padding: 45px !important; }
     .generation-info .row .image-container {
       width: 50% !important; }
@@ -461,7 +436,7 @@ footer {
       padding: 40px 0; }
     main .generation-info .row .image-container, main .generation-info .row .flex-column {
       width: 100% !important; }
-    main .generation-info .row .flex-column .title-text p {
+    main .generation-info .row .flex-column .info p {
       padding: 0 0 45px 0 !important; }
   main .generation-info .row:last-child {
     flex-direction: column; }

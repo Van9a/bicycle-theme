@@ -1,6 +1,4 @@
-/**
- * Created by Admin on 31.10.2018.
- */
+//hamburger menu
 $(document).ready(function () {
     $('.main-screen__hamg-menu').click(function () {
         $('.main-screen__hamg-menu').toggleClass('active');
@@ -14,7 +12,7 @@ $(document).ready(function () {
 window.onscroll = function () {
     myFunction()
 };
-
+//header fixed
 var header = document.getElementById("menu");
 var sticky = header.offsetTop;
 
@@ -26,12 +24,17 @@ function myFunction() {
     }
 }
 
+//slider
 $(document).ready(function () {
-    //initialize swiper when document ready
-    var swiper = new Swiper('.swiper-container', {
-        pagination: {
-            el: '.swiper-pagination',
-        },
+    $('.single-item').slick({
+        dots: true,
+        accessibility: false,
+        infinite: true,
+        speed: 3000,
+        slidesToShow: 1,
+        adaptiveHeight: false,
+        autoPlay: true,
+        autoplaySpeed: 3000,
+        arrows: false,
     });
 });
-console.clear();

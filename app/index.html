@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="slick-1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick-1.8.1/slick/slick-theme.css"/>
     <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
@@ -27,13 +29,12 @@
 </div>
 <main>
     <section class="new-generation">
-
-        <div class="title-text">
-            <div class="title-text__icon">
+        <div class="info">
+            <div class="info__icon">
                 <img src="images/Icon.png" alt="">
             </div>
-            <h3>A new generation of vintage bike</h3>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            <h3 class="info__title">A new generation of vintage bike</h3>
+            <p class="info__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                 Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
                 when an unknown printer took a galley of type and scrambled it to make a type specimen book.
                 It has survived not only five centuries, but also the leap into electronic typesetting, remaining
@@ -48,12 +49,12 @@
                 <img src="images/Logo3.png" alt="">
             </div>
             <div class="flex-column">
-                <div class="title-text">
-                    <div class="title-text__icon">
+                <div class="info">
+                    <div class="info__icon">
                         <img src="images/Icon2.png" alt="">
                     </div>
-                    <h3>Vintage oliva</h3>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    <h3 class="info__title">Vintage oliva</h3>
+                    <p class="info__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                         Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
                         when an unknown printer took a galley of type and scrambled it to make a type specimen book.
                         It has survived not only five centuries, but also the leap into electronic typesetting,
@@ -67,12 +68,12 @@
         </div>
         <div class="row">
             <div class="flex-column">
-                <div class="title-text">
-                    <div class="title-text__icon">
+                <div class="info">
+                    <div class="info__icon">
                         <img src="images/Icon5.png" alt="">
                     </div>
-                    <h3>La boriosa</h3>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    <h3 class="info__title">La boriosa</h3>
+                    <p class="info__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                         Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
                         when an unknown printer took a galley of type and scrambled it to make a type specimen book.
                         It has survived not only five centuries, but also the leap into electronic typesetting,
@@ -91,12 +92,12 @@
                 <img src="images/Logo6.png" alt="">
             </div>
             <div class="flex-column">
-                <div class="title-text">
-                    <div class="title-text__icon">
+                <div class="info">
+                    <div class="info__icon">
                         <img src="images/Icon7.png" alt="">
                     </div>
-                    <h3>retrò Bike - M. Hulot</h3>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    <h3 class="info__title">retrò Bike - M. Hulot</h3>
+                    <p class="info__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                         Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
                         when an unknown printer took a galley of type and scrambled it to make a type specimen book.
                         It has survived not only five centuries, but also the leap into electronic typesetting,
@@ -111,49 +112,39 @@
             </div>
         </div>
     </section>
-    <section class="contact flex-column">
-
-        <div class="swiper-container">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <div class="title-text">
-                        <div class="title-text__icon">
-                            <img src="images/twitterSlider.png" alt="">
-                        </div>
-                        <h3>AOD New York @aod <p>/ 35 min</p></h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut tellus ac nulla semper
-                            rhoncus. Nullam a
-                            odio porttitor, dictum turpis vitae, pretium ante amet.
-                        </p>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="title-text">
-                        <div class="title-text__icon">
-                            <img src="images/twitterSlider.png" alt="">
-                        </div>
-                        <h3>AOD New York @aod <p>/ 35 min</p></h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut tellus ac nulla semper
-                            rhoncus. Nullam a
-                            odio porttitor, dictum turpis vitae, pretium ante amet.
-                        </p>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="title-text">
-                        <div class="title-text__icon">
-                            <img src="images/twitterSlider.png" alt="">
-                        </div>
-                        <h3>AOD New York @aod <p>/ 35 min</p></h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut tellus ac nulla semper
-                            rhoncus. Nullam a
-                            odio porttitor, dictum turpis vitae, pretium ante amet.
-                        </p>
-                    </div>
-                </div>
+    <section class="contact flex-column single-item">
+        <div class="info">
+            <div class="info__icon">
+                <img src="images/twitterSlider.png" alt="">
             </div>
-            <!-- Add Pagination -->
-            <div class="swiper-pagination"></div>
+            <h3 class="info__title">11AOD New York @aod <p>/ 35 min</p></h3>
+            <p class="info__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut tellus ac
+                nulla semper
+                rhoncus. Nullam a
+                odio porttitor, dictum turpis vitae, pretium ante amet.
+            </p>
+        </div>
+        <div class="info">
+            <div class="info__icon">
+                <img src="images/twitterSlider.png" alt="">
+            </div>
+            <h3 class="info__title">22AOD New York @aod <p>/ 35 min</p></h3>
+            <p class="info__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut tellus ac
+                nulla semper
+                rhoncus. Nullam a
+                odio porttitor, dictum turpis vitae, pretium ante amet.
+            </p>
+        </div>
+        <div class="info">
+            <div class="info__icon">
+                <img src="images/twitterSlider.png" alt="">
+            </div>
+            <h3 class="info__title">33AOD New York @aod <p>/ 35 min</p></h3>
+            <p class="info__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut tellus ac
+                nulla semper
+                rhoncus. Nullam a
+                odio porttitor, dictum turpis vitae, pretium ante amet.
+            </p>
         </div>
     </section>
     <section class="gallery">
@@ -257,7 +248,6 @@
     </section>
 </main>
 <footer class="footer">
-
     <div class="footer__item">
         <div class="company">AOD New York</div>
         <div class="street">2250 Lexington Avenue</div>
@@ -272,23 +262,13 @@
         <p>Handcrafted by </p>
         <img src="images/Y%20E%20B%20O%20Logo.png" alt="">
     </div>
-
 </footer>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js "></script>
+<script src="https://code.jquery.com/jquery-migrate-3.0.1.js"></script>
 <!--Slider-->
-<script src="../node_modules/swiper/dist/js/swiper.min.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.2/css/swiper.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.2/css/swiper.min.css">
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.2/js/swiper.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.2/js/swiper.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.2/js/swiper.esm.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.2/js/swiper.esm.bundle.js"></script>
+<script type="text/javascript" src="slick-1.8.1/slick/slick.min.js"></script>
 <!--Slider end-->
-<!--Bootstrap-->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-<!--Bootstrap end-->
+
 <script src="js/index.js"></script>
 </body>
 </html>
