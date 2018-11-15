@@ -38,3 +38,4 @@ $(document).ready(function () {
         arrows: false,
     });
 });
+console.clear();
