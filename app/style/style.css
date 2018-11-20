@@ -296,12 +296,10 @@ main {
     display: flex; }
     .footer .social-icon__container {
       height: max-content;
-      padding-right: 15px; }
+      margin-right: 15px; }
       .footer .social-icon__container a img:hover {
         opacity: .5;
         transition: all 400ms ease; }
-      .footer .social-icon__container:last-child {
-        padding: 0; }
   .footer .author {
     display: flex;
     align-items: center; }
@@ -446,6 +444,8 @@ main {
     main .contact-with-us__input-section button {
       margin-top: 20px;
       width: 100%; }
+  main .contact {
+    padding: 125px 70px; }
   footer {
     display: flex;
     flex-direction: column; }
@@ -489,6 +489,8 @@ main {
       width: 100%; }
   main .contact-with-us {
     padding: 60px; }
+  main .contact {
+    padding: 125px 40px; }
   .footer {
     display: flex;
     flex-direction: column;
@@ -503,8 +505,10 @@ main {
 @media screen and (max-width: 430px) {
   main .generation-info__items:last-child .image-container {
     padding: 80px 0; }
-  main .contact .info {
-    padding: 127px 70px; }
+  main .contact {
+    padding: 10px 10px; }
+    main .contact .info {
+      padding: 127px 10px; }
   main .contact-with-us__input-section input {
     width: 260px; }
   .footer {
@@ -534,7 +538,9 @@ main {
 
 @media screen and (max-width: 320px) {
   main .discover__button {
-    padding: 16px 30px; } }
+    padding: 16px 30px; }
+  main .contact {
+    padding: 10px 10px; } }
 
 @media screen and (min-width: 320px) {
   .gallery {
