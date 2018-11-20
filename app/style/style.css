@@ -3,18 +3,12 @@ html, body {
   margin: 0;
   padding: 0; }
 
-/*********************************************/
 .slick-dots {
   bottom: 0; }
 
 .slick-dotted.slick-slider {
   margin-bottom: 0; }
 
-/*.slick-slider .slick-track, .slick-slider .slick-list{
-  transform: none!important;
-  width: max-content!important;
-}*/
-/*********************************************/
 .flex-column {
   display: flex;
   flex-direction: column; }
@@ -27,7 +21,7 @@ html, body {
   background: url("../images/bg.png") no-repeat center;
   background-size: cover;
   min-height: 800px;
-  height: 80vh; }
+  height: 100vh; }
   .main-screen .menu {
     padding-top: 35px; }
     .main-screen .menu .menu__mobile {
@@ -42,7 +36,7 @@ html, body {
       font-weight: bold;
       font-size: 13px; }
       .main-screen .menu .menu__mobile .menu__item {
-        padding: 0 40px; }
+        margin: 0 40px; }
         .main-screen .menu .menu__mobile .menu__item a {
           display: block;
           color: #4d4959;
@@ -108,6 +102,7 @@ main {
         padding-top: 100px;
         padding-left: 70px;
         padding-right: 59px;
+        padding-bottom: 54px;
         position: relative; }
         main .generation-info__items .item-content .info .info__title {
           margin-top: 23px;
@@ -119,8 +114,7 @@ main {
           font-family: "Lato", sans-serif;
           text-align: justify;
           position: relative;
-          padding-bottom: 33px;
-          margin-bottom: 40px; }
+          padding-bottom: 33px; }
           main .generation-info__items .item-content .info p:after {
             content: '';
             position: absolute;
@@ -142,10 +136,13 @@ main {
   main .generation-info__items:last-child .item-content {
     width: 33.333%; }
   main .contact {
+    padding: 100px 125px;
     width: 100%;
     overflow: hidden;
     display: flex;
     flex-direction: column; }
+    main .contact .slick-list {
+      margin-bottom: 100px; }
     main .contact .carousel-indicators li {
       background-color: white;
       width: 10px;
@@ -158,8 +155,6 @@ main {
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 124px 125px;
-      margin-bottom: 54px;
       font-family: "Lato", sans-serif; }
       main .contact .info__title {
         margin-top: 27px;
@@ -172,12 +167,15 @@ main {
         font-size: 24px;
         line-height: 34px;
         font-style: italic; }
-    main .contact ul li {
-      color: #a9afb3;
-      border-radius: 50%; }
-      main .contact ul li button {
-        width: 10px;
-        height: 10px; }
+    main .contact .slick-dots {
+      margin-bottom: 65px;
+      left: 0; }
+      main .contact .slick-dots li {
+        color: #a9afb3;
+        border-radius: 50%; }
+        main .contact .slick-dots li button {
+          width: 10px;
+          height: 10px; }
   main .gallery {
     width: 100%;
     display: flex; }
@@ -192,9 +190,7 @@ main {
   main .item--hover {
     width: 100%;
     height: 265px;
-    display: flex;
-    /*align-items: stretch;
-    justify-content: stretch;*/ }
+    display: flex; }
     main .item--hover a {
       position: relative;
       display: flex;
@@ -284,6 +280,7 @@ main {
 .footer {
   display: flex;
   justify-content: space-around;
+  align-items: center;
   padding: 90px 108px; }
   .footer__item {
     font-size: 16px;
@@ -292,21 +289,26 @@ main {
     font-family: "Lato", sans-serif; }
     .footer__item .company {
       font-weight: bold; }
+  .footer .address .city a {
+    text-decoration: none;
+    color: #848789; }
   .footer .social-icon {
     display: flex; }
-    .footer .social-icon div {
+    .footer .social-icon__container {
+      height: max-content;
       padding-right: 15px; }
-      .footer .social-icon div a img:hover {
+      .footer .social-icon__container a img:hover {
         opacity: .5;
         transition: all 400ms ease; }
-      .footer .social-icon div:last-child {
+      .footer .social-icon__container:last-child {
         padding: 0; }
   .footer .author {
     display: flex;
     align-items: center; }
-    .footer .author p {
+    .footer .author__by {
       color: #848789;
-      margin-right: 10px; }
+      margin-right: 10px;
+      min-width: 110px; }
     .footer .author img {
       width: 100%;
       height: max-content; }
@@ -314,8 +316,6 @@ main {
 @media screen and (max-width: 1440px) {
   .container {
     padding: 117px 75px !important; }
-  main .contact .info {
-    padding: 127px 125px; }
   main .gallery {
     display: flex; }
     main .gallery__items {

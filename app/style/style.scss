@@ -6,7 +6,6 @@ html, body {
   padding: 0;
 }
 
-/*********************************************/
 .slick-dots {
   bottom: 0;
 }
@@ -15,11 +14,6 @@ html, body {
   margin-bottom: 0;
 }
 
-/*.slick-slider .slick-track, .slick-slider .slick-list{
-  transform: none!important;
-  width: max-content!important;
-}*/
-/*********************************************/
 .flex-column {
   display: flex;
   flex-direction: column;
@@ -34,8 +28,7 @@ html, body {
   background: url("../images/bg.png") no-repeat center;
   background-size: cover;
   min-height: 800px;
-  height: 80vh; //100vh;
-
+  height: 100vh;
 
   .menu {
     padding-top: 35px;
@@ -52,7 +45,7 @@ html, body {
       font-weight: bold;
       font-size: 13px;
       .menu__item {
-        padding: 0 40px;
+        margin: 0 40px;
         a {
           display: block;
           color: #4d4959;
@@ -130,10 +123,6 @@ main {
         justify-content: space-around;
 
       }
-      img {
-        //  width: 100%;
-        // height: 100%;
-      }
       .item-content {
         display: flex;
         flex-direction: column;
@@ -142,6 +131,7 @@ main {
           padding-top: 100px;
           padding-left: 70px;
           padding-right: 59px;
+          padding-bottom: 54px;
           position: relative;
           .info__title {
             margin-top: 23px;
@@ -155,7 +145,6 @@ main {
             text-align: justify;
             position: relative;
             padding-bottom: 33px;
-            margin-bottom: 40px;
             &:after {
               content: '';
               position: absolute;
@@ -188,10 +177,14 @@ main {
     }
   }
   .contact {
+    padding: 100px 125px;
     width: 100%;
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    .slick-list {
+      margin-bottom: 100px;
+    }
     .carousel-indicators li {
       background-color: white;
       width: 10px;
@@ -206,8 +199,7 @@ main {
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 124px 125px;
-      margin-bottom: 54px;
+
       font-family: $Lato;
       &__title {
         margin-top: 27px;
@@ -225,7 +217,9 @@ main {
 
       }
     }
-    ul {
+    .slick-dots {
+      margin-bottom: 65px;
+      left: 0;
       li {
 
         color: #a9afb3;
@@ -256,8 +250,7 @@ main {
     width: 100%;
     height: 265px;
     display: flex;
-    /*align-items: stretch;
-    justify-content: stretch;*/
+
     a {
       position: relative;
       display: flex;
@@ -368,6 +361,7 @@ main {
 .footer {
   display: flex;
   justify-content: space-around;
+  align-items: center;
   padding: 90px 108px;
   &__item {
     font-size: 16px;
@@ -379,9 +373,18 @@ main {
 
     }
   }
+  .address {
+    .city {
+      a {
+        text-decoration: none;
+        color: #848789;
+      }
+    }
+  }
   .social-icon {
     display: flex;
-    div {
+    &__container {
+      height: max-content;
       padding-right: 15px;
       a {
         img:hover {
@@ -398,9 +401,10 @@ main {
   .author {
     display: flex;
     align-items: center;
-    p {
+    &__by {
       color: #848789;
       margin-right: 10px;
+      min-width: 110px;
     }
     img {
       width: 100%;
@@ -414,11 +418,6 @@ main {
     padding: 117px 75px !important;
   }
   main {
-    .contact {
-      .info {
-        padding: 127px 125px;
-      }
-    }
     .gallery {
       display: flex;
       &__items {
