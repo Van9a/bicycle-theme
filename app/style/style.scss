@@ -17,9 +17,20 @@ html, body {
 .menu {
   position: absolute;
   width: 100%;
-  padding-top: 35px;
+  padding: 35px 0;
   transition: all .4s ease;
-  .menu__container {
+  &__link {
+    display: block;
+    color: #4d4959;
+    text-decoration: none;
+    letter-spacing: 3px;
+    &:hover {
+      color: #64c29e;
+      cursor: pointer;
+      transition: color 300ms ease-out;
+    }
+  }
+  &__container {
     width: 100%;
     padding: 0;
     margin: 0;
@@ -32,17 +43,6 @@ html, body {
     font-size: 13px;
     .menu__item {
       margin: 0 40px;
-      a {
-        display: block;
-        color: #4d4959;
-        text-decoration: none;
-        letter-spacing: 3px;
-        &:hover {
-          color: #64c29e;
-          cursor: pointer;
-          transition: color 300ms ease-out;
-        }
-      }
     }
   }
 
@@ -54,7 +54,6 @@ html, body {
   width: 100%;
   background-color: white;
   z-index: 2;
- // transition: all .4s ease;
 }
 
 .main-screen {
@@ -69,14 +68,14 @@ main {
   .info {
     text-align: center;
     color: #353738;
-    font-family: $Lato;
+
     font-size: 18px;
-    h3 {
+    &__title {
       font-size: 18px;
       letter-spacing: 4px;
       text-transform: uppercase;
     }
-    p {
+    &__text {
       color: #848789;
       line-height: 34px;
       margin: 0;
@@ -86,20 +85,17 @@ main {
     padding: 132px 230px;
     .info {
       max-width: 1080px;
-      h3 {
-        font-size: 18px;
+      &__title {
         color: #353738;
-        font-family: $Lato;
         font-weight: bold;
         text-align: center;
         letter-spacing: 3.7px;
         margin: 23px 0;
       }
-      p {
+      &__text {
         font-size: 16px;
         line-height: 30px;
         color: #848789;
-        font-family: $Lato;
         text-align: center;
       }
     }
@@ -109,9 +105,10 @@ main {
     &__items {
       display: flex;
       .image-container {
+        min-height: 200px;
         width: 66.9%;
-        background-repeat: no-repeat !important;
-        background-size: cover !important;
+        background-repeat: no-repeat;
+        background-size: cover;
         display: flex;
         align-items: center;
         justify-content: space-around;
@@ -125,15 +122,11 @@ main {
           max-width: 400px;
           padding: 100px 59px 54px 70px;
           position: relative;
-          .info__title {
+          &__title {
             margin-top: 23px;
             margin-bottom: 10px;
           }
-          p {
-            font-size: 16px;
-            line-height: 31px;
-            color: #848789;
-            font-family: $Lato;
+          &__text {
             text-align: justify;
             position: relative;
             padding-bottom: 33px;
@@ -190,8 +183,6 @@ main {
       display: flex;
       flex-direction: column;
       align-items: center;
-
-      font-family: $Lato;
       &__title {
         max-width: 1040px;
         margin-top: 27px;
@@ -212,11 +203,9 @@ main {
       }
     }
     .slick-dots {
-
       bottom: 65px;
       left: 0;
       li {
-
         color: #a9afb3;
         border-radius: 50%;
         button {
@@ -245,8 +234,10 @@ main {
     width: 100%;
     height: 265px;
     display: flex;
-
-    a {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    &__link {
       position: relative;
       display: flex;
       flex-direction: column;
@@ -274,7 +265,6 @@ main {
         right: 0;
         bottom: 0;
         opacity: 0;
-        // transition: opacity 300ms ease;
         z-index: -1;
       }
 
@@ -282,13 +272,11 @@ main {
   }
 
   .discover {
-    align-items: center;
-    justify-content: center;
-    min-height: 200px;
+    padding: 70px 0;
     background: #282f35;
-    display: flex;
-    flex-direction: column;
     &__button {
+      display: block;
+      margin: 0 auto;
       font-size: 14px;
       letter-spacing: 3px;
       background: #282f35;
@@ -299,7 +287,7 @@ main {
       &:hover {
         cursor: pointer;
         background-color: rgb(100, 194, 158);
-        border: 2px solid rgb(100, 194, 158);
+        border: 1px solid rgb(100, 194, 158);
         transition: all 400ms ease-out;
       }
     }
@@ -317,7 +305,6 @@ main {
       margin-top: 31px;
       font-size: 24px;
       line-height: 34px;
-      font-family: $Lato;
       font-style: italic;
     }
     &__input-section {
@@ -340,7 +327,6 @@ main {
         font-size: 24px;
         line-height: 24px;
         color: #ffffff;
-        font-family: $Lato;
         font-weight: 300;
         &:hover {
           cursor: pointer;
@@ -362,31 +348,30 @@ main {
     font-size: 16px;
     line-height: 18px;
     color: #848789;
-    font-family: $Lato;
-    .company {
-      font-weight: bold;
-
+    .address {
+      &__company {
+        font-weight: bold;
+      }
     }
   }
   .address {
-    .city {
-      a {
-        text-decoration: none;
-        color: #848789;
-      }
+    &__link {
+      text-decoration: none;
+      color: #848789;
     }
   }
   .social-icons {
     display: flex;
+    &__link {
+      img:hover {
+        opacity: .5;
+        transition: all 400ms ease;
+      }
+    }
     &__container {
       height: max-content;
       margin-right: 15px;
-      a {
-        img:hover {
-          opacity: .5;
-          transition: all 400ms ease;
-        }
-      }
+
       &:last-child {
         margin: 0;
       }
@@ -401,11 +386,11 @@ main {
       margin-right: 10px;
       min-width: 110px;
     }
-    a {
+    &__link {
       text-decoration: none;
       img {
         width: 100%;
-        height: max-content;
+        height: auto;
       }
     }
 
@@ -413,9 +398,6 @@ main {
 }
 
 @media screen and (max-width: 1440px) {
-  .container {
-    padding: 117px 75px !important;
-  }
   main {
     .gallery {
       display: flex;
@@ -433,12 +415,34 @@ main {
     }
     .generation-info {
       &__items {
-        overflow: hidden;
         .image-container {
-          width: 50% !important;
+          width: 50%;
         }
         .item-content {
-          width: 50% !important;
+          width: 50%;
+
+        }
+        &:last-child {
+          display: flex;
+          flex-direction: column;
+
+          .image-container, .item-content {
+            width: 100%;
+          }
+          .item-content {
+            align-items: center;
+            .info {
+              padding: 100px 40px 54px 40px;
+              &:after {
+                content: '';
+                position: absolute;
+                left: 45%;
+                bottom: -39px;
+                border: 20px solid transparent;
+                border-top: 20px solid white;
+              }
+            }
+          }
 
         }
       }
@@ -470,14 +474,13 @@ main {
 
 @media screen and (max-width: 768px) {
   .menu {
-    padding-top: 0;
+    padding: 0;
   }
   .menu__container {
     display: flex;
     flex-direction: column;
     text-align: center;
     background-color: #fff;
-
     .menu__item {
       padding: 34px;
     }
@@ -580,7 +583,7 @@ main {
 
   .menu .menu__container.open {
     height: auto;
-    width: 100vw;
+    width: 100%;
     position: absolute;
     left: 0;
     top: 0;
@@ -612,9 +615,10 @@ main {
       padding: 125px 70px;
     }
   }
-  footer {
+  .footer {
     display: flex;
     flex-direction: column;
+    align-items: start;
     &__item {
       margin-bottom: 30px;
       &:last-child {
@@ -640,28 +644,32 @@ main {
       &__items {
         flex-direction: column;
         .image-container {
+          background-position: center;
+          background-size: cover;
+          background-repeat: no-repeat;
           padding: 40px 0;
         }
         .image-container, .item-content {
-          width: 100% !important;
+          width: 100%;
         }
         .item-content {
-          .info p {
-            padding: 0 0 45px 0 !important
+          .info {
+            &__text {
 
+              padding: 0 0 45px 0;
+            }
           }
         }
-
       }
-      &__items :last-child {
+      &__items:last-child {
         flex-direction: column;
         .image-container {
-          width: 100% !important;
+          width: 100%;
           padding: 0px;
           height: 200px;
         }
         .item-content {
-          width: 100% !important;
+          width: 100%;
         }
       }
     }
@@ -738,9 +746,7 @@ main {
       &__items {
         .item-content {
           .info {
-            padding-top: 50px;
-            padding-left: 25px;
-            padding-right: 25px;
+            padding: 50px 25px;
           }
         }
       }
@@ -790,11 +796,11 @@ main {
 }
 
 @media screen and (min-width: 320px) {
-
+  .hamburg-menu {
+    right: -20px;
+  }
   .gallery {
     text-align: center;
-    svg {
-      padding-left: 15px;
-    }
   }
+
 }
