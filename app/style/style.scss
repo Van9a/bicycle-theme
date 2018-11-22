@@ -85,6 +85,7 @@ main {
     padding: 132px 230px;
     .info {
       max-width: 1080px;
+      margin: 0 auto;
       &__title {
         color: #353738;
         font-weight: bold;
@@ -122,6 +123,7 @@ main {
           max-width: 400px;
           padding: 100px 59px 54px 70px;
           position: relative;
+          margin: 0 auto;
           &__title {
             margin-top: 23px;
             margin-bottom: 10px;
@@ -183,6 +185,7 @@ main {
       display: flex;
       flex-direction: column;
       align-items: center;
+      margin: 0 auto;
       &__title {
         max-width: 1040px;
         margin-top: 27px;

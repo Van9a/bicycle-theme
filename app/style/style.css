@@ -66,7 +66,8 @@ main {
   main .new-generation {
     padding: 132px 230px; }
     main .new-generation .info {
-      max-width: 1080px; }
+      max-width: 1080px;
+      margin: 0 auto; }
       main .new-generation .info__title {
         color: #353738;
         font-weight: bold;
@@ -95,7 +96,8 @@ main {
       main .generation-info__items .item-content .info {
         max-width: 400px;
         padding: 100px 59px 54px 70px;
-        position: relative; }
+        position: relative;
+        margin: 0 auto; }
         main .generation-info__items .item-content .info__title {
           margin-top: 23px;
           margin-bottom: 10px; }
@@ -141,7 +143,8 @@ main {
     main .contact .info {
       display: flex;
       flex-direction: column;
-      align-items: center; }
+      align-items: center;
+      margin: 0 auto; }
       main .contact .info__title {
         max-width: 1040px;
         margin-top: 27px;
