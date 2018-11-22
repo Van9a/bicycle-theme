@@ -1,11 +1,11 @@
 //hamburger menu
 $(document).ready(function () {
-    $('.main-screen__hamg-menu').click(function () {
-        $('.main-screen__hamg-menu').toggleClass('active');
+    $('.hamburg-menu').click(function () {
+        $('.hamburg-menu').toggleClass('active');
     })
 });
 $(document).ready(function () {
-    $('.main-screen__hamg-menu').click(function () {
+    $('.hamburg-menu').click(function () {
         $('.menu #main-screen__menu').toggleClass('open');
     })
 });
