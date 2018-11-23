@@ -6,7 +6,7 @@ $(document).ready(function () {
 });
 $(document).ready(function () {
     $('.hamburg-menu').click(function () {
-        $('.menu #main-screen__menu').toggleClass('open');
+        $('#menu').toggleClass('open');
     })
 });
 window.onscroll = function () {
@@ -38,4 +38,3 @@ $(document).ready(function () {
         arrows: false,
     });
 });
-console.clear();
