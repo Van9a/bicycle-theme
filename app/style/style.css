@@ -64,18 +64,19 @@ body {
     margin: 0; }
 
 .new-generation {
-  padding: 132px 230px; }
+  padding: 117px 230px; }
   .new-generation .info {
     max-width: 1080px;
     margin: 0 auto;
     text-align: center; }
     .new-generation .info__title {
       font-weight: bold;
-      letter-spacing: 3.7px;
+      letter-spacing: 1.7px;
       margin: 23px 0; }
     .new-generation .info__text {
-      font-size: 16px;
-      line-height: 30px; }
+      font-size: 17px;
+      line-height: 33px;
+      margin-bottom: 20px; }
 
 .generation-info__items {
   display: flex; }
@@ -92,16 +93,21 @@ body {
     flex-direction: column;
     width: 33.1%; }
     .generation-info__items__item-content .info {
-      max-width: 400px;
-      padding: 100px 59px 54px 70px;
-      position: relative; }
+      padding: 66px 64px 60px 72px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
       .generation-info__items__item-content .info__title {
         margin-top: 23px;
-        margin-bottom: 10px; }
+        margin-bottom: 15px;
+        max-width: 400px; }
       .generation-info__items__item-content .info__text {
         text-align: justify;
         position: relative;
-        padding-bottom: 33px; }
+        max-width: 400px;
+        font-size: 16px;
+        line-height: 30px; }
         .generation-info__items__item-content .info__text:after {
           content: '';
           width: 50px;
@@ -128,6 +134,12 @@ body {
   .generation-info__items:last-child__item-content {
     width: 33.5%; }
 
+.generation-info__items:nth-child(2)__item-content .info__title {
+  margin-top: 21px;
+  margin-bottom: 15px;
+  max-width: 400px;
+  font-size: 18px; }
+
 .contact {
   padding: 100px 125px;
   width: 100%;
@@ -135,9 +147,12 @@ body {
   flex-direction: column; }
   .contact img {
     width: 32px;
-    height: 27px; }
+    height: 27px;
+    margin-top: 24px; }
   .contact .slick-list {
-    margin-bottom: 100px; }
+    margin-bottom: 85px; }
+  .contact .slick-dots li button:before {
+    font-size: 13px; }
   .contact .carousel-indicators li {
     background-color: white;
     width: 10px;
@@ -153,9 +168,11 @@ body {
     margin: 0 auto; }
     .contact .info__title {
       max-width: 1040px;
-      margin-top: 27px;
+      margin-top: 33px;
       margin-bottom: 11px;
-      text-transform: none; }
+      text-transform: none;
+      font-size: 18px;
+      letter-spacing: 2px; }
       .contact .info__title__time {
         display: inline;
         color: #848789; }
@@ -248,9 +265,6 @@ body {
   flex-direction: column;
   align-items: center;
   padding: 110px; }
-  .contact-with-us img {
-    width: 94px;
-    height: 85px; }
   .contact-with-us__title {
     margin-top: 31px;
     font-size: 24px;
@@ -273,8 +287,7 @@ body {
       border: none;
       font-size: 24px;
       line-height: 24px;
-      color: #ffffff;
-      font-weight: 300; }
+      color: #fff; }
       .contact-with-us__input-section button:hover {
         cursor: pointer;
         background-color: #ff5654;
@@ -284,7 +297,7 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 90px 108px; }
+  padding: 84px 88px; }
   .footer__item {
     font-size: 16px;
     line-height: 18px;
@@ -292,6 +305,7 @@ body {
     .footer__item .address__company {
       font-weight: bold; }
   .footer .address__link {
+    display: block;
     text-decoration: none;
     color: #848789; }
   .footer .social-icons {
@@ -307,7 +321,10 @@ body {
   .footer .author {
     padding-left: 10px;
     display: flex;
-    align-items: center; }
+    align-items: center;
+    font-style: italic;
+    font-size: 14px;
+    line-height: 18px; }
     .footer .author__by {
       color: #848789;
       margin-right: 10px;
@@ -359,10 +376,6 @@ body {
   .footer__item:last-child {
     margin: 0; }
 
-.footer .author img {
-  width: auto;
-  height: auto; }
-
 @media screen and (max-width: 768px) {
   .menu {
     padding: 0;
@@ -375,7 +388,7 @@ body {
   .hamburg-menu {
     position: fixed;
     top: 50px;
-    right: -27px;
+    right: -15px;
     transform: translate(-50%, -50%);
     width: 50px;
     height: 50px;
@@ -448,11 +461,10 @@ body {
     z-index: 1;
     transition: all .4s ease; }
   .menu.open .menu__item {
-    padding: 20px 40px;
+    padding: 20px 0px;
     display: flex;
     flex-direction: column;
     align-items: center; }
-  /**************************************/
   .contact-with-us__input-section {
     display: flex;
     flex-direction: column;
@@ -531,6 +543,8 @@ body {
     padding: 50px; } }
 
 @media screen and (max-width: 380px) {
+  .hamburg-menu {
+    right: -27px; }
   .new-generation {
     padding: 117px 20px; }
     .new-generation .info p {
