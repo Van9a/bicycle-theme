@@ -17,7 +17,6 @@ body {
   width: 100%;
   padding: 35px 0;
   transition: all .4s ease;
-  margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -25,14 +24,13 @@ body {
   text-transform: uppercase;
   font-weight: bold;
   font-size: 13px; }
-  .menu__item {
-    margin: 0 40px; }
   .menu__link {
     display: block;
     color: #4d4959;
     text-decoration: none;
-    letter-spacing: 3px; }
-    .menu__link img {
+    letter-spacing: 3px;
+    margin: 0 40px; }
+    .menu__link__logo {
       width: 94px;
       height: 85px; }
     .menu__link:hover {
@@ -67,15 +65,15 @@ body {
   padding: 117px 230px; }
   .new-generation .info {
     max-width: 1080px;
-    margin: 0 auto;
-    text-align: center; }
+    margin: 0 auto; }
+    .new-generation .info__logo {
+      width: 52px;
+      height: 42px; }
     .new-generation .info__title {
-      font-weight: bold;
       letter-spacing: 1.7px;
       margin: 23px 0; }
     .new-generation .info__text {
       font-size: 17px;
-      line-height: 33px;
       margin-bottom: 20px; }
 
 .generation-info__items {
@@ -124,21 +122,55 @@ body {
         border: 20px solid transparent;
         border-top: 20px solid white; }
   .generation-info__items:last-child .image-container {
-    width: 33.5%;
-    min-height: 200px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: space-around; }
+    width: 33.5%; }
   .generation-info__items:last-child__item-content {
     width: 33.5%; }
+  .generation-info__items:last-child .info__logo {
+    width: 23px;
+    height: 41px; }
+  .generation-info__items:last-child .generation-info__items__item-content .image-container {
+    background: url("../images/Layer16.png") no-repeat center/cover;
+    width: 100%; }
+  .generation-info__items:last-child .image-container:first-child {
+    background-image: url("../images/Layer15.png"); }
+    .generation-info__items:last-child .image-container:first-child__logo {
+      width: 208px;
+      height: 67px; }
+  .generation-info__items:last-child .image-container:last-child {
+    background-image: url("../images/Layer14.png"); }
 
-.generation-info__items:nth-child(2)__item-content .info__title {
-  margin-top: 21px;
-  margin-bottom: 15px;
-  max-width: 400px;
-  font-size: 18px; }
+.generation-info__items:first-child .generation-info__items__item-content .image-container {
+  background-image: url("../images/Layer11.png");
+  width: 100%; }
+
+.generation-info__items:first-child .generation-info__items__item-content .info__logo {
+  width: 41px;
+  height: 30px; }
+
+.generation-info__items:first-child .image-container {
+  background-image: url("../images/bicycle-company.png"); }
+  .generation-info__items:first-child .image-container__logo {
+    width: 113px;
+    height: 118px; }
+
+.generation-info__items:nth-child(2) {
+  /* &__item-content .info__title {
+       margin-top: 21px;
+       margin-bottom: 15px;
+       max-width: 400px;
+       font-size: 18px;
+     }*/ }
+  .generation-info__items:nth-child(2) .generation-info__items__item-content .info__logo {
+    width: 32px;
+    height: 32px; }
+  .generation-info__items:nth-child(2) .generation-info__items__item-content .image-container {
+    background-image: url("../images/Layer13.png");
+    width: 100%; }
+  .generation-info__items:nth-child(2) .image-container {
+    background-image: url("../images/Layer12.png"); }
+    .generation-info__items:nth-child(2) .image-container__logo {
+      width: 177px;
+      height: 152px; }
 
 .contact {
   padding: 100px 125px;
@@ -202,10 +234,11 @@ body {
       display: flex; }
     .gallery__items .item--hover {
       height: 267px; }
+  .gallery .gallery__items .item:first-child .gallery__items .item--hover {
+    background-image: url("../images/Layer19.png"); }
 
 .item--hover {
   width: 100%;
-  height: 265px;
   display: flex;
   background-repeat: no-repeat;
   background-size: cover;
@@ -265,6 +298,9 @@ body {
   flex-direction: column;
   align-items: center;
   padding: 110px; }
+  .contact-with-us__logo {
+    width: 94px;
+    height: 85px; }
   .contact-with-us__title {
     margin-top: 31px;
     font-size: 24px;
@@ -335,11 +371,10 @@ body {
         width: 55px;
         height: 36px; }
 
-@media screen and (max-width: 1440px) {
-  .gallery {
-    display: flex; }
-    .gallery__items {
-      max-width: 33.333333%; } }
+.footer__item {
+  margin-bottom: 10px; }
+  .footer__item:last-child {
+    margin: 0; }
 
 @media screen and (max-width: 1024px) {
   .new-generation {
@@ -352,7 +387,6 @@ body {
     display: flex;
     flex-direction: column; }
     .generation-info__items:last-child .image-container, .generation-info__items:last-child .generation-info__items__item-content {
-      align-items: center;
       width: 100%; }
     .generation-info__items:last-child__item-content {
       align-items: center; }
@@ -371,11 +405,6 @@ body {
     max-width: 100%;
     width: 100%; } }
 
-.footer__item {
-  margin-bottom: 10px; }
-  .footer__item:last-child {
-    margin: 0; }
-
 @media screen and (max-width: 768px) {
   .menu {
     padding: 0;
@@ -391,14 +420,14 @@ body {
     right: -15px;
     transform: translate(-50%, -50%);
     width: 50px;
-    height: 50px;
+    height: 23px;
     cursor: pointer;
     z-index: 3; }
   .burger-nav {
     width: 50px;
-    height: 6px;
+    height: 0;
     position: absolute;
-    top: 50%;
+    top: 0;
     left: 50%;
     transform: translate(-50%, -50%);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
@@ -410,11 +439,13 @@ body {
     width: 50px;
     height: 6px;
     position: absolute;
+    top: 16px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     transition: .5s;
+    border: none;
     background: #64c29e; }
   .burger-nav:before {
-    top: -16px;
+    top: 0px;
     background: #64c29e; }
   .hamburg-menu.active .burger-nav {
     background: rgba(0, 0, 0, 0);
@@ -430,10 +461,10 @@ body {
     height: 0;
     overflow: hidden;
     background: #fff; }
-  .menu .menu__item {
+  .menu {
     text-align: left;
     margin: 0; }
-  .menu .menu__item a {
+  .menu a {
     color: #64c29e; }
   .menu a:hover {
     text-transform: uppercase;
@@ -460,7 +491,7 @@ body {
     flex-direction: column;
     z-index: 1;
     transition: all .4s ease; }
-  .menu.open .menu__item {
+  .menu.open .menu__link {
     padding: 20px 0px;
     display: flex;
     flex-direction: column;
