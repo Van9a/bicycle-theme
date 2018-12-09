@@ -39,7 +39,6 @@ body {
     margin: 0 40px;
     &__logo {
       width: 94px;
-      height: 85px;
     }
     &:hover {
       color: #64c29e;
@@ -85,7 +84,6 @@ body {
     margin: 0 auto;
     &__logo {
       width: 52px;
-      height: 42px;
     }
     &__title {
       letter-spacing: 1.7px;
@@ -93,7 +91,6 @@ body {
     }
     &__text {
       font-size: 17px;
-      margin-bottom: 20px;
     }
   }
 
@@ -138,7 +135,6 @@ body {
             width: 50px;
             height: 3px;
             background: #d7d7d7;
-            border-width: 0 10px;
             display: block;
             margin: 40px auto 0;
           }
@@ -146,7 +142,7 @@ body {
         &:after {
           content: '';
           position: absolute;
-          left: 46%;
+          left: auto;
           bottom: -39px;
           border: 20px solid transparent;
           border-top: 20px solid white;
@@ -164,7 +160,6 @@ body {
       .info {
         &__logo {
           width: 23px;
-          height: 41px;
         }
       }
       .generation-info__items__item-content {
@@ -176,9 +171,8 @@ body {
 
       .image-container:first-child {
         background-image: url("../images/Layer15.png");
-        &__logo {
+        .image-container__logo {
           width: 208px;
-          height: 67px;
         }
       }
       .image-container:last-child {
@@ -194,9 +188,7 @@ body {
       }
       .info {
         &__logo {
-
           width: 41px;
-          height: 30px;
         }
       }
     }
@@ -204,7 +196,6 @@ body {
       background-image: url('../images/bicycle-company.png');
       &__logo {
         width: 113px;
-        height: 118px;
       }
     }
   }
@@ -219,7 +210,6 @@ body {
       .info {
         &__logo {
           width: 32px;
-          height: 32px;
         }
       }
       .image-container {
@@ -231,21 +221,20 @@ body {
       background-image: url('../images/Layer12.png');
       &__logo {
         width: 177px;
-        height: 152px;
       }
     }
   }
 }
 
 .contact {
-  padding: 100px 125px;
+  padding: 100px 137px;
   width: 100%;
   display: flex;
   flex-direction: column;
-  img {
-    width: 32px;
-    height: 27px;
-    margin-top: 24px;
+  .info {
+    &__logo {
+      width: 32px;
+    }
   }
   .slick-list {
     margin-bottom: 85px;
@@ -315,12 +304,49 @@ body {
     .item--hover {
       height: 267px;
     }
-//
   }
-  .gallery__items .item:first-child {
-    .gallery__items .item--hover {
-      background-image: url('../images/Layer19.png');
+  .gallery__items:first-child {
+    .item:first-child {
+      .item--hover:first-child {
+        background-image: url('../images/Layer19.png');
+      }
+      .item--hover:nth-child(2) {
+        background-image: url('../images/Layer21.png');
+      }
     }
+    .item:nth-child(2) {
+      .item--hover {
+        background-image: url('../images/Layer20.png');
+      }
+    }
+  }
+  .gallery__items:nth-child(2) {
+    .item:first-child {
+      .item--hover:first-child {
+        background-image: url('../images/Layer22.png');
+        height: 534px;
+      }
+      .item--hover:nth-child(2) {
+        background-image: url('../images/Layer25.png');
+        height: 534px;
+      }
+    }
+  }
+  .gallery__items:last-child {
+    .item:first-child {
+      .item--hover {
+        background-image: url('../images/Layer20.png');
+      }
+    }
+    .item:last-child {
+      .item--hover:first-child {
+        background-image: url('../images/Layer19.png');
+      }
+      .item--hover:nth-child(2) {
+        background-image: url('../images/Layer21.png');
+      }
+    }
+
   }
 }
 
@@ -396,7 +422,6 @@ body {
   padding: 110px;
   &__logo {
     width: 94px;
-    height: 85px;
   }
   &__title {
     margin-top: 31px;
@@ -404,10 +429,10 @@ body {
     line-height: 34px;
     font-style: italic;
   }
-  &__input-section {
+  &__container {
     margin-top: 30px;
     display: flex;
-    input {
+    &__input {
       padding: 25px;
       width: 355px;
       font-size: 15px;
@@ -417,7 +442,7 @@ body {
         border: 2px solid #64c29e;
       }
     }
-    button {
+    &__btn {
       padding: 25px 45px;
       background: #64c29e;
       border: none;
@@ -459,20 +484,15 @@ body {
   .social-icons {
     display: flex;
     &__link {
-      img:hover {
+      margin-right: 15px;
+      &__image:hover {
         opacity: .5;
         transition: all 400ms ease;
       }
-    }
-    &__container {
-      height: max-content;
-      margin-right: 15px;
-
       &:last-child {
         margin: 0;
       }
     }
-
   }
   .author {
     padding-left: 10px;
@@ -488,9 +508,8 @@ body {
     }
     &__link {
       text-decoration: none;
-      img {
+      &__image {
         width: 55px;
-        height: 36px;
       }
     }
 
@@ -519,7 +538,6 @@ body {
       }
       &__item-content {
         width: 50%;
-
       }
       &:last-child {
         display: flex;
@@ -667,18 +685,18 @@ body {
     transition: all .4s ease;
   }
   .menu.open .menu__link {
-    padding: 20px 0px;
+    margin: 20px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 
   .contact-with-us {
-    &__input-section {
+    &__container {
       display: flex;
       flex-direction: column;
       align-items: center;
-      button {
+      &__btn {
         margin-top: 20px;
         width: 100%;
       }
@@ -763,10 +781,12 @@ body {
     padding: 100px;
     &__item {
       margin-bottom: 40px;
-      &:last-child {
+      .author {
         margin-bottom: 0;
-        img {
-          width: auto;
+        &__link {
+          &__image {
+            width: auto;
+          }
         }
       }
     }
@@ -788,8 +808,8 @@ body {
     }
   }
   .contact-with-us {
-    &__input-section {
-      input {
+    &__container {
+      &__input {
         width: 260px;
       }
     }
@@ -807,7 +827,7 @@ body {
   .new-generation {
     padding: 117px 20px;
     .info {
-      p {
+      &__text {
         text-align: justify;
       }
     }
@@ -842,8 +862,8 @@ body {
 
 @media screen and (max-width: 340px) {
   .contact-with-us {
-    &__input-section {
-      input {
+    &__container {
+      &__input {
         width: 200px;
       }
     }
