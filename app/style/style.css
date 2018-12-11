@@ -21,7 +21,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: "Lato", sans-serif;
   text-transform: uppercase;
   font-weight: bold;
   font-size: 13px; }
@@ -55,7 +54,8 @@ body {
   .info__title {
     letter-spacing: 4px;
     text-transform: uppercase;
-    color: #353738; }
+    color: #353738;
+    font-size: 20px; }
   .info__text {
     color: #848789;
     line-height: 34px;
@@ -319,7 +319,7 @@ body {
       .contact-with-us__container__btn:hover {
         cursor: pointer;
         background-color: #ff5654;
-        transition: all 400ms ease-out; }
+        transition: background 400ms ease-out; }
 
 .footer {
   display: flex;
@@ -342,7 +342,7 @@ body {
       margin-right: 15px; }
       .footer .social-icons__link__image:hover {
         opacity: .5;
-        transition: all 400ms ease; }
+        transition: opacity 400ms ease; }
       .footer .social-icons__link:last-child {
         margin: 0; }
   .footer .author {
@@ -411,7 +411,7 @@ body {
     width: 50px;
     cursor: pointer;
     z-index: 3; }
-    .hamburg-menu__hamburg-menu__burger-nav {
+    .hamburg-menu__burger-nav {
       width: 50px;
       height: 0;
       position: absolute;
@@ -433,12 +433,12 @@ body {
     border: none;
     background-color: #64c29e; }
   .hamburg-menu__burger-nav:before {
-    top: 0px;
+    top: 0;
     background-color: #64c29e; }
   .hamburg-menu.active .hamburg-menu__burger-nav {
     background-color: rgba(0, 0, 0, 0);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0);
-    transition: all 1s ease; }
+    transition: 1s ease; }
   .hamburg-menu.active .hamburg-menu__burger-nav:before {
     top: 0;
     transform: rotate(45deg); }
@@ -450,18 +450,17 @@ body {
     overflow: hidden;
     background-color: #fff; }
   .menu {
-    text-align: left;
     margin: 0; }
-  .menu a {
+  .menu .menu__link {
     color: #64c29e; }
-  .menu a:hover {
+  .menu .menu__link:hover {
     text-transform: uppercase;
     text-decoration: none;
     color: #64c29e;
     transform: scaleX(1); }
-  .menu a:hover:after {
+  .menu .menu__link:hover:after {
     width: 100%; }
-  .menu a:after {
+  .menu .menu__link:after {
     display: block;
     content: "";
     height: 2px;

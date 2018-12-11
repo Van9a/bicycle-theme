@@ -27,7 +27,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: $Lato;
   text-transform: uppercase;
   font-weight: bold;
   font-size: 13px;
@@ -70,6 +69,7 @@ body {
     letter-spacing: 4px;
     text-transform: uppercase;
     color: #353738;
+    font-size: 20px;
   }
   &__text {
     color: #848789;
@@ -442,7 +442,7 @@ body {
       &:hover {
         cursor: pointer;
         background-color: #ff5654;
-        transition: all 400ms ease-out;
+        transition: background 400ms ease-out;
       }
     }
   }
@@ -476,7 +476,7 @@ body {
       margin-right: 15px;
       &__image:hover {
         opacity: .5;
-        transition: all 400ms ease;
+        transition: opacity 400ms ease;
       }
       &:last-child {
         margin: 0;
@@ -581,7 +581,7 @@ body {
     // height: 23px;
     cursor: pointer;
     z-index: 3;
-    &__hamburg-menu__burger-nav {
+    &__burger-nav {
       width: 50px;
       height: 0;
       position: absolute;
@@ -608,14 +608,14 @@ body {
   }
 
   .hamburg-menu__burger-nav:before {
-    top: 0px;
+    top: 0;
     background-color: #64c29e;
   }
 
   .hamburg-menu.active .hamburg-menu__burger-nav {
     background-color: rgba(0, 0, 0, 0);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0);
-    transition: all 1s ease;
+    transition: 1s ease;
 
   }
 
@@ -636,23 +636,22 @@ body {
   }
 
   .menu {
-    text-align: left;
     margin: 0;
   }
 
-  .menu a {
+  .menu .menu__link {
     color: #64c29e;
   }
-  .menu a:hover {
+  .menu .menu__link:hover {
     text-transform: uppercase;
     text-decoration: none;
     color: #64c29e;
     transform: scaleX(1);
   }
-  .menu a:hover:after {
+  .menu .menu__link:hover:after {
     width: 100%;
   }
-  .menu a:after {
+  .menu .menu__link:after {
     display: block;
     content: "";
     height: 2px;
