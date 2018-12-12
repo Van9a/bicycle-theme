@@ -31,7 +31,8 @@ body {
     color: #4d4959;
     text-decoration: none;
     letter-spacing: 3px;
-    margin: 0 40px; }
+    margin: 0 40px;
+    min-width: max-content; }
     .menu__link:hover {
       color: #64c29e;
       cursor: pointer;
@@ -79,38 +80,34 @@ body {
   .generation-info__items .image-container {
     min-height: 200px;
     width: 66.9%;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background: center no-repeat / cover;
     display: flex;
     align-items: center;
-    justify-content: space-around; }
-  .generation-info__items__item-content {
+    justify-content: center; }
+  .generation-info__items .generation-info__item {
     display: flex;
     flex-direction: column;
     width: 33.1%; }
-    .generation-info__items__item-content .info {
+    .generation-info__items .generation-info__item .info {
       padding: 64px 65px 60px 61px;
       position: relative;
       display: flex;
       flex-direction: column;
       align-items: center; }
-      .generation-info__items__item-content .info__title {
-        max-width: 400px;
+      .generation-info__items .generation-info__item .info__title {
         margin: 23px 0 11px 0; }
-      .generation-info__items__item-content .info__text {
+      .generation-info__items .generation-info__item .info__text {
         text-align: justify;
-        position: relative;
-        max-width: 400px;
         font-size: 16px;
         line-height: 30px; }
-        .generation-info__items__item-content .info__text:after {
+        .generation-info__items .generation-info__item .info__text:after {
           content: '';
           width: 50px;
           height: 3px;
           background-color: #d7d7d7;
           display: block;
           margin: 40px auto 0; }
-      .generation-info__items__item-content .info:after {
+      .generation-info__items .generation-info__item .info:after {
         content: '';
         position: absolute;
         left: auto;
@@ -119,41 +116,41 @@ body {
         border-top: 20px solid white; }
   .generation-info__items:last-child .image-container {
     width: 33.5%; }
-  .generation-info__items:last-child__item-content {
+  .generation-info__items:last-child .generation-info__item {
     width: 33.5%; }
   .generation-info__items:last-child .info__logo {
     width: 23px; }
   .generation-info__items:last-child .image-container:last-child {
     background-image: url("../images/Layer14.png"); }
-  .generation-info__items:last-child .generation-info__items__item-content .image-container {
-    background: url("../images/Layer16.png") no-repeat center/cover;
+  .generation-info__items:last-child .generation-info__item .image-container {
+    background-image: url("../images/Layer16.png");
     width: 100%; }
   .generation-info__items:last-child .image-container:first-child {
     background-image: url("../images/Layer15.png"); }
     .generation-info__items:last-child .image-container:first-child .image-container__logo {
       width: 208px; }
 
-.generation-info__items:first-child .generation-info__items__item-content .image-container {
-  background-image: url("../images/Layer11.png");
-  width: 100%; }
-
-.generation-info__items:first-child .generation-info__items__item-content .info__logo {
-  width: 41px; }
-
 .generation-info__items:first-child .image-container {
   background-image: url("../images/BicycleCompany.png"); }
   .generation-info__items:first-child .image-container__logo {
     width: 113px; }
+
+.generation-info__items:first-child .generation-info__item .image-container {
+  background-image: url("../images/Layer11.png");
+  width: 100%; }
+
+.generation-info__items:first-child .generation-info__item .info__logo {
+  width: 41px; }
 
 .generation-info__items:nth-child(2) .image-container {
   background-image: url("../images/Layer12.png"); }
   .generation-info__items:nth-child(2) .image-container__logo {
     width: 177px; }
 
-.generation-info__items:nth-child(2) .generation-info__items__item-content .info__logo {
+.generation-info__items:nth-child(2) .generation-info__item .info__logo {
   width: 32px; }
 
-.generation-info__items:nth-child(2) .generation-info__items__item-content .image-container {
+.generation-info__items:nth-child(2) .generation-info__item .image-container {
   background-image: url("../images/Layer13.png");
   width: 100%; }
 
@@ -326,11 +323,11 @@ body {
   justify-content: space-around;
   align-items: center;
   padding: 84px 88px; }
-  .footer__item {
+  .footer .generation-info__item {
     font-size: 16px;
     line-height: 18px;
     color: #848789; }
-    .footer__item .address__company {
+    .footer .generation-info__item .address__company {
       font-weight: bold; }
   .footer .address__link {
     display: block;
@@ -360,9 +357,9 @@ body {
       .footer .author__link__image {
         width: 55px; }
 
-.footer__item {
+.footer .generation-info__item {
   margin-bottom: 10px; }
-  .footer__item:last-child {
+  .footer .generation-info__item:last-child {
     margin: 0; }
 
 @media screen and (max-width: 1024px) {
@@ -370,18 +367,18 @@ body {
     padding: 132px 100px; }
   .generation-info__items .image-container {
     width: 50%; }
-  .generation-info__items__item-content {
+  .generation-info__items .generation-info__item {
     width: 50%; }
   .generation-info__items:last-child {
     display: flex;
     flex-direction: column; }
-    .generation-info__items:last-child .image-container, .generation-info__items:last-child .generation-info__items__item-content {
+    .generation-info__items:last-child .image-container, .generation-info__items:last-child .generation-info__items__item {
       width: 100%; }
-    .generation-info__items:last-child__item-content {
+    .generation-info__items:last-child .generation-info__item {
       align-items: center; }
-      .generation-info__items:last-child__item-content .info {
+      .generation-info__items:last-child .generation-info__item .info {
         padding: 100px 40px 54px 40px; }
-        .generation-info__items:last-child__item-content .info:after {
+        .generation-info__items:last-child .generation-info__item .info:after {
           content: '';
           position: absolute;
           left: 47%;
@@ -496,9 +493,9 @@ body {
     display: flex;
     flex-direction: column;
     align-items: start; }
-    .footer__item {
+    .footer .generation-info__item {
       margin-bottom: 30px; }
-      .footer__item:last-child {
+      .footer .generation-info__item:last-child {
         margin-bottom: 0;
         display: flex;
         justify-content: space-around; }
@@ -517,9 +514,9 @@ body {
           background-repeat: no-repeat;*/
       background: no-repeat center / cover;
       padding: 40px 0; }
-    .generation-info__items .image-container, .generation-info__items__item-content {
+    .generation-info__items .image-container, .generation-info__items__item {
       width: 100%; }
-    .generation-info__items .item-content .info__text {
+    .generation-info__items .generation-info__item .info__text {
       padding: 0 0 45px 0; }
   .generation-info__items:last-child {
     flex-direction: column; }
@@ -527,7 +524,7 @@ body {
       width: 100%;
       padding: 0;
       height: 200px; }
-    .generation-info__items:last-child__item-content {
+    .generation-info__items:last-child .generation-info__item {
       width: 100%; }
   .gallery {
     flex-direction: column; }
@@ -542,11 +539,11 @@ body {
     display: flex;
     flex-direction: column;
     padding: 100px; }
-    .footer__item {
+    .footer .generation-info__item {
       margin-bottom: 40px; }
-      .footer__item .author {
+      .footer .generation-info__item .author {
         margin-bottom: 0; }
-        .footer__item .author__link__image {
+        .footer .generation-info__item .author__link__image {
           width: auto; } }
 
 @media screen and (max-width: 430px) {
@@ -568,7 +565,7 @@ body {
     padding: 117px 20px; }
     .new-generation .info__text {
       text-align: justify; }
-  .generation-info__items__item-content .info {
+  .generation-info__items .generation-info__item .info {
     padding: 50px 25px; }
   .gallery__items .item {
     flex-direction: column; }

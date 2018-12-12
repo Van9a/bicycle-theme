@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Lato&subset=latin-ext');
 
 $Lato: 'Lato', sans-serif;
+$MainText: #848789;
 html, body {
   margin: 0;
   padding: 0;
@@ -39,6 +40,7 @@ body {
     text-decoration: none;
     letter-spacing: 3px;
     margin: 0 40px;
+    min-width: max-content;
 
     &:hover {
       color: #64c29e;
@@ -72,7 +74,7 @@ body {
     font-size: 20px;
   }
   &__text {
-    color: #848789;
+    color: $MainText;
     line-height: 34px;
     margin: 0;
   }
@@ -94,7 +96,6 @@ body {
       font-size: 17px;
     }
   }
-
 }
 
 .generation-info {
@@ -103,14 +104,13 @@ body {
     .image-container {
       min-height: 200px;
       width: 66.9%;
-      background-repeat: no-repeat;
-      background-size: cover;
+      background: center no-repeat / cover;
       display: flex;
       align-items: center;
-      justify-content: space-around;
+      justify-content: center;
 
     }
-    &__item-content {
+    .generation-info__item {
       display: flex;
       flex-direction: column;
       width: 33.1%;
@@ -121,13 +121,10 @@ body {
         flex-direction: column;
         align-items: center;
         &__title {
-          max-width: 400px;
           margin: 23px 0 11px 0;
         }
         &__text {
           text-align: justify;
-          position: relative;
-          max-width: 400px;
           font-size: 16px;
           line-height: 30px;
           &:after {
@@ -154,7 +151,7 @@ body {
       .image-container {
         width: 33.5%;
       }
-      &__item-content {
+      .generation-info__item {
         width: 33.5%;
       }
       .info {
@@ -165,9 +162,9 @@ body {
       .image-container:last-child {
         background-image: url('../images/Layer14.png');
       }
-      .generation-info__items__item-content {
+      .generation-info__item {
         .image-container {
-          background: url('../images/Layer16.png') no-repeat center / cover;
+          background-image: url('../images/Layer16.png');
           width: 100%
         }
       }
@@ -182,7 +179,13 @@ body {
     }
   }
   &__items:first-child {
-    .generation-info__items__item-content {
+    .image-container {
+      background-image: url('../images/BicycleCompany.png');
+      &__logo {
+        width: 113px;
+      }
+    }
+    .generation-info__item {
       .image-container {
         background-image: url('../images/Layer11.png');
         width: 100%;
@@ -193,12 +196,7 @@ body {
         }
       }
     }
-    .image-container {
-      background-image: url('../images/BicycleCompany.png');
-      &__logo {
-        width: 113px;
-      }
-    }
+
   }
   &__items:nth-child(2) {
     .image-container {
@@ -207,7 +205,7 @@ body {
         width: 177px;
       }
     }
-    .generation-info__items__item-content {
+    .generation-info__item {
       .info {
         &__logo {
           width: 32px;
@@ -261,7 +259,7 @@ body {
       letter-spacing: 2px;
       &__time {
         display: inline;
-        color: #848789;
+        color: $MainText;
       }
     }
     &__text {
@@ -404,7 +402,7 @@ body {
 
 .contact-with-us {
   font-size: 24px;
-  color: #848789;
+  color: $MainText;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -453,10 +451,10 @@ body {
   justify-content: space-around;
   align-items: center;
   padding: 84px 88px;
-  &__item {
+  .generation-info__item {
     font-size: 16px;
     line-height: 18px;
-    color: #848789;
+    color: $MainText;
     .address {
       &__company {
         font-weight: bold;
@@ -467,7 +465,7 @@ body {
     &__link {
       display: block;
       text-decoration: none;
-      color: #848789;
+      color: $MainText;
     }
   }
   .social-icons {
@@ -490,7 +488,7 @@ body {
     font-size: 14px;
     line-height: 18px;
     &__by {
-      color: #848789;
+      color: $MainText;
       margin-right: 10px;
       min-width: 110px;
     }
@@ -505,7 +503,7 @@ body {
 }
 
 .footer {
-  &__item {
+  .generation-info__item {
     margin-bottom: 10px;
     &:last-child {
       margin: 0;
@@ -524,16 +522,16 @@ body {
       .image-container {
         width: 50%;
       }
-      &__item-content {
+      .generation-info__item {
         width: 50%;
       }
       &:last-child {
         display: flex;
         flex-direction: column;
-        .image-container, .generation-info__items__item-content {
+        .image-container, .generation-info__items__item {
           width: 100%;
         }
-        &__item-content {
+        .generation-info__item {
           align-items: center;
           .info {
             padding: 100px 40px 54px 40px;
@@ -698,7 +696,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: start;
-    &__item {
+    .generation-info__item {
       margin-bottom: 30px;
       &:last-child {
         margin-bottom: 0;
@@ -727,10 +725,10 @@ body {
         background: no-repeat center / cover;
         padding: 40px 0;
       }
-      .image-container, &__item-content {
+      .image-container, &__item {
         width: 100%;
       }
-      .item-content {
+      .generation-info__item {
         .info {
           &__text {
             padding: 0 0 45px 0;
@@ -745,7 +743,7 @@ body {
         padding: 0;
         height: 200px;
       }
-      &__item-content {
+      .generation-info__item {
         width: 100%;
       }
     }
@@ -768,7 +766,7 @@ body {
     display: flex;
     flex-direction: column;
     padding: 100px;
-    &__item {
+    .generation-info__item {
       margin-bottom: 40px;
       .author {
         margin-bottom: 0;
@@ -823,7 +821,7 @@ body {
   }
   .generation-info {
     &__items {
-      &__item-content {
+      .generation-info__item {
         .info {
           padding: 50px 25px;
         }
