@@ -202,53 +202,60 @@ body {
   .gallery__items {
     padding: 0;
     width: inherit;
-    max-width: 33.5333%; }
+    max-width: 33.5333%;
+    /*  .item--hover {
+        height: 267px;
+        width: 100%;
+        display: flex;
+        background: no-repeat center / cover;*/ }
     .gallery__items .item {
       display: flex; }
     .gallery__items .item--hover {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      flex-grow: 1;
+      text-decoration: none;
+      text-transform: uppercase;
+      color: #fff;
+      font-size: 18px;
+      font-weight: bold;
       height: 267px;
       width: 100%;
-      display: flex;
-      background: no-repeat center / cover; }
-      .gallery__items .item--hover__link {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        flex-grow: 1;
-        text-decoration: none;
-        text-transform: uppercase;
-        color: #fff;
-        font-size: 18px;
-        font-weight: bold;
+      background: rgba(100, 194, 158, 0.8) no-repeat center/cover;
+      opacity: 0; }
+      .gallery__items .item--hover:hover {
+        background-color: rgba(100, 194, 158, 0.8);
+        opacity: 1;
+        cursor: pointer;
+        transition: opacity 400ms ease; }
+      .gallery__items .item--hover:after {
+        position: absolute;
+        content: '';
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
         opacity: 0;
-        background-color: rgba(100, 194, 158, 0.8); }
-        .gallery__items .item--hover__link:hover {
-          opacity: 1;
-          cursor: pointer;
-          transition: opacity 400ms ease; }
-        .gallery__items .item--hover__link:after {
-          position: absolute;
-          content: '';
-          left: 0;
-          top: 0;
-          right: 0;
-          bottom: 0;
-          opacity: 0;
-          z-index: -1; }
+        z-index: -1; }
   .gallery .gallery__items:first-child .item:first-child .item--hover:first-child {
     background-image: url("../images/Layer19.png"); }
   .gallery .gallery__items:first-child .item:first-child .item--hover:nth-child(2) {
     background-image: url("../images/Layer21.png"); }
   .gallery .gallery__items:first-child .item:nth-child(2) .item--hover {
     background-image: url("../images/Layer20.png"); }
-  .gallery .gallery__items:nth-child(2) .item:first-child .item--hover:first-child {
-    background-image: url("../images/Layer22.png");
-    height: 534px; }
-  .gallery .gallery__items:nth-child(2) .item:first-child .item--hover:nth-child(2) {
-    background-image: url("../images/Layer25.png");
-    height: 534px; }
+  .gallery .gallery__items:nth-child(2) {
+    display: flex; }
+    .gallery .gallery__items:nth-child(2) .item:first-child {
+      width: 50%;
+      background-image: url("../images/Layer22.png");
+      height: 534px; }
+    .gallery .gallery__items:nth-child(2) .item:last-child {
+      width: 50%;
+      background-image: url("../images/Layer25.png");
+      height: 534px; }
   .gallery .gallery__items:last-child .item:first-child .item--hover {
     background-image: url("../images/Layer20.png"); }
   .gallery .gallery__items:last-child .item:last-child .item--hover:first-child {
@@ -402,7 +409,7 @@ body {
     right: -15px;
     transform: translate(-50%, -50%);
     width: 50px;
-    height: 23px;
+    height: 40px;
     cursor: pointer;
     z-index: 3; }
     .hamburg-menu__burger-nav {
@@ -421,23 +428,23 @@ body {
     width: 50px;
     height: 6px;
     position: absolute;
-    top: 16px;
+    top: 24px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     transition: all .5s;
     border: none;
     background-color: #64c29e; }
   .hamburg-menu__burger-nav:before {
-    top: 0;
+    top: 8px;
     background-color: #64c29e; }
   .hamburg-menu.active .hamburg-menu__burger-nav {
     background-color: rgba(0, 0, 0, 0);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0);
     transition: background 1s ease; }
   .hamburg-menu.active .hamburg-menu__burger-nav:before {
-    top: 0;
+    top: 17px;
     transform: rotate(45deg); }
   .hamburg-menu.active .hamburg-menu__burger-nav:after {
-    top: 0;
+    top: 17px;
     transform: rotate(135deg); }
   .menu {
     height: 0;
