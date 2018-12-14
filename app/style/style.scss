@@ -40,7 +40,6 @@ body {
     color: #4d4959;
     letter-spacing: 3px;
     margin: 0 40px;
-    min-width: max-content;
     text-decoration: none;
 
     &:hover {
@@ -308,15 +307,8 @@ body {
         cursor: pointer;
         transition: opacity 400ms ease;
       }
-      &:after {
-        position: absolute;
-        content: '';
-        left: 0;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        opacity: 0;
-        z-index: -1;
+      &__img {
+        width: 51px;
       }
     }
 
@@ -448,6 +440,7 @@ body {
   justify-content: space-around;
   align-items: center;
   padding: 84px 88px;
+
   &__item {
     font-size: 16px;
     line-height: 18px;
@@ -468,6 +461,11 @@ body {
       color: $MainColor;
       &:hover {
         opacity: .5;
+      }
+    }
+    .address__link{
+      &:hover{
+        transition: opacity .5s ease;
       }
     }
   }
@@ -657,6 +655,7 @@ body {
 
   .menu.open {
     margin: 0;
+    padding: 20px;
     width: 100%;
     height: auto;
     position: fixed;
@@ -776,7 +775,7 @@ body {
     }
   }
   .contact {
-    padding: 10px 10px;
+    padding: 10px;
     .contact-info {
       padding: 127px 10px;
     }
@@ -845,6 +844,6 @@ body {
     }
   }
   .contact {
-    padding: 10px 10px;
+    padding: 10px;
   }
 }
