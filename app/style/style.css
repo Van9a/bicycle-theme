@@ -27,7 +27,6 @@ body {
   .menu__i-logo {
     width: 94px; }
   .menu__link {
-    display: block;
     color: #4d4959;
     letter-spacing: 3px;
     margin: 0 40px;
@@ -62,8 +61,7 @@ body {
   .info__text {
     color: #848789;
     line-height: 34px;
-    margin: 0;
-    font-size: 16px; }
+    margin: 0; }
 
 .new-generation {
   padding: 117px 230px; }
@@ -73,44 +71,10 @@ body {
   .new-generation__logo {
     width: 52px; }
   .new-generation__title {
-    letter-spacing: 1.7px;
     margin: 23px 0; }
 
 .generation-info__items {
   display: flex; }
-  .generation-info__items .image-container {
-    min-height: 200px;
-    width: 66.9%;
-    background: center no-repeat / cover;
-    display: flex;
-    align-items: center;
-    justify-content: center; }
-  .generation-info__items .generation-info__item {
-    display: flex;
-    flex-direction: column;
-    width: 33.1%; }
-  .generation-info__items .generation-info__item-info {
-    padding: 64px 65px 60px 61px;
-    position: relative; }
-    .generation-info__items .generation-info__item-info .generation-info__item-title {
-      margin: 23px 0 11px 0; }
-    .generation-info__items .generation-info__item-info .generation-info__item-text {
-      text-align: justify;
-      line-height: 30px; }
-      .generation-info__items .generation-info__item-info .generation-info__item-text:after {
-        content: '';
-        width: 50px;
-        height: 3px;
-        background-color: #d7d7d7;
-        display: block;
-        margin: 40px auto 0; }
-    .generation-info__items .generation-info__item-info:after {
-      content: '';
-      position: absolute;
-      left: auto;
-      bottom: -39px;
-      border: 20px solid transparent;
-      border-top: 20px solid white; }
   .generation-info__items:last-child .image-container {
     width: 33.5%; }
   .generation-info__items:last-child .generation-info__item {
@@ -126,6 +90,39 @@ body {
     background-image: url("../images/Layer15.png"); }
     .generation-info__items:last-child .image-container:first-child .image-container__logo {
       width: 208px; }
+  .generation-info__items .image-container {
+    min-height: 200px;
+    width: 66.9%;
+    background: center no-repeat / cover;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+  .generation-info__items .generation-info__item {
+    display: flex;
+    flex-direction: column;
+    width: 33.1%; }
+  .generation-info__items .generation-info__item-info {
+    padding: 64px 65px 60px 61px;
+    position: relative; }
+    .generation-info__items .generation-info__item-info:after {
+      content: '';
+      position: absolute;
+      left: auto;
+      bottom: -39px;
+      border: 20px solid transparent;
+      border-top: 20px solid white; }
+  .generation-info__items .generation-info__item-title {
+    margin: 23px 0 11px 0; }
+  .generation-info__items .generation-info__item-text {
+    text-align: justify;
+    line-height: 30px; }
+    .generation-info__items .generation-info__item-text:after {
+      content: '';
+      width: 50px;
+      height: 3px;
+      background-color: #d7d7d7;
+      display: block;
+      margin: 40px auto 0; }
 
 .generation-info__items:first-child .image-container {
   background-image: url("../images/BicycleCompany.png"); }
@@ -153,9 +150,7 @@ body {
 
 .contact {
   padding: 100px 137px;
-  width: 100%;
-  display: flex;
-  flex-direction: column; }
+  width: 100%; }
   .contact .contact-logo {
     width: 32px; }
   .contact .slick-list {
@@ -172,8 +167,7 @@ body {
     background-color: #a9afb3; }
   .contact .contact-info {
     margin: 0 auto;
-    display: flex;
-    flex-direction: column; }
+    display: flex; }
   .contact .contact-title {
     max-width: 1040px;
     margin: 33px 0 11px 0;
@@ -185,7 +179,6 @@ body {
   .contact .contact-text {
     max-width: 1040px;
     font-size: 24px;
-    line-height: 34px;
     font-style: italic; }
   .contact .slick-dots {
     bottom: 65px;
@@ -208,12 +201,10 @@ body {
       display: flex;
       background: no-repeat center / cover; }
     .gallery__items .item--hover {
-      position: relative;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      flex-grow: 1;
       text-decoration: none;
       text-transform: uppercase;
       color: #fff;
@@ -297,7 +288,6 @@ body {
     width: 94px; }
   .contact-with-us__title {
     margin-top: 31px;
-    font-size: 24px;
     line-height: 34px;
     font-style: italic; }
   .contact-with-us__container {
@@ -315,7 +305,6 @@ body {
     padding: 25px 45px;
     background: #64c29e;
     border: none;
-    font-size: 24px;
     line-height: 24px;
     color: #fff; }
     .contact-with-us__btn:hover {
@@ -350,13 +339,13 @@ body {
     display: flex; }
     .footer .social-icons__link {
       margin-right: 15px; }
-      .footer .social-icons__link__image {
-        width: 35px; }
-      .footer .social-icons__link__image:hover {
-        opacity: .5;
-        transition: opacity 400ms ease; }
       .footer .social-icons__link:last-child {
         margin: 0; }
+    .footer .social-icons__i-link {
+      width: 35px; }
+    .footer .social-icons__i-link:hover {
+      opacity: .5;
+      transition: opacity 400ms ease; }
   .footer .author {
     display: flex;
     align-items: center;
@@ -387,17 +376,7 @@ body {
     .generation-info__items:last-child .image-container, .generation-info__items:last-child .generation-info__items__item {
       width: 100%; }
     .generation-info__items:last-child .generation-info__item {
-      width: 100%;
-      align-items: center; }
-      .generation-info__items:last-child .generation-info__item .generation-info__item {
-        padding: 100px 40px 54px 40px; }
-        .generation-info__items:last-child .generation-info__item .generation-info__item:after {
-          content: '';
-          position: absolute;
-          left: 47%;
-          bottom: -39px;
-          border: 20px solid transparent;
-          border-top: 20px solid white; }
+      width: 100%; }
   .gallery {
     flex-direction: column; }
   .gallery__items {
@@ -419,7 +398,7 @@ body {
     width: 50px;
     height: 40px;
     cursor: pointer;
-    z-index: 3; }
+    z-index: 2; }
     .hamburg-menu__burger-nav {
       width: 50px;
       height: 0;
@@ -431,6 +410,8 @@ body {
       transition: transform .5s;
       background: #64c29e;
       border: none; }
+      .hamburg-menu__burger-nav :hover:after {
+        width: 100%; }
   .hamburg-menu__burger-nav:before, .hamburg-menu__burger-nav:after {
     content: '';
     width: 50px;
@@ -448,25 +429,24 @@ body {
     background-color: rgba(0, 0, 0, 0);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0);
     transition: background 1s ease; }
-  .hamburg-menu.active .hamburg-menu__burger-nav:before {
-    top: 17px;
-    transform: rotate(45deg); }
+    .hamburg-menu.active .hamburg-menu__burger-nav:before {
+      top: 17px;
+      transform: rotate(45deg); }
   .hamburg-menu.active .hamburg-menu__burger-nav:after {
     top: 17px;
     transform: rotate(135deg); }
   .menu {
     height: 0;
+    margin: 0;
     overflow: hidden;
     background-color: #fff; }
-  .menu {
-    margin: 0; }
-  .menu .menu__link {
-    color: #64c29e; }
-  .menu .menu__link:hover {
-    text-transform: uppercase;
-    text-decoration: none;
-    color: #64c29e;
-    transform: scaleX(1); }
+    .menu__link {
+      color: #64c29e; }
+      .menu__link :hover {
+        text-transform: uppercase;
+        text-decoration: none;
+        color: #64c29e;
+        transform: scaleX(1); }
   .menu .menu__link:hover:after {
     width: 100%; }
   .menu .menu__link:after {
@@ -503,9 +483,9 @@ body {
     display: flex;
     flex-direction: column;
     align-items: start; }
-    .footer .generation-info__item {
+    .footer__item {
       margin-bottom: 30px; }
-      .footer .generation-info__item:last-child {
+      .footer__item:last-child {
         margin-bottom: 0;
         display: flex;
         justify-content: space-around; }
@@ -546,11 +526,11 @@ body {
     display: flex;
     flex-direction: column;
     padding: 100px; }
-    .footer .generation-info__item {
+    .footer__item {
       margin-bottom: 40px; }
-      .footer .generation-info__item .author {
+      .footer__item .author {
         margin-bottom: 0; }
-        .footer .generation-info__item .author__link-image {
+        .footer__item .author__link-image {
           width: 55px; } }
 
 @media screen and (max-width: 430px) {
