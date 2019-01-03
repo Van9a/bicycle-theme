@@ -25,7 +25,7 @@ body {
   position: absolute;
   width: 100%;
   padding: 35px 0;
-  transition: background .4s ease;
+  transition: background .3s ease;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -277,7 +277,7 @@ body {
       color: #fff;
       font-size: 18px;
       font-weight: bold;
-      height: 267px;
+      min-height: 267px;
       width: 100%;
       background: rgba(100, 194, 158, 0.8) center / cover;
       opacity: 0;
@@ -285,7 +285,7 @@ body {
         background-color: rgba(100, 194, 158, 0.8);
         opacity: 1;
         cursor: pointer;
-        transition: opacity 400ms ease;
+        transition: opacity 600ms ease;
       }
       &:active, &:focus {
         opacity: 1;
@@ -320,6 +320,7 @@ body {
       background-image: url('../images/Layer22.png');
       width: 50%;
       .item-link {
+        //height: 567px;
         height: 100%;
       }
     }
@@ -327,6 +328,7 @@ body {
       background-image: url('../images/Layer25.png');
       width: 50%;
       .item-link {
+        //height: 567px;
         height: 100%;
       }
     }
@@ -367,7 +369,7 @@ body {
       cursor: pointer;
       background-color: rgb(100, 194, 158);
       border: 1px solid rgb(100, 194, 158);
-      transition: background 400ms ease-out;
+      transition: background 300ms ease-out;
     }
   }
 
@@ -411,7 +413,7 @@ body {
     &:hover, &:focus, &:active {
       cursor: pointer;
       background-color: #ff5654;
-      transition: background 400ms ease-out;
+      transition: background 300ms ease-out;
     }
   }
 }
@@ -431,7 +433,7 @@ body {
   }
   .address__link {
     &:hover {
-      transition: opacity .5s ease;
+      transition: opacity .3s ease;
     }
     &:focus, &:active {
       opacity: .7;
@@ -452,7 +454,7 @@ body {
   &__link {
     &:hover, &:focus, &:active {
       opacity: .5;
-      transition: opacity .5s ease;
+      transition: opacity .3s ease;
     }
   }
   &__link-image {
@@ -489,7 +491,7 @@ body {
     }
     &__i-link:hover {
       opacity: .6;
-      transition: opacity 400ms ease;
+      transition: opacity 300ms ease;
     }
   }
 
@@ -571,7 +573,7 @@ body {
     position: absolute;
     top: 24px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    transition: all .5s;
+    transition: top, transform .3s;
     background-color: #64c29e;
   }
 
@@ -595,10 +597,11 @@ body {
   }
 
   .menu {
-    height: 0;
+    visibility: hidden;
     margin: 0;
     overflow: hidden;
     background-color: #fff;
+    opacity: 0;
     &__link {
       color: #64c29e;
       :hover {
@@ -618,20 +621,18 @@ body {
     height: 2px;
     width: 0;
     background-color: #64c29e;
-   // transition: background-color .3s ease-in-out;
   }
 
   .menu.menu--open {
     padding: 20px;
     width: 100%;
-    height: auto;
+    visibility: visible;
     position: fixed;
     left: 0;
     top: 0;
-    display: flex;
-    flex-direction: column;
+    opacity: 1;
     z-index: 1;
-    transition: all .4s ease;
+    transition: opacity .3s ease;
 
   }
   .menu.menu--open .menu__link {
