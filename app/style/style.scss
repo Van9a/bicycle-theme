@@ -3,6 +3,9 @@
 $Lato: 'Lato', sans-serif;
 $MainColor: #848789;
 $TitleColor: #353738;
+$TransitionDuration: .3s;
+$HoverFocusOpacity: .7;
+$ActiveOpacity: .6;
 html, body {
   margin: 0;
   padding: 0;
@@ -26,7 +29,7 @@ body {
   position: absolute;
   width: 100%;
   padding: 35px 0;
-  transition: background .3s ease;
+  transition: background $TransitionDuration ease;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -35,27 +38,28 @@ body {
   font-size: 13px;
   &__i-logo {
     width: 94px;
-    transition: opacity .3s;
+    transition: opacity $TransitionDuration;
   }
-  &__i-logo:hover, &__i-logo:focus {
-    opacity: .7;
+  &__i-logo:hover,
+  &__i-logo:focus {
+    opacity: $HoverFocusOpacity;
   }
   &__i-logo:active {
-    opacity: .6;
+    opacity: $ActiveOpacity;
   }
   &__link {
     color: #4d4959;
     letter-spacing: 3px;
     margin: 0 40px;
     text-decoration: none;
-    transition: color .3s ease-out, opacity 3s;
+    transition: color $TransitionDuration ease-out, opacity $TransitionDuration;
     &:hover,
     &:focus {
       color: #64c29e;
-      opacity: .7;
+      opacity: $HoverFocusOpacity;
     }
     &:active {
-      opacity: .6;
+      opacity: $ActiveOpacity;
     }
   }
 }
@@ -259,10 +263,8 @@ body {
 }
 
 .gallery {
-
   display: flex;
   &__items {
-
     width: 100%;
     max-width: calc(100% / 3);
     .gallery__item {
@@ -283,14 +285,14 @@ body {
       width: 100%;
       opacity: 0;
       cursor: pointer;
-      transition: opacity .3s ease;
-      &:hover, &:focus {
-        background-color: rgba(100, 194, 158, 0.8);
+      transition: opacity $TransitionDuration ease;
+      background-color: rgba(100, 194, 158, 0.8);
+      &:hover,
+      &:focus {
         opacity: 1;
       }
       &:active {
-        opacity: 1;
-        background-color: rgba(100, 194, 158, 0.8);
+        opacity: 0.9;
       }
       .gallery__item-img {
         width: 51px;
@@ -368,13 +370,14 @@ body {
     padding: 16px 50px;
     text-transform: uppercase;
     cursor: pointer;
-    transition: background-color .3s ease-out, opacity .3s;
-    &:hover, &:focus {
+    transition: background-color $TransitionDuration ease-out, opacity $TransitionDuration;
+    &:hover,
+    &:focus {
       background-color: rgb(100, 194, 158);
       border: 1px solid rgb(100, 194, 158);
     }
     &:active {
-      opacity: .6;
+      opacity: $ActiveOpacity;
     }
   }
 
@@ -416,12 +419,13 @@ body {
     line-height: 24px;
     color: #fff;
     cursor: pointer;
-    transition: background-color .3s ease-out;
-    &:hover, &:focus {
+    transition: background-color $TransitionDuration ease-out;
+    &:hover,
+    &:focus {
       background-color: #ff5654;
     }
     &:active {
-      opacity: .6;
+      opacity: $ActiveOpacity;
     }
   }
 }
@@ -435,12 +439,13 @@ body {
     display: block;
     text-decoration: none;
     color: $MainColor;
-    transition: opacity .3s;
-    &:hover, &:focus {
-      opacity: .7;
+    transition: opacity $TransitionDuration;
+    &:hover,
+    &:focus {
+      opacity: $HoverFocusOpacity;
     }
     &:active {
-      opacity: .6;
+      opacity: $ActiveOpacity;
     }
   }
 }
@@ -457,12 +462,13 @@ body {
     margin-right: 10px;
   }
   &__link {
-    transition: opacity .3s;
-    &:hover, &:focus {
-      opacity: .7;
+    transition: opacity $TransitionDuration;
+    &:hover,
+    &:focus {
+      opacity: $HoverFocusOpacity;
     }
     &:active {
-      opacity: .6;
+      opacity: $ActiveOpacity;
     }
   }
   &__link-image {
@@ -487,15 +493,16 @@ body {
     display: flex;
     &__link {
       margin-right: 15px;
-      transition: opacity .3s ease;
+      transition: opacity $TransitionDuration ease;
       &:last-child {
         margin-right: 0;
       }
-      &:hover, &:focus {
-        opacity: .7;
+      &:hover,
+      &:focus {
+        opacity: $HoverFocusOpacity;
       }
       &:active {
-        opacity: .6;
+        opacity: $ActiveOpacity;
       }
     }
     &__i-link {
@@ -538,8 +545,6 @@ body {
 
 @media screen and (max-width: 768px) {
   .menu {
-    padding: 0;
-    display: flex;
     flex-direction: column;
     text-align: center;
     visibility: hidden;
@@ -547,13 +552,10 @@ body {
     position: fixed;
     background-color: #fff;
     opacity: 0;
+    transition: opacity $TransitionDuration, visibility $TransitionDuration;
     &__link {
       text-transform: uppercase;
-      &:hover {
-        color: #64c29e;
-        transform: scaleX(1);
-        transition: all .5s;
-      }
+      margin: 20px 0;
     }
   }
   .hamburg-menu {
@@ -564,12 +566,13 @@ body {
     height: 40px;
     cursor: pointer;
     z-index: 2;
-    transition: transform .5s, opacity .3s ease;
-    &:hover, &:focus {
-      opacity: .7;
+    transition: transform .5s, opacity $TransitionDuration;
+    &:hover,
+    &:focus {
+      opacity: $HoverFocusOpacity;
     }
     &:active {
-      opacity: .6;
+      opacity: $ActiveOpacity;
     }
     &__burger-nav {
       width: 100%;
@@ -607,7 +610,7 @@ body {
   .hamburg-menu.hamburg-menu--active .hamburg-menu__burger-nav {
     background-color: rgba(0, 0, 0, 0);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0);
-    transition: background .3s ease;
+    transition: background $TransitionDuration;
     &:before {
       top: 17px;
       transform: rotate(45deg);
@@ -627,22 +630,17 @@ body {
     height: 2px;
     width: 0;
     background-color: #64c29e;
-    transition: width .3s ease;
+    transition: width $TransitionDuration;
   }
 
   .menu.menu--open {
-    padding: 20px;
     width: 100%;
     visibility: visible;
     left: 0;
     top: 0;
     opacity: 1;
     z-index: 1;
-    transition: opacity .3s ease;
-
-  }
-  .menu.menu--open .menu__link {
-    margin: 20px 0;
+    transition: opacity $TransitionDuration;
   }
 
   .contact-with-us {
