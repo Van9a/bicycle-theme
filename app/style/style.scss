@@ -2,6 +2,7 @@
 
 $Lato: 'Lato', sans-serif;
 $MainColor: #848789;
+$TitleColor: #353738;
 html, body {
   margin: 0;
   padding: 0;
@@ -34,8 +35,9 @@ body {
   font-size: 13px;
   &__i-logo {
     width: 94px;
+    transition: opacity .3s;
   }
-  &__i-logo:hover, &__i-logo:active, &__i-logo:focus {
+  &__i-logo:hover, &__i-logo:focus {
     opacity: .7;
   }
   &__i-logo:active {
@@ -46,11 +48,14 @@ body {
     letter-spacing: 3px;
     margin: 0 40px;
     text-decoration: none;
+    transition: color .3s ease-out, opacity 3s;
     &:hover,
     &:focus {
       color: #64c29e;
-      transition: color 300ms ease-out;
       opacity: .7;
+    }
+    &:active {
+      opacity: .6;
     }
   }
 }
@@ -64,7 +69,7 @@ body {
 }
 
 .main-screen {
-  background: transparent url("../images/Bg.png") no-repeat center / cover;
+  background: transparent url("../images/Bg.jpg") no-repeat center / cover;
   height: 100vh;
 
 }
@@ -77,7 +82,7 @@ body {
   &__title {
     letter-spacing: 4px;
     text-transform: uppercase;
-    color: #353738;
+    color: $TitleColor;
     font-weight: bold;
     font-size: 18px;
   }
@@ -115,16 +120,16 @@ body {
         width: 23px;
       }
       .image-container:last-child {
-        background-image: url('../images/Layer14.png');
+        background-image: url('../images/Layer14.jpg');
       }
       .generation-info__item {
         .image-container {
-          background-image: url('../images/Layer16.png');
+          background-image: url('../images/Layer16.jpg');
           width: 100%
         }
       }
       .image-container:first-child {
-        background-image: url("../images/Layer15.png");
+        background-image: url("../images/Layer15.jpg");
         .image-container__logo {
           width: 208px;
         }
@@ -173,14 +178,14 @@ body {
   }
   &__items:first-child {
     .image-container {
-      background-image: url('../images/BicycleCompany.png');
+      background-image: url('../images/BicycleCompany.jpg');
       &__logo {
         width: 113px;
       }
     }
     .generation-info__item {
       .image-container {
-        background-image: url('../images/Layer11.png');
+        background-image: url('../images/Layer11.jpg');
         width: 100%;
       }
       .generation-info__item-logo {
@@ -190,7 +195,7 @@ body {
   }
   &__items:nth-child(2) {
     .image-container {
-      background-image: url('../images/Layer12.png');
+      background-image: url('../images/Layer12.jpg');
       &__logo {
         width: 177px;
       }
@@ -200,7 +205,7 @@ body {
         width: 32px;
       }
       .image-container {
-        background-image: url('../images/Layer13.png');
+        background-image: url('../images/Layer13.jpg');
         width: 100%;
       }
     }
@@ -209,7 +214,7 @@ body {
 
 .contact {
   padding: 100px 137px;
-  //  width: 100%;
+
   .contact__logo {
     width: 32px;
   }
@@ -254,14 +259,14 @@ body {
 }
 
 .gallery {
-  //  width: 100%;
+
   display: flex;
   &__items {
-    // padding: 0;
+
     width: 100%;
     max-width: calc(100% / 3);
     .gallery__item {
-      // display: flex;
+
       background: no-repeat center / cover;
     }
     .gallery__item-link {
@@ -276,16 +281,16 @@ body {
       font-weight: bold;
       min-height: 267px;
       width: 100%;
-      background-color: rgba(100, 194, 158, 0.8);
       opacity: 0;
       cursor: pointer;
+      transition: opacity .3s ease;
       &:hover, &:focus {
         background-color: rgba(100, 194, 158, 0.8);
         opacity: 1;
-        transition: opacity 600ms ease;
       }
       &:active {
         opacity: 1;
+        background-color: rgba(100, 194, 158, 0.8);
       }
       .gallery__item-img {
         width: 51px;
@@ -298,15 +303,15 @@ body {
     display: flex;
     flex-wrap: wrap;
     .gallery__item:nth-child(1) {
-      background-image: url('../images/Layer19.png');
+      background-image: url('../images/Layer19.jpg');
       width: 50%;
     }
     .gallery__item:nth-child(2) {
-      background-image: url('../images/Layer21.png');
+      background-image: url('../images/Layer21.jpg');
       width: 50%;
     }
     .gallery__item:last-child {
-      background-image: url('../images/Layer20.png');
+      background-image: url('../images/Layer20.jpg');
       width: 100%;
     }
 
@@ -314,18 +319,18 @@ body {
   .gallery__items:nth-child(2) {
     display: flex;
     .gallery__item:first-child {
-      background-image: url('../images/Layer22.png');
+      background-image: url('../images/Layer22.jpg');
       width: 50%;
       .gallery__item-link {
-        //height: 567px;
+
         height: 100%;
       }
     }
     .gallery__item:last-child {
-      background-image: url('../images/Layer25.png');
+      background-image: url('../images/Layer25.jpg');
       width: 50%;
       .gallery__item-link {
-        //height: 567px;
+
         height: 100%;
       }
     }
@@ -334,15 +339,15 @@ body {
     display: flex;
     flex-wrap: wrap;
     .gallery__item:first-child {
-      background-image: url('../images/Layer20.png');
+      background-image: url('../images/Layer20.jpg');
       width: 100%;
     }
     .gallery__item:nth-child(2) {
-      background-image: url('../images/Layer19.png');
+      background-image: url('../images/Layer19.jpg');
       width: 50%;
     }
     .gallery__item:nth-child(3) {
-      background-image: url('../images/Layer21.png');
+      background-image: url('../images/Layer21.jpg');
       width: 50%;
     }
   }
@@ -363,10 +368,10 @@ body {
     padding: 16px 50px;
     text-transform: uppercase;
     cursor: pointer;
+    transition: background-color .3s ease-out, opacity .3s;
     &:hover, &:focus {
       background-color: rgb(100, 194, 158);
       border: 1px solid rgb(100, 194, 158);
-      transition: background 300ms ease-out;
     }
     &:active {
       opacity: .6;
@@ -411,9 +416,9 @@ body {
     line-height: 24px;
     color: #fff;
     cursor: pointer;
-    &:hover, &:focus, &:active {
+    transition: background-color .3s ease-out;
+    &:hover, &:focus {
       background-color: #ff5654;
-      transition: background 300ms ease-out;
     }
     &:active {
       opacity: .6;
@@ -430,13 +435,9 @@ body {
     display: block;
     text-decoration: none;
     color: $MainColor;
+    transition: opacity .3s;
     &:hover, &:focus {
       opacity: .7;
-    }
-  }
-  .address__link {
-    &:hover, &:focus {
-      transition: opacity .7s ease;
     }
     &:active {
       opacity: .6;
@@ -450,18 +451,18 @@ body {
   font-style: italic;
   font-size: 14px;
   line-height: 18px;
+
   &__by {
     color: $MainColor;
     margin-right: 10px;
   }
   &__link {
+    transition: opacity .3s;
     &:hover, &:focus {
       opacity: .7;
-      transition: opacity .3s ease;
     }
     &:active {
       opacity: .6;
-      transition: opacity .3s ease;
     }
   }
   &__link-image {
@@ -486,6 +487,7 @@ body {
     display: flex;
     &__link {
       margin-right: 15px;
+      transition: opacity .3s ease;
       &:last-child {
         margin-right: 0;
       }
@@ -498,10 +500,6 @@ body {
     }
     &__i-link {
       width: 35px;
-    }
-    &__i-link:hover {
-      opacity: .6;
-      transition: opacity 300ms ease;
     }
   }
 
@@ -520,7 +518,6 @@ body {
         width: 50%;
       }
       &:last-child {
-        display: flex;
         flex-direction: column;
         .image-container, .generation-info__items__item {
           width: 100%;
@@ -545,24 +542,34 @@ body {
     display: flex;
     flex-direction: column;
     text-align: center;
+    visibility: hidden;
+    overflow: hidden;
+    position: fixed;
     background-color: #fff;
+    opacity: 0;
+    &__link {
+      text-transform: uppercase;
+      &:hover {
+        color: #64c29e;
+        transform: scaleX(1);
+        transition: all .5s;
+      }
+    }
   }
   .hamburg-menu {
     position: fixed;
     top: 50px;
     right: 15px;
-    //  transform: translate(-50%, -50%);
     width: 50px;
     height: 40px;
     cursor: pointer;
     z-index: 2;
+    transition: transform .5s, opacity .3s ease;
     &:hover, &:focus {
       opacity: .7;
-      transition: transform .5s;
     }
     &:active {
       opacity: .6;
-      transition: transform .5s;
     }
     &__burger-nav {
       width: 100%;
@@ -588,7 +595,7 @@ body {
     position: absolute;
     top: 24px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    transition: top .5s, transform .3s;
+    transition: top .5s, transform .5s;
     background-color: #64c29e;
   }
 
@@ -600,7 +607,7 @@ body {
   .hamburg-menu.hamburg-menu--active .hamburg-menu__burger-nav {
     background-color: rgba(0, 0, 0, 0);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0);
-    transition: background 1s ease;
+    transition: background .3s ease;
     &:before {
       top: 17px;
       transform: rotate(45deg);
@@ -611,24 +618,6 @@ body {
     transform: rotate(135deg);
   }
 
-  .menu {
-    visibility: hidden;
-    //  margin: 0;
-    overflow: hidden;
-    position: fixed;
-    background-color: #fff;
-    opacity: 0;
-    &__link {
-      color: #64c29e;
-      :hover {
-        text-transform: uppercase;
-        text-decoration: none;
-        color: #64c29e;
-        transform: scaleX(1);
-        transition: all .5s;
-      }
-    }
-  }
   .menu .menu__link:hover:after {
     width: 100%;
   }
@@ -645,7 +634,6 @@ body {
     padding: 20px;
     width: 100%;
     visibility: visible;
-
     left: 0;
     top: 0;
     opacity: 1;
@@ -671,7 +659,7 @@ body {
   }
 
   .footer {
-    display: flex;
+
     flex-direction: column;
     align-items: start;
     &__item {
@@ -711,9 +699,6 @@ body {
       }
     }
   }
-  .gallery {
-    flex-direction: column;
-  }
   .contact-with-us {
     padding: 60px;
   }
@@ -727,9 +712,6 @@ body {
       margin-bottom: 40px;
       .author {
         margin-bottom: 0;
-        &__link-image {
-          width: 55px;
-        }
       }
     }
   }
