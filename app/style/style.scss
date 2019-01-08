@@ -3,6 +3,7 @@
 $Lato: 'Lato', sans-serif;
 $MainColor: #848789;
 $TitleColor: #353738;
+$GreenLight: #64c29e;
 $TransitionDuration: .3s;
 $HoverFocusOpacity: .7;
 $ActiveOpacity: .6;
@@ -55,7 +56,7 @@ body {
     transition: color $TransitionDuration, opacity $TransitionDuration;
     &:hover,
     &:focus {
-      color: #64c29e;
+      color: $GreenLight;
       opacity: $HoverFocusOpacity;
     }
     &:active {
@@ -75,7 +76,6 @@ body {
 .main-screen {
   background: transparent url("../images/Bg.jpg") no-repeat center / cover;
   height: 100vh;
-
 }
 
 .info {
@@ -218,7 +218,6 @@ body {
 
 .contact {
   padding: 100px 137px;
-
   .contact__logo {
     width: 32px;
   }
@@ -268,7 +267,6 @@ body {
     width: 100%;
     max-width: calc(100% / 3);
     .gallery__item {
-
       background: no-repeat center / cover;
     }
     .gallery__item-link {
@@ -409,12 +407,12 @@ body {
     color: #c8c8c8;
     border: 2px solid #d3d7d9;
     &:focus {
-      border: 2px solid #64c29e;
+      border: 2px solid $GreenLight;
     }
   }
   &__btn {
     padding: 25px 45px;
-    background: #64c29e;
+    background: $GreenLight;
     border: none;
     line-height: 24px;
     color: #fff;
@@ -509,7 +507,6 @@ body {
       width: 35px;
     }
   }
-
 }
 
 @media screen and (max-width: 1024px) {
@@ -583,7 +580,7 @@ body {
       transform: translate(-50%, -50%);
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
       transition: transform $TransitionDuration;
-      background: #64c29e;
+      background: $GreenLight;
       border: none;
       :hover:after {
         width: 100%;
@@ -600,12 +597,12 @@ body {
     top: 24px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     transition: top $TransitionDuration, transform $TransitionDuration;
-    background-color: #64c29e;
+    background-color: $GreenLight;
   }
 
   .hamburg-menu__burger-nav:before {
     top: 8px;
-    background-color: #64c29e;
+    background-color: $GreenLight;
   }
 
   .hamburg-menu.hamburg-menu--active .hamburg-menu__burger-nav {
@@ -630,7 +627,7 @@ body {
     content: "";
     height: 2px;
     width: 0;
-    background-color: #64c29e;
+    background-color: $GreenLight;
     transition: width $TransitionDuration;
   }
 

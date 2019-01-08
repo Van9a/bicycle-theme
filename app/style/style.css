@@ -425,7 +425,8 @@ body {
       border: none; }
       .hamburg-menu__burger-nav :hover:after {
         width: 100%; }
-  .hamburg-menu__burger-nav:before, .hamburg-menu__burger-nav:after {
+  .hamburg-menu__burger-nav:before,
+  .hamburg-menu__burger-nav:after {
     content: '';
     width: 100%;
     height: 6px;
