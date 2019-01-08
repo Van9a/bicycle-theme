@@ -29,7 +29,7 @@ body {
   position: absolute;
   width: 100%;
   padding: 35px 0;
-  transition: background $TransitionDuration ease;
+  transition: background $TransitionDuration;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -52,7 +52,7 @@ body {
     letter-spacing: 3px;
     margin: 0 40px;
     text-decoration: none;
-    transition: color $TransitionDuration ease-out, opacity $TransitionDuration;
+    transition: color $TransitionDuration, opacity $TransitionDuration;
     &:hover,
     &:focus {
       color: #64c29e;
@@ -285,7 +285,7 @@ body {
       width: 100%;
       opacity: 0;
       cursor: pointer;
-      transition: opacity $TransitionDuration ease;
+      transition: opacity $TransitionDuration ;
       background-color: rgba(100, 194, 158, 0.8);
       &:hover,
       &:focus {
@@ -370,7 +370,7 @@ body {
     padding: 16px 50px;
     text-transform: uppercase;
     cursor: pointer;
-    transition: background-color $TransitionDuration ease-out, opacity $TransitionDuration;
+    transition: background-color $TransitionDuration, opacity $TransitionDuration;
     &:hover,
     &:focus {
       background-color: rgb(100, 194, 158);
@@ -419,7 +419,7 @@ body {
     line-height: 24px;
     color: #fff;
     cursor: pointer;
-    transition: background-color $TransitionDuration ease-out;
+    transition: background-color $TransitionDuration ;
     &:hover,
     &:focus {
       background-color: #ff5654;
@@ -493,7 +493,7 @@ body {
     display: flex;
     &__link {
       margin-right: 15px;
-      transition: opacity $TransitionDuration ease;
+      transition: opacity $TransitionDuration;
       &:last-child {
         margin-right: 0;
       }
@@ -566,7 +566,7 @@ body {
     height: 40px;
     cursor: pointer;
     z-index: 2;
-    transition: transform .5s, opacity $TransitionDuration;
+    transition: transform $TransitionDuration, opacity $TransitionDuration;
     &:hover,
     &:focus {
       opacity: $HoverFocusOpacity;
@@ -582,7 +582,7 @@ body {
       left: 50%;
       transform: translate(-50%, -50%);
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-      transition: transform .5s;
+      transition: transform $TransitionDuration;
       background: #64c29e;
       border: none;
       :hover:after {
@@ -598,7 +598,7 @@ body {
     position: absolute;
     top: 24px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    transition: top .5s, transform .5s;
+    transition: top $TransitionDuration, transform $TransitionDuration;
     background-color: #64c29e;
   }
 
