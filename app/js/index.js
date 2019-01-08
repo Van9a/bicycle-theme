@@ -1,7 +1,7 @@
 //hamburger menu
 $(document).ready(function () {
     $('.hamburg-menu').click(function () {
-        $('.hamburg-menu').toggleClass('active');
+        $('.hamburg-menu').toggleClass('hamburg-menu--active');
     })
 });
 $(document).ready(function () {

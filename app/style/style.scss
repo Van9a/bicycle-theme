@@ -35,8 +35,11 @@ body {
   &__i-logo {
     width: 94px;
   }
-  &__i-logo:hover, &__i-logo:active, &__i-logo:focus, &__i-logo:focus-within {
-    opacity: .5;
+  &__i-logo:hover, &__i-logo:active, &__i-logo:focus {
+    opacity: .7;
+  }
+  &__i-logo:active {
+    opacity: .6;
   }
   &__link {
     color: #4d4959;
@@ -103,10 +106,10 @@ body {
     display: flex;
     &:last-child {
       .image-container {
-        width: 33.5%;
+        width: calc(100% / 3);
       }
       .generation-info__item {
-        width: 33.5%;
+        width: calc(100% / 3);
       }
       .generation-info__item-logo {
         width: 23px;
@@ -137,7 +140,6 @@ body {
 
     }
     .generation-info__item {
-
       width: 33.1%;
     }
     .generation-info__item-info {
@@ -252,17 +254,17 @@ body {
 }
 
 .gallery {
-  width: 100%;
+  //  width: 100%;
   display: flex;
   &__items {
-    padding: 0;
+    // padding: 0;
     width: 100%;
-    max-width: 33.5333%;
+    max-width: calc(100% / 3);
     .gallery__item {
       // display: flex;
       background: no-repeat center / cover;
     }
-    .item-link {
+    .gallery__item-link {
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -274,18 +276,18 @@ body {
       font-weight: bold;
       min-height: 267px;
       width: 100%;
-      background: rgba(100, 194, 158, 0.8) center / cover;
+      background-color: rgba(100, 194, 158, 0.8);
       opacity: 0;
-      &:hover {
+      cursor: pointer;
+      &:hover, &:focus {
         background-color: rgba(100, 194, 158, 0.8);
         opacity: 1;
-        cursor: pointer;
         transition: opacity 600ms ease;
       }
-      &:active, &:focus {
+      &:active {
         opacity: 1;
       }
-      &__img {
+      .gallery__item-img {
         width: 51px;
         margin-bottom: 13px;
       }
@@ -314,7 +316,7 @@ body {
     .gallery__item:first-child {
       background-image: url('../images/Layer22.png');
       width: 50%;
-      .item-link {
+      .gallery__item-link {
         //height: 567px;
         height: 100%;
       }
@@ -322,7 +324,7 @@ body {
     .gallery__item:last-child {
       background-image: url('../images/Layer25.png');
       width: 50%;
-      .item-link {
+      .gallery__item-link {
         //height: 567px;
         height: 100%;
       }
@@ -360,11 +362,14 @@ body {
     color: white;
     padding: 16px 50px;
     text-transform: uppercase;
-    &:hover, &:active, &:focus {
-      cursor: pointer;
+    cursor: pointer;
+    &:hover, &:focus {
       background-color: rgb(100, 194, 158);
       border: 1px solid rgb(100, 194, 158);
       transition: background 300ms ease-out;
+    }
+    &:active {
+      opacity: .6;
     }
   }
 
@@ -405,10 +410,13 @@ body {
     border: none;
     line-height: 24px;
     color: #fff;
+    cursor: pointer;
     &:hover, &:focus, &:active {
-      cursor: pointer;
       background-color: #ff5654;
       transition: background 300ms ease-out;
+    }
+    &:active {
+      opacity: .6;
     }
   }
 }
@@ -422,16 +430,16 @@ body {
     display: block;
     text-decoration: none;
     color: $MainColor;
-    &:hover {
-      opacity: .5;
+    &:hover, &:focus {
+      opacity: .7;
     }
   }
   .address__link {
-    &:hover {
-      transition: opacity .3s ease;
+    &:hover, &:focus {
+      transition: opacity .7s ease;
     }
-    &:focus, &:active {
-      opacity: .7;
+    &:active {
+      opacity: .6;
     }
   }
 }
@@ -447,8 +455,12 @@ body {
     margin-right: 10px;
   }
   &__link {
-    &:hover, &:focus, &:active {
-      opacity: .5;
+    &:hover, &:focus {
+      opacity: .7;
+      transition: opacity .3s ease;
+    }
+    &:active {
+      opacity: .6;
       transition: opacity .3s ease;
     }
   }
@@ -477,7 +489,10 @@ body {
       &:last-child {
         margin-right: 0;
       }
-      &:focus, &:active {
+      &:hover, &:focus {
+        opacity: .7;
+      }
+      &:active {
         opacity: .6;
       }
     }
@@ -541,8 +556,13 @@ body {
     height: 40px;
     cursor: pointer;
     z-index: 2;
-    &:hover, &:focus, &:active {
+    &:hover, &:focus {
+      opacity: .7;
+      transition: transform .5s;
+    }
+    &:active {
       opacity: .6;
+      transition: transform .5s;
     }
     &__burger-nav {
       width: 100%;
@@ -577,7 +597,7 @@ body {
     background-color: #64c29e;
   }
 
-  .hamburg-menu.active .hamburg-menu__burger-nav {
+  .hamburg-menu.hamburg-menu--active .hamburg-menu__burger-nav {
     background-color: rgba(0, 0, 0, 0);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0);
     transition: background 1s ease;
@@ -586,14 +606,14 @@ body {
       transform: rotate(45deg);
     }
   }
-  .hamburg-menu.active .hamburg-menu__burger-nav:after {
+  .hamburg-menu.hamburg-menu--active .hamburg-menu__burger-nav:after {
     top: 17px;
     transform: rotate(135deg);
   }
 
   .menu {
     visibility: hidden;
-    margin: 0;
+    //  margin: 0;
     overflow: hidden;
     position: fixed;
     background-color: #fff;
@@ -605,6 +625,7 @@ body {
         text-decoration: none;
         color: #64c29e;
         transform: scaleX(1);
+        transition: all .5s;
       }
     }
   }
@@ -617,6 +638,7 @@ body {
     height: 2px;
     width: 0;
     background-color: #64c29e;
+    transition: width .3s ease;
   }
 
   .menu.menu--open {
