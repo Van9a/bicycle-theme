@@ -18,9 +18,9 @@ var sticky = header.offsetTop;
 
 function myFunction() {
     if (window.pageYOffset > sticky) {
-        header.classList.add("sticky");
+        header.classList.add("menu--fixed");
     } else {
-        header.classList.remove("sticky");
+        header.classList.remove("menu--fixed");
     }
 }
 
