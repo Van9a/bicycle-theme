@@ -1,12 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Lato&subset=latin-ext');
 
 $Lato: 'Lato', sans-serif;
-$MainColor: #848789;
-$TitleColor: #353738;
-$GreenLight: #64c29e;
-$TransitionDuration: .3s;
-$HoverFocusOpacity: .7;
-$ActiveOpacity: .6;
+$mainColor: #848789;
+$titleColor: #353738;
+$greenLight: #64c29e;
+$transitionDuration: .3s;
+$hoverFocusOpacity: .7;
+$activeOpacity: .6;
+$whiteColor: #fff;
 html, body {
   margin: 0;
   padding: 0;
@@ -30,7 +31,7 @@ body {
   position: absolute;
   width: 100%;
   padding: 35px 0;
-  transition: background $TransitionDuration;
+  transition: background $transitionDuration;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -39,28 +40,28 @@ body {
   font-size: 13px;
   &__i-logo {
     width: 94px;
-    transition: opacity $TransitionDuration;
-  }
-  &__i-logo:hover,
-  &__i-logo:focus {
-    opacity: $HoverFocusOpacity;
-  }
-  &__i-logo:active {
-    opacity: $ActiveOpacity;
+    transition: opacity $transitionDuration;
+    &:hover,
+    &:focus {
+      opacity: $hoverFocusOpacity;
+    }
+    &:active {
+      opacity: $activeOpacity;
+    }
   }
   &__link {
     color: #4d4959;
     letter-spacing: 3px;
     margin: 0 40px;
     text-decoration: none;
-    transition: color $TransitionDuration, opacity $TransitionDuration;
+    transition: color $transitionDuration, opacity $transitionDuration;
     &:hover,
     &:focus {
-      color: $GreenLight;
-      opacity: $HoverFocusOpacity;
+      color: $greenLight;
+      opacity: $hoverFocusOpacity;
     }
     &:active {
-      opacity: $ActiveOpacity;
+      opacity: $activeOpacity;
     }
   }
 }
@@ -86,12 +87,12 @@ body {
   &__title {
     letter-spacing: 4px;
     text-transform: uppercase;
-    color: $TitleColor;
+    color: $titleColor;
     font-weight: bold;
     font-size: 18px;
   }
   &__text {
-    color: $MainColor;
+    color: $mainColor;
     line-height: 34px;
     margin: 0;
   }
@@ -248,7 +249,7 @@ body {
     letter-spacing: 2px;
   }
   .contact__time {
-    color: $MainColor;
+    color: $mainColor;
   }
   .contact__text {
     max-width: 1040px;
@@ -276,14 +277,14 @@ body {
       align-items: center;
       text-decoration: none;
       text-transform: uppercase;
-      color: #fff;
+      color: $whiteColor;
       font-size: 18px;
       font-weight: bold;
       min-height: 267px;
       width: 100%;
       opacity: 0;
       cursor: pointer;
-      transition: opacity $TransitionDuration;
+      transition: opacity $transitionDuration;
       background-color: rgba(100, 194, 158, 0.8);
       &:hover,
       &:focus {
@@ -368,14 +369,14 @@ body {
     padding: 16px 50px;
     text-transform: uppercase;
     cursor: pointer;
-    transition: background-color $TransitionDuration, opacity $TransitionDuration;
+    transition: background-color $transitionDuration, opacity $transitionDuration;
     &:hover,
     &:focus {
       background-color: rgb(100, 194, 158);
       border: 1px solid rgb(100, 194, 158);
     }
     &:active {
-      opacity: $ActiveOpacity;
+      opacity: $activeOpacity;
     }
   }
 
@@ -383,7 +384,7 @@ body {
 
 .contact-with-us {
   font-size: 24px;
-  color: $MainColor;
+  color: $mainColor;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -407,23 +408,23 @@ body {
     color: #c8c8c8;
     border: 2px solid #d3d7d9;
     &:focus {
-      border: 2px solid $GreenLight;
+      border: 2px solid $greenLight;
     }
   }
   &__btn {
     padding: 25px 45px;
-    background: $GreenLight;
+    background: $greenLight;
     border: none;
     line-height: 24px;
-    color: #fff;
+    color: $whiteColor;
     cursor: pointer;
-    transition: background-color $TransitionDuration;
+    transition: background-color $transitionDuration;
     &:hover,
     &:focus {
       background-color: #ff5654;
     }
     &:active {
-      opacity: $ActiveOpacity;
+      opacity: $activeOpacity;
     }
   }
 }
@@ -436,14 +437,14 @@ body {
     max-width: max-content;
     display: block;
     text-decoration: none;
-    color: $MainColor;
-    transition: opacity $TransitionDuration;
+    color: $mainColor;
+    transition: opacity $transitionDuration;
     &:hover,
     &:focus {
-      opacity: $HoverFocusOpacity;
+      opacity: $hoverFocusOpacity;
     }
     &:active {
-      opacity: $ActiveOpacity;
+      opacity: $activeOpacity;
     }
   }
 }
@@ -456,17 +457,17 @@ body {
   line-height: 18px;
 
   &__by {
-    color: $MainColor;
+    color: $mainColor;
     margin-right: 10px;
   }
   &__link {
-    transition: opacity $TransitionDuration;
+    transition: opacity $transitionDuration;
     &:hover,
     &:focus {
-      opacity: $HoverFocusOpacity;
+      opacity: $hoverFocusOpacity;
     }
     &:active {
-      opacity: $ActiveOpacity;
+      opacity: $activeOpacity;
     }
   }
   &__link-image {
@@ -482,7 +483,7 @@ body {
   &__item {
     line-height: 18px;
     margin-bottom: 10px;
-    color: $MainColor;
+    color: $mainColor;
     &:last-child {
       margin: 0;
     }
@@ -491,16 +492,16 @@ body {
     display: flex;
     &__link {
       margin-right: 15px;
-      transition: opacity $TransitionDuration;
+      transition: opacity $transitionDuration;
       &:last-child {
         margin-right: 0;
       }
       &:hover,
       &:focus {
-        opacity: $HoverFocusOpacity;
+        opacity: $hoverFocusOpacity;
       }
       &:active {
-        opacity: $ActiveOpacity;
+        opacity: $activeOpacity;
       }
     }
     &__i-link {
@@ -549,13 +550,13 @@ body {
     height: 40px;
     cursor: pointer;
     z-index: 2;
-    transition: transform $TransitionDuration, opacity $TransitionDuration;
+    transition: transform $transitionDuration, opacity $transitionDuration;
     &:hover,
     &:focus {
-      opacity: $HoverFocusOpacity;
+      opacity: $hoverFocusOpacity;
     }
     &:active {
-      opacity: $ActiveOpacity;
+      opacity: $activeOpacity;
     }
     &__burger-nav {
       width: 100%;
@@ -565,8 +566,8 @@ body {
       left: 50%;
       transform: translate(-50%, -50%);
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-      transition: transform $TransitionDuration;
-      background: $GreenLight;
+      transition: transform $transitionDuration;
+      background: $greenLight;
       border: none;
       &:before,
       &:after {
@@ -576,8 +577,8 @@ body {
         position: absolute;
         top: 24px;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-        transition: top $TransitionDuration, transform $TransitionDuration;
-        background-color: $GreenLight;
+        transition: top $transitionDuration, transform $transitionDuration;
+        background-color: $greenLight;
       }
       &:before {
         top: 8px;
@@ -588,7 +589,7 @@ body {
   .hamburg-menu.hamburg-menu--active .hamburg-menu__burger-nav {
     background-color: rgba(0, 0, 0, 0);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0);
-    transition: background $TransitionDuration;
+    transition: background $transitionDuration;
     &:before {
       top: 17px;
       transform: rotate(45deg);
@@ -605,9 +606,9 @@ body {
     visibility: hidden;
     overflow: hidden;
     position: fixed;
-    background-color: #fff;
+    background-color: $whiteColor;
     opacity: 0;
-    transition: opacity $TransitionDuration, visibility $TransitionDuration;
+    transition: opacity $transitionDuration, visibility $transitionDuration;
     &__link {
       text-transform: uppercase;
       margin: 20px 0;
@@ -616,24 +617,21 @@ body {
         content: "";
         height: 2px;
         width: 0;
-        background-color: $GreenLight;
-        transition: width $TransitionDuration;
+        background-color: $greenLight;
+        transition: width $transitionDuration;
+      }
+      &:hover {
+        &:after {
+          width: 100%;
+        }
       }
     }
   }
 
-  .menu .menu__link:hover:after {
-    width: 100%;
-  }
-
   .menu.menu--open {
-    width: 100%;
     visibility: visible;
-    left: 0;
-    top: 0;
     opacity: 1;
     z-index: 1;
-    transition: opacity $TransitionDuration;
   }
 
   .contact-with-us {
@@ -731,7 +729,33 @@ body {
       width: 260px;
     }
   }
-
+  .gallery {
+    .gallery__items:first-child {
+      .gallery__item:nth-child(1) {
+        width: 100%;
+      }
+      .gallery__item:nth-child(2) {
+        width: 100%;
+      }
+    }
+    .gallery__items:nth-child(2) {
+      flex-direction: column;
+      .gallery__item:first-child {
+        width: 100%;
+      }
+      .gallery__item:last-child {
+        width: 100%;
+      }
+    }
+    .gallery__items:last-child {
+      .gallery__item:nth-child(2) {
+        width: 100%;
+      }
+      .gallery__item:nth-child(3) {
+        width: 100%;
+      }
+    }
+  }
   .footer {
     padding: 50px;
   }
@@ -750,13 +774,6 @@ body {
         .generation-info__item-info {
           padding: 50px 25px;
         }
-      }
-    }
-  }
-  .gallery {
-    &__items {
-      .gallery__item {
-        flex-direction: column;
       }
     }
   }
