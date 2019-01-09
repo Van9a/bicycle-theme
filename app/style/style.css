@@ -200,7 +200,7 @@ body {
       align-items: center;
       text-decoration: none;
       text-transform: uppercase;
-      color: white;
+      color: #fff;
       font-size: 18px;
       font-weight: bold;
       min-height: 267px;
@@ -269,8 +269,8 @@ body {
     cursor: pointer;
     transition: background-color 0.3s, opacity 0.3s; }
     .discover__button:hover, .discover__button:focus {
-      background-color: #64c29e;
-      border: 1px solid #64c29e; }
+      background-color: #64C29E;
+      border: 1px solid #64C29E; }
     .discover__button:active {
       opacity: 0.6; }
 
@@ -303,7 +303,7 @@ body {
     background: #64c29e;
     border: none;
     line-height: 24px;
-    color: white;
+    color: #fff;
     cursor: pointer;
     transition: background-color 0.3s; }
     .contact-with-us__btn:hover, .contact-with-us__btn:focus {
@@ -438,7 +438,7 @@ body {
     visibility: hidden;
     overflow: hidden;
     position: fixed;
-    background-color: white;
+    background-color: #fff;
     opacity: 0;
     transition: opacity 0.3s, visibility 0.3s; }
     .menu__link {
