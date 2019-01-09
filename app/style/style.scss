@@ -587,10 +587,7 @@ body {
 
   .menu {
     flex-direction: column;
-    text-align: center;
     visibility: hidden;
-    overflow: hidden;
-    position: fixed;
     background-color: $whiteColor;
     opacity: 0;
     transition: opacity $transitionDuration, visibility $transitionDuration;

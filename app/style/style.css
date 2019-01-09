@@ -417,10 +417,7 @@ body {
     transform: rotate(135deg); }
   .menu {
     flex-direction: column;
-    text-align: center;
     visibility: hidden;
-    overflow: hidden;
-    position: fixed;
     background-color: #fff;
     opacity: 0;
     transition: opacity 0.3s, visibility 0.3s;
