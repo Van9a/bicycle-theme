@@ -28,14 +28,13 @@ body {
 }
 
 .menu {
-  position: absolute;
+  position: fixed;
   width: 100%;
   padding: 35px 0;
   transition: background $transitionDuration;
   display: flex;
   justify-content: center;
   align-items: center;
-  text-transform: uppercase;
   font-weight: bold;
   font-size: 13px;
   z-index: 1;
@@ -55,6 +54,7 @@ body {
     letter-spacing: 3px;
     margin: 0 40px;
     text-decoration: none;
+    text-transform: uppercase;
     transition: color $transitionDuration, opacity $transitionDuration;
     &:hover,
     &:focus {
@@ -68,7 +68,6 @@ body {
 }
 
 .menu--fixed {
-  position: fixed;
   background-color: white;
   z-index: 2;
 }
@@ -597,7 +596,6 @@ body {
     transition: opacity $transitionDuration, visibility $transitionDuration;
     z-index: 1;
     &__link {
-      text-transform: uppercase;
       margin: 20px 0;
       &:after {
         display: block;
