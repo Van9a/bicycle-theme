@@ -23,7 +23,8 @@ body {
   align-items: center;
   text-transform: uppercase;
   font-weight: bold;
-  font-size: 13px; }
+  font-size: 13px;
+  z-index: 1; }
   .menu__i-logo {
     width: 94px;
     transition: opacity 0.3s; }
@@ -423,7 +424,8 @@ body {
     position: fixed;
     background-color: #fff;
     opacity: 0;
-    transition: opacity 0.3s, visibility 0.3s; }
+    transition: opacity 0.3s, visibility 0.3s;
+    z-index: 1; }
     .menu__link {
       text-transform: uppercase;
       margin: 20px 0; }
@@ -438,8 +440,7 @@ body {
         width: 100%; }
   .menu.menu--open {
     visibility: visible;
-    opacity: 1;
-    z-index: 1; }
+    opacity: 1; }
   .contact-with-us__container {
     flex-direction: column; }
   .contact-with-us__btn {
