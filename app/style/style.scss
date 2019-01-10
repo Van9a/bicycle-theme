@@ -16,9 +16,10 @@ html, body {
 body {
   font-family: $Lato;
   font-size: 16px;
-
 }
-
+i{
+  font-style: italic;
+}
 .slick-dots {
   bottom: 0;
 }
@@ -688,12 +689,9 @@ body {
     }
   }
   .contact {
-    padding: 10px;
+    padding: 20px;
     .contact-info {
       padding: 127px 10px;
-    }
-    .contact__logo {
-      margin-top: 20px;
     }
     .contact__text {
       font-size: 20px;
