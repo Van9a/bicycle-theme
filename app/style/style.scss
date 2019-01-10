@@ -92,7 +92,6 @@ body {
   &__text {
     color: $mainColor;
     line-height: 34px;
-
   }
 }
 
@@ -242,7 +241,7 @@ body {
   }
   .contact__title {
     max-width: 1040px;
-    margin: 33px 0 11px 0;
+    margin: 33px auto 11px ;
     text-transform: none;
     letter-spacing: 2px;
   }
@@ -432,7 +431,7 @@ body {
     font-weight: bold;
   }
   &__link {
-    max-width: max-content;
+    max-width: 100%;
     display: block;
     text-decoration: none;
     color: $mainColor;
@@ -652,11 +651,6 @@ body {
       }
       .image-container, .generation-info__item {
         width: 100%;
-      }
-      .generation-info__item {
-        .generation-info__item-text {
-          padding: 0 0 45px 0;
-        }
       }
     }
     &__items:last-child {
