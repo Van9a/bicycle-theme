@@ -9,6 +9,19 @@ $hoverFocusOpacity: .7;
 $activeOpacity: .6;
 $whiteColor: #fff;
 
+@mixin hoverFocusOpacity{
+  &:hover,
+  &:focus {
+    opacity: $hoverFocusOpacity;
+  }
+  &:active {
+    opacity: $activeOpacity;
+  }
+}
+%transitionOpacity {
+  transition: opacity $transitionDuration;
+}
+
 body {
   font-family: $Lato;
   font-size: 16px;
@@ -40,14 +53,8 @@ i {
   box-sizing: border-box;
   &__i-logo {
     width: 94px;
-    transition: opacity $transitionDuration;
-    &:hover,
-    &:focus {
-      opacity: $hoverFocusOpacity;
-    }
-    &:active {
-      opacity: $activeOpacity;
-    }
+    @extend %transitionOpacity;
+    @include hoverFocusOpacity;
   }
   &__link {
     color: #4d4959;
@@ -55,15 +62,14 @@ i {
     margin: 0 40px;
     text-decoration: none;
     text-transform: uppercase;
-    transition: color $transitionDuration, opacity $transitionDuration;
+    @extend %transitionOpacity;
+    transition: color $transitionDuration;
+    @include hoverFocusOpacity;
     &:hover,
     &:focus {
       color: $greenLight;
-      opacity: $hoverFocusOpacity;
     }
-    &:active {
-      opacity: $activeOpacity;
-    }
+
   }
 }
 
@@ -282,7 +288,7 @@ i {
     width: 100%;
     opacity: 0;
     cursor: pointer;
-    transition: opacity $transitionDuration;
+    @extend %transitionOpacity;
     background-color: rgba(100, 194, 158, 0.8);
     &:hover,
     &:focus {
@@ -365,15 +371,15 @@ i {
     padding: 16px 50px;
     text-transform: uppercase;
     cursor: pointer;
-    transition: background-color $transitionDuration, opacity $transitionDuration;
+    @extend %transitionOpacity;
+    transition: background-color $transitionDuration;
+    @include hoverFocusOpacity;
     &:hover,
     &:focus {
       background-color: $greenLight;
       border: 1px solid $greenLight;
     }
-    &:active {
-      opacity: $activeOpacity;
-    }
+
   }
 
 }
@@ -414,14 +420,14 @@ i {
     line-height: 24px;
     color: $whiteColor;
     cursor: pointer;
-    transition: background-color $transitionDuration, opacity $transitionDuration;
+    transition: background-color $transitionDuration;
+    @extend %transitionOpacity;
+    @include hoverFocusOpacity;
     &:hover,
     &:focus {
       background-color: #ff5654;
     }
-    &:active {
-      opacity: $activeOpacity;
-    }
+
   }
 }
 
@@ -433,14 +439,8 @@ i {
     text-decoration: none;
     color: $mainColor;
     font-style: italic;
-    transition: opacity $transitionDuration;
-    &:hover,
-    &:focus {
-      opacity: $hoverFocusOpacity;
-    }
-    &:active {
-      opacity: $activeOpacity;
-    }
+    @extend %transitionOpacity;
+    @include hoverFocusOpacity;
   }
 }
 
@@ -456,14 +456,8 @@ i {
     margin-right: 10px;
   }
   &__link {
-    transition: opacity $transitionDuration;
-    &:hover,
-    &:focus {
-      opacity: $hoverFocusOpacity;
-    }
-    &:active {
-      opacity: $activeOpacity;
-    }
+    @extend %transitionOpacity;
+    @include hoverFocusOpacity;
   }
   &__link-image {
     width: 55px;
@@ -474,17 +468,11 @@ i {
   display: flex;
   &__link {
     margin-right: 15px;
-    transition: opacity $transitionDuration;
+    @extend %transitionOpacity;
     &:last-child {
       margin-right: 0;
     }
-    &:hover,
-    &:focus {
-      opacity: $hoverFocusOpacity;
-    }
-    &:active {
-      opacity: $activeOpacity;
-    }
+    @include hoverFocusOpacity;
   }
   &__i-link {
     width: 35px;
@@ -547,14 +535,10 @@ i {
     height: 40px;
     cursor: pointer;
     z-index: 2;
-    transition: transform $transitionDuration, opacity $transitionDuration;
-    &:hover,
-    &:focus {
-      opacity: $hoverFocusOpacity;
-    }
-    &:active {
-      opacity: $activeOpacity;
-    }
+   @include hoverFocusOpacity;
+   // @extend %transitionOpacity;
+    transition: transform $transitionDuration;
+
     &:before,
     &:after {
       content: '';
@@ -587,7 +571,11 @@ i {
     visibility: hidden;
     background-color: $whiteColor;
     opacity: 0;
-    transition: opacity $transitionDuration, visibility $transitionDuration;
+    @include hoverFocusOpacity;
+    &:active {
+      opacity: $activeOpacity;
+    }
+    transition: visibility $transitionDuration;
     z-index: 1;
     padding: 35px 20px;
     &__link {
